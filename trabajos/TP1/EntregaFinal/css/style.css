@@ -1,0 +1,98 @@
+body{
+    background-color: #fafafa;
+    align-content: center;
+    font-family: "Montserrat";
+}
+canvas{
+    background-color: white;
+    border: 1px solid rgb(80, 79, 79);
+    margin: 10px;
+}
+footer, header{
+    background-color: #4b4040;
+    color: white;
+    text-align: center;
+    display: flex;
+}
+header{
+    margin-bottom: 10px;
+}
+footer{
+    margin-top: 10px;
+    justify-content: center;
+}
+.btn{
+    background-color: white;
+    color:#4b4040;
+    border: 1px solid #4b4040;
+    border-radius: 6px;
+    padding: 10px;
+    font-family: "Montserrat";
+    transition: 0.3s;
+    margin-top:5px;
+}
+.btn:hover{
+    background-color: #4b4040; 
+    color:white;
+}
+#div-canvas, section, #div-filtros, #color-picker{
+    display: flex;
+}
+i{
+    margin-right:5px;
+}
+#slider {
+    -webkit-appearance: none;  
+    appearance: none;
+    height: 5px; 
+    background: #d3d3d3; 
+    outline: none; 
+    opacity: 0.7; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+  }
+  #slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%;
+    background: #4b4040; 
+    cursor: pointer; 
+    transition: 0.6s;
+  }
+  #slider::-webkit-slider-thumb:hover{
+      width:25px;
+      height: 25px;
+  }
+
+  .slidecontainer p, #div-filtros p, #color-picker p{
+      color:#555555;
+  }
+  .slidecontainer, #color-picker{
+    align-items: center;
+    display: flex;
+  }
+  aside{
+      margin:10px;
+  }
+.tools{
+    margin-left: 5px;
+}
+#filtros{
+    padding: 5px;
+    border-radius: 6px;
+    color: #4b4040;
+    margin: 5px;
+}
+
+.slidecontainer, #div-filtros, #color-picker{
+    margin-left: 20px;
+}
+input[type="color" i]{
+    border: none;
+    background-color: white;
+}
+#imageInput{
+    display:none;
+}
