@@ -21,15 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
     let dibujar = false;
     ctx.lineJoin = "round";
 
-    limpiar.addEventListener('click', function(evt) {
+    limpiar.addEventListener('click', function (evt) {
         dibujar = false;
-        //ctx.clearRect(0, 0, cw, ch);
- 
-      }, false);
+        ctx.clearRect(0, 0, width, height);
+        Trazados.length = 0;
+        puntos.length = 0;
+    }, false);
 
     canvas.addEventListener('mousedown', function (evt) { //el mouse dibuja
         dibujar = true;
-        //ctx.clearRect(0, 0, cw, ch);
         ctx.beginPath();
 
     }, false);
