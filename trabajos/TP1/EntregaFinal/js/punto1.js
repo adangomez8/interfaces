@@ -7,55 +7,68 @@
 "use strict"
 
 document.addEventListener("DOMContentLoaded", function () {
-    let canvas = document.querySelector('#canvas');
-    let ctx = canvas.getContext('2d');
-    let width = canvas.width;
-    let height = canvas.height;
-    let imageData = ctx.createImageData(width, height);
+})
+let canvas = document.querySelector('#canvas');
+let ctx = canvas.getContext('2d');
+let width = canvas.width;
+let height = canvas.height;
+let imageData = ctx.createImageData(width, height);
+let limpiar = document.getElementById("clean");
+let pencil = false;
+let rubber = false;
+let dibujar = false;
+ctx.lineJoin = "round";
+ctx.lineWidth = 0.5;
 
-    let limpiar = document.getElementById("clean");
-    let pencil = false;
-    let rubber = false;
-    let color = "black";
-    let lineWidth = 5;
-    let dibujar = false;
-    ctx.lineJoin = "round";
+function draw(e) {
 
-    limpiar.addEventListener('click', function (evt) {
-        dibujar = false;
-        ctx.clearRect(0, 0, width, height);
-        Trazados.length = 0;
-        puntos.length = 0;
-    }, false);
+    let x = e.layerX;
+    let y = e.layerY;
+
+    if (dibujar === true) {//Triple para que iguale en valor y en tipo
+        ctx.lineTo(x, y); // Dibuja la linea hasta x2, y2
+        ctx.stroke(); // Indica que van a hacer solamentes lineas
+    }
+}
+
+let btnPencil = document.querySelector("#pencil");
+btnPencil.addEventListener("click", function () {
+    pencil = true;
+    rubber = false;
+    movilidad();
+});
+
+function movilidad() {
 
     canvas.addEventListener('mousedown', function (evt) { //el mouse dibuja
+        let x = evt.layerX;
+        let y = evt.layerY;
         dibujar = true;
         ctx.beginPath();
-
-    }, false);
+        ctx.moveTo(x, y)
+        canvas.addEventListener('mousemove', draw);//se mueve el mouse
+    });
 
     canvas.addEventListener('mouseup', function (evt) { //se suelta el mouse
+        ctx.closePath(); //Cierra la ruta
         dibujar = false;
 
-    }, false);
+    });
 
     canvas.addEventListener("mouseout", function (evt) { //el mouse sale
         dibujar = false;
-    }, false);
+    });
+}
 
-    canvas.addEventListener("mousemove", function (evt) { //se mueve el mouse
-        if (dibujar) {
-            let m = oMousePos(canvas, evt);
-            ctx.lineTo(m.x, m.y);
-            ctx.stroke();
-        }
-    }, false);
+function defColor(color) { // funcion para el color
+    ctx.strokeStyle = color.value;
+}
 
-    function oMousePos(canvas, evt) { //posicion del mouse
-        var ClientRect = canvas.getBoundingClientRect();
-        return { //objeto
-            x: Math.round(evt.clientX - ClientRect.left),
-            y: Math.round(evt.clientY - ClientRect.top)
-        }
-    }
-})
+function defGrosor(grosor) { //funcion para el grosor de la linea
+    ctx.lineWidth = grosor.value;
+}
+
+limpiar.addEventListener('click', function (evt) {
+    dibujar = false;
+    ctx.clearRect(0, 0, width, height);
+}, false);
