@@ -9,12 +9,6 @@ let g;
 let b;
 let a = 255;
 
-//cargar imagen
-document.getElementById("upload").addEventListener("change", loadPictura);
-
-//descargar imagen
-document.getElementById("download").addEventListener("click", save)
-
 //filtros
 document.getElementById('original').value = original();
 document.getElementById('negativo').value = negative();
@@ -23,34 +17,6 @@ document.getElementById('saturacion').value = saturation();
 document.getElementById('binario').value = binarization();
 document.getElementById('sepia').value = sepia();
 document.getElementById('blur').value = blur();
-
-//cargar imagen
-public.cargarImg = function () {
-    var img = new Image();
-    img.src = 'imagen1.jpg';
-
-    img.onload = function () {
-        ctx.drawImagen(img, 0, 0);
-    }
-};
-
-public.getImageData = function(){
-    return ctx.getImageData(0, 0, canvas.width, canvas.height);
-};
-
-//descargar imagen
-public.save = function () {
-    var link = window.document.createElement('a'),
-        url = canvas.toDataURL(),
-        filename = 'img.jpg';
-
-    link.setAttribute('href', url);
-    link.setAttribute('drownload', filename);
-    link.style.visibility = 'hidden';
-    window.document.body.appendChild(link);
-    link.click();
-    window.document.body.removeChild(link);
-};
 
 //imagen original
 function original() {
