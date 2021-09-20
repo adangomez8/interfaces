@@ -13,6 +13,8 @@ let ctx = canvas.getContext('2d');
 let width = canvas.width;
 let height = canvas.height;
 let imageData = ctx.createImageData(width, height);
+
+//lapiz
 let pencil = false;
 let dibujar = false;
 ctx.lineJoin = "round";
@@ -29,6 +31,7 @@ function draw(e) {
     }
 }
 
+//evento lapiz
 let btnPencil = document.querySelector("#pencil");
 btnPencil.addEventListener("click", function () {
     pencil = true;
@@ -36,6 +39,7 @@ btnPencil.addEventListener("click", function () {
     movilidad();
 });
 
+//movilidad del mouse
 function movilidad() {
 
     canvas.addEventListener('mousedown', function (evt) { //el mouse dibuja
