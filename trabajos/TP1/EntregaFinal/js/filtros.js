@@ -20,11 +20,9 @@ document.getElementById('blur').value = blur();
 
 //imagen original
 function original() {
-    let imagen = new imagen();
-    imagen.src = "";
-    imagen.onload = function () {
-        ctx.drawImagen(imagen, 0, 0);
-    }
+    if (copia != null){
+        ctx.putImageData(copia, 0, 0);
+      }
 }
 
 //filtro  negativo
