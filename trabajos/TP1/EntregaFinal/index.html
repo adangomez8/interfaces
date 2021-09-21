@@ -17,9 +17,11 @@
         <section> <canvas id="canvas" width="700" height="380"> </canvas></section>
         <aside>
             <button id="clean" class="btn"><i class="fa fa-broom"></i>Limpiar Lienzo</button>
-            <button id="upload" class="btn"><i class="fas fa-upload"></i>Subir imágen</button>
-            <input type="file" name="filename" id="imageInput" accept="image/*">
-            <button id="download" class="btn"><i class="fas fa-download"></i>Descargar imágen</button>
+            <label for="imageInput" class="btn"><i class="fas fa-upload"></i>Subir imagen</label>
+            <input type="file" id="imageInput" accept="image/*">
+            <a id="downloadImg" download="image.png" href="" download>
+                <button id="download" class="btn"><i class="fas fa-download"></i>Descargar imágen</button>
+            </a>
         </aside>
     </div>
     <section>

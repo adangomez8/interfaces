@@ -1,14 +1,16 @@
 "use strict"
 
 //cargar imagen
-document.getElementById("upload").addEventListener('change', loadPicture);
+let imageInput = document.getElementById("imageInput");
+imageInput.addEventListener("change", loadPicture);
 
 //descargar imagen
-document.getElementById("download").addEventListener('click', save)
+let btn = document.getElementById("download");
+btn.addEventListener("click", savePicture);
 
 //cargar imagen
 function loadPicture(e) {
-    limpiar(); //limpia el canvas
+    //limpiar(); //limpia el canvas
 
     let urlImagen = e.target.files[0]; //crea una url de la img
     let reader = new FileReader();
@@ -44,18 +46,18 @@ function loadPicture(e) {
     reader.readAsDataURL(urlImagen);
 };
 
-public.getImageData = function () {
+function getImageData () {
     return ctx.getImageData(0, 0, canvas.width, canvas.height);
 };
 
 //descargar imagen
-public.save = function () {
+function savePicture() {
     var link = window.document.createElement('a'),
         url = canvas.toDataURL(),
-        filename = 'img.jpg';
+        file = 'img.jpg';
 
     link.setAttribute('href', url);
-    link.setAttribute('drownload', filename);
+    link.setAttribute('drownloadImg', file);
     link.style.visibility = 'hidden';
     window.document.body.appendChild(link);
     link.click();
