@@ -5,8 +5,8 @@ let imageInput = document.getElementById("imageInput");
 imageInput.addEventListener("change", loadPicture);
 
 //descargar imagen
-let btn = document.getElementById("download");
-btn.addEventListener("click", savePicture);
+let btnDescargar = document.getElementById("download");
+btnDescargar.addEventListener("click", savePicture);
 
 //cargar imagen
 function loadPicture(e) {
@@ -44,20 +44,13 @@ function loadPicture(e) {
     };
     reader.readAsDataURL(urlImagen);
 };
-function getImageData () {
+function getImageData() {
     return ctx.getImageData(0, 0, canvas.width, canvas.height);
 };
 
 //descargar imagen
 function savePicture() {
-    var link = window.document.createElement('a'),
-        url = canvas.toDataURL(),
-        file = 'img.jpg';
-
-    link.setAttribute('href', url);
-    link.setAttribute('drownloadImg', file);
-    link.style.visibility = 'hidden';
-    window.document.body.appendChild(link);
-    link.click();
-    window.document.body.removeChild(link);
+    let dnld = document.getElementById("downloadImg"); 
+    let image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"); // devuelve la matriz 
+    dnld.setAttribute("href", image);
 };
