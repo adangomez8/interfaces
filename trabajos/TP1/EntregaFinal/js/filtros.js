@@ -1,43 +1,37 @@
 "use strict"
 
-let ctx = canvas.getContext('2d');
-let width = canvas.width;
-let height = canvas.height;
+//let ctx = canvas.getContext('2d');
+//let width = canvas.width;
+//let height = canvas.height;
 
 let r;
 let g;
 let b;
 let a = 255;
 
-//filtros
-document.getElementById('original').value = original();
-document.getElementById('negativo').value = negative();
-document.getElementById('brillo').value = brightness();
-document.getElementById('saturacion').value = saturation();
-document.getElementById('binario').value = binarization();
-document.getElementById('sepia').value = sepia();
-document.getElementById('blur').value = blur();
-
+let btnOriginal = document.getElementById("original");
+btnOriginal.addEventListener("click", original);
 //imagen original
 function original() {
-    if (copia != null){
+    let copia = ctx.getImageData(0, 0, width, height);
+    if (copia != null) {
         ctx.putImageData(copia, 0, 0);
-      }
+    }
 }
 
 //filtro  negativo
+let btnNegative = document.getElementById("negativo");
+btnNegative.addEventListener("click", negative);
+
 function negative() {
     //Obtengo la información de la imagen que esta en el contexto del canvas
-    let imageData = ctx.getImageData(0, 0, canvasW, canvasH);
-    //Función que recorre la imagen y le setea los pixeles
-    function draw(imageData, r, g, b) {
-        for (let x = 0; x < canvasW; x++) {
-            for (let y = 0; y < canvasH; y++) {
-                setPixel(imageData, x, y, r, g, b);
-            }
+    let imageData = ctx.getImageData(0, 0, width, height);
+    // Se recorre la imagen y le setea los pixeles
+    for (let x = 0; x < width; x++) {
+        for (let y = 0; y < height; y++) {
+            setPixel(imageData, x, y, r, g, b);
         }
     }
-    draw(imageData, r, g, b);
     //Función que setea cada pixel r g y b de la imagen según un criterio
     function setPixel(imageData, x, y, r, g, b) {
         //Saco la cuenta de cual sería mi indice
@@ -57,14 +51,17 @@ function negative() {
     ctx.putImageData(imageData, 0, 0);
 }
 
+
 //filtro brillo
+let btnBrillo = document.getElementById("brillo");
+btnBrillo.addEventListener("click", brightness);
 function brightness() {
     //Obtengo la información de la imagen que esta en el contexto del canvas
-    let imageData = ctx.getImageData(0, 0, canvasW, canvasH);
+    let imageData = ctx.getImageData(0, 0, width, height);
     //Función que recorre la imagen y le setea los pixeles
     function draw(imageData, r, g, b) {
-        for (let x = 0; x < canvasW; x++) {
-            for (let y = 0; y < canvasH; y++) {
+        for (let x = 0; x < width; x++) {
+            for (let y = 0; y < height; y++) {
                 setPixel(imageData, x, y, r, g, b);
             }
         }
@@ -90,13 +87,15 @@ function brightness() {
 }
 
 //filtro de saturacion
+let btnSaturacion = document.getElementById("saturacion");
+btnSaturacion.addEventListener("click", saturation);
 function saturation() {
     //Obtengo la información de la imagen que esta en el contexto del canvas
-    let imageData = ctx.getImageData(0, 0, canvasW, canvasH);
+    let imageData = ctx.getImageData(0, 0, width, height);
     //Función que recorre la imagen y le setea los pixeles
     function draw(imageData, r, g, b) {
-        for (let x = 0; x < canvasW; x++) {
-            for (let y = 0; y < canvasH; y++) {
+        for (let x = 0; x < width; x++) {
+            for (let y = 0; y < height; y++) {
                 setPixel(imageData, x, y, r, g, b);
             }
         }
@@ -128,14 +127,16 @@ function saturation() {
     ctx.putImageData(imageData, 0, 0);
 }
 
+/*let btnBinarizacion = document.getElementById("binarizacion");
+btnBinarizacion.addEventListener("click", binarization);*/
 //filtro binario
 function binarization() {
     //Obtengo la información de la imagen que esta en el contexto del canvas
-    let imageData = ctx.getImageData(0, 0, canvasW, canvasH);
+    let imageData = ctx.getImageData(0, 0, width, height);
     //Función que recorre la imagen y le setea los pixeles
     function draw(imageData, r, g, b) {
-        for (let x = 0; x < canvasW; x++) {
-            for (let y = 0; y < canvasH; y++) {
+        for (let x = 0; x < width; x++) {
+            for (let y = 0; y < height; y++) {
                 setPixel(imageData, x, y, r, g, b);
             }
         }
@@ -174,14 +175,16 @@ function binarization() {
     ctx.putImageData(imageData, 0, 0);
 }
 
+let btnSepia = document.getElementById("sepia");
+btnSepia.addEventListener("click", sepia);
 //filtro sepia
 function sepia() {
     //Obtengo la información de la imagen que esta en el contexto del canvas
-    let imageData = ctx.getImageData(0, 0, canvasW, canvasH);
+    let imageData = ctx.getImageData(0, 0, width, height);
     //Función que recorre la imagen y le setea los pixeles
     function draw(imageData, r, g, b) {
-        for (let x = 0; x < canvasW; x++) {
-            for (let y = 0; y < canvasH; y++) {
+        for (let x = 0; x < width; x++) {
+            for (let y = 0; y < height; y++) {
                 setPixel(imageData, x, y, r, g, b);
             }
         }
@@ -207,3 +210,9 @@ function sepia() {
 }
 
 //filtro blur
+
+let btnBlur = document.getElementById("blur");
+btnBlur.addEventListener("click", blur);
+function blur(){
+
+}
