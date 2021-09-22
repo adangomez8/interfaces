@@ -39,13 +39,11 @@ function loadPicture(e) {
             }
 
             ctx.drawImage(image, 0, 0, imgWidth, imgHeight);
-            copia = ctx.getImageData(0, 0, width, height);
-            atras = copia;
+            ctx.getImageData(0, 0, width, height);
         };
     };
     reader.readAsDataURL(urlImagen);
 };
-
 function getImageData () {
     return ctx.getImageData(0, 0, canvas.width, canvas.height);
 };
