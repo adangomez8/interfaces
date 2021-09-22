@@ -1,25 +1,22 @@
 "use strict"
 
-//let ctx = canvas.getContext('2d');
-//let width = canvas.width;
-//let height = canvas.height;
-
 let r;
 let g;
 let b;
 let a = 255;
+let copia;
 
+//imagen original
 let btnOriginal = document.getElementById("original");
 btnOriginal.addEventListener("click", original);
-//imagen original
+
 function original() {
-    let copia = ctx.getImageData(0, 0, width, height);
     if (copia != null) {
         ctx.putImageData(copia, 0, 0);
     }
 }
 
-//filtro  negativo
+//filtro negativo
 let btnNegative = document.getElementById("negativo");
 btnNegative.addEventListener("click", negative);
 
@@ -127,9 +124,9 @@ function saturation() {
     ctx.putImageData(imageData, 0, 0);
 }
 
-/*let btnBinarizacion = document.getElementById("binarizacion");
-btnBinarizacion.addEventListener("click", binarization);*/
-//filtro binario
+//filtro binarizacions
+let btnBinarizacion = document.getElementById("binario");
+btnBinarizacion.addEventListener("click", binarization);
 function binarization() {
     //Obtengo la información de la imagen que esta en el contexto del canvas
     let imageData = ctx.getImageData(0, 0, width, height);

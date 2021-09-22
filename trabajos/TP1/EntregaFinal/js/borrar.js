@@ -1,7 +1,11 @@
 "use strict"
 
-//limpiar canvas
-let limpiar = document.getElementById("clean");
+
+let btn_limpiar = document.getElementById('clean');
+btn_limpiar.addEventListener('click', limpiar);
+function limpiar() { 
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
 
 //goma
 let rubber = false;
@@ -15,12 +19,6 @@ btnRubber.addEventListener("click", function () {
     rubber = true;
     borrar();
 });
-
-//limpiar canvas
-limpiar.addEventListener('click', function (evt) {
-    dibujar = false;
-    ctx.clearRect(0, 0, width, height);
-}, false);
 
 //funcion de la goma
 function borrar() {

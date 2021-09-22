@@ -10,7 +10,7 @@ btnDescargar.addEventListener("click", savePicture);
 
 //cargar imagen
 function loadPicture(e) {
-    //limpiar(); //limpia el canvas
+    limpiar(); //limpia el canvas
 
     let urlImagen = e.target.files[0]; //crea una url de la img
     let reader = new FileReader();
@@ -39,11 +39,12 @@ function loadPicture(e) {
             }
 
             ctx.drawImage(image, 0, 0, imgWidth, imgHeight);
-            ctx.getImageData(0, 0, width, height);
+            copia = ctx.getImageData(0, 0, width, height);
         };
     };
     reader.readAsDataURL(urlImagen);
-};
+}
+
 function getImageData() {
     return ctx.getImageData(0, 0, canvas.width, canvas.height);
 };
