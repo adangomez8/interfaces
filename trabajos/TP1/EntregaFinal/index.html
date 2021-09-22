@@ -11,23 +11,31 @@
 
 <body>
     <header>
-        <h1 id="titulo">Paint</h1>
+        <h3 id="titulo">Paint</h3>
     </header>
     <div id="div-canvas">
-        <section> <canvas id="canvas" width="700" height="380"> </canvas></section>
+        <section> <canvas id="canvas" width="800" height="450"> </canvas></section>
         <aside>
-            <button id="clean" class="btn"><i class="fa fa-broom"></i>Limpiar Lienzo</button>
-            <label for="imageInput" class="btn"><i class="fas fa-upload"></i>Subir imagen</label>
-            <input type="file" id="imageInput" accept="image/*">
-            <a id="downloadImg" download="image.png" href="" download>
-                <button id="download" class="btn"><i class="fas fa-download"></i>Descargar imágen</button>
-            </a>
+            <button class="btn filtros" value="original" id="original"><b>Original</b></button>
+            <p></p>
+            <button class="btn filtros" value="negativo" id="negativo"><b>Negativo</b></button>
+            <p></p>
+            <button class="btn filtros" value="brillo" id="brillo"><b>Brillo</b></button>
+            <p></p>
+            <button class="btn filtros" value="saturacion" id="saturacion"><b>Saturación</b></button>
+            <p></p>
+            <button class="btn filtros" value="binarizacion" id="binario"><b>Binarización</b></button>
+            <p></p>
+            <button class="btn filtros" value="sepia" id="sepia"><b>Sepia</b></button>
+            <p></p>
+            <button class="btn filtros" value="blur" id="blur"><b>Blur</b></button>
         </aside>
     </div>
     <section>
         <div class="tools">
             <button id="pencil" class="btn"><i class="fas fa-pencil-alt"></i>Lápiz</button>
             <button id="rubber" class="btn"><i class="fas fa-eraser"></i>Goma</button>
+            <button id="clean" class="btn"><i class="fa fa-broom"></i>Limpiar Lienzo</button>
         </div>
         <div id="color-picker">
             <p>Color</p>
@@ -37,18 +45,14 @@
             <p>Grosor</p>
             <input type="range" onchange="defGrosor(this)" min="1" max="100" step="0.5" value="0.5">
         </div>
-        <div id="div-filtros">
-            <p>Filtros</p>
-            <select name="filtro" id="filtros">
-                <option value="negativo" id="original">Original</option>
-                <option value="negativo" id="negativo">Negativo</option>
-                <option value="brillo" id="brillo">Brillo</option>
-                <option value="saturacion" id="saturacion">Saturación</option>
-                <option value="binarizacion" id="binario">Binarización</option>
-                <option value="sepia" id="sepia">Sepia</option>
-                <option value="blur" id="blur">Blur</option>
-            </select>
+        <div>
+            <label for="imageInput" class="btn"><i class="fas fa-upload"></i>Subir imagen</label>
+            <input type="file" id="imageInput" accept="image/*">
+            <a id="downloadImg" download="image.png" href="" download>
+                <button id="download" class="btn"><i class="fas fa-download"></i>Descargar imágen</button>
+            </a>
         </div>
+
     </section>
     <footer id="footer">
         <p>@2021 | Interfaces de usuario e interacción | Sasha Lujan - Adan Gomez</p>

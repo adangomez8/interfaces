@@ -1,5 +1,5 @@
 body{
-    background-color: #fafafa;
+    background-color: #7c7474;
     align-content: center;
     font-family: "Montserrat";
 }
@@ -8,14 +8,17 @@ canvas{
     border: 1px solid rgba(255, 99, 71, 0.5);
     margin: 10px;
 }
-footer, header{
+footer{
     background-color: #ff6347;
     color: white;
     text-align: center;
     display: flex;
 }
 header{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    background-color: #ff6347;
+    color: white;
+    width: 25%;
 }
 footer{
     margin-top: 10px;
@@ -79,11 +82,14 @@ i{
 .tools{
     margin-left: 5px;
 }
-#filtros{
+.filtros{
     padding: 5px;
     border-radius: 6px;
-    color: #ff6347;
+    color: #f561c9;
     margin: 5px;
+    font-size: 15px;
+    width: 100px;
+    margin-top: 20px;
 }
 
 .slidecontainer, #div-filtros, #color-picker{
