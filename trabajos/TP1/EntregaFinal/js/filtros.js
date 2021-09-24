@@ -6,20 +6,30 @@ let b;
 let a = 255;
 let copia;
 
-//imagen original
+//botones de filtros
 let btnOriginal = document.getElementById("original");
 btnOriginal.addEventListener("click", original);
+let btnNegative = document.getElementById("negativo");
+btnNegative.addEventListener("click", negative);
+let btnBrillo = document.getElementById("brillo");
+btnBrillo.addEventListener("click", brightness);
+let btnSaturacion = document.getElementById("saturacion");
+btnSaturacion.addEventListener("click", saturation);
+let btnBinarizacion = document.getElementById("binario");
+btnBinarizacion.addEventListener("click", binarization);
+let btnSepia = document.getElementById("sepia");
+btnSepia.addEventListener("click", sepia);
+let btnBlur = document.getElementById("blur");
+btnBlur.addEventListener("click", blur);
 
+//funcion que devuelve la imagen original cargada desde el disco
 function original() {
     if (copia != null) {
         ctx.putImageData(copia, 0, 0);
     }
 }
 
-//filtro negativo
-let btnNegative = document.getElementById("negativo");
-btnNegative.addEventListener("click", negative);
-
+//funcion que trasforma la imagen actual aplicando el filtro negativo a los colores actuales
 function negative() {
     //Obtengo la información de la imagen que esta en el contexto del canvas
     let imageData = ctx.getImageData(0, 0, width, height);
@@ -48,10 +58,7 @@ function negative() {
     ctx.putImageData(imageData, 0, 0);
 }
 
-
-//filtro brillo
-let btnBrillo = document.getElementById("brillo");
-btnBrillo.addEventListener("click", brightness);
+//funcion que agrega brillo a la imagen actual
 function brightness() {
     //Obtengo la información de la imagen que esta en el contexto del canvas
     let imageData = ctx.getImageData(0, 0, width, height);
@@ -79,17 +86,13 @@ function brightness() {
         imageData.data[index + 1] = g + 10;
         imageData.data[index + 2] = b + 10;
     }
-    //Muestro la imagen en el contexto
     ctx.putImageData(imageData, 0, 0);
 }
 
-//filtro de saturacion
-let btnSaturacion = document.getElementById("saturacion");
-btnSaturacion.addEventListener("click", saturation);
+//funcion que transforma la imagen actual tomando los valores r, g y b
 function saturation() {
-    //Obtengo la información de la imagen que esta en el contexto del canvas
     let imageData = ctx.getImageData(0, 0, width, height);
-    //Función que recorre la imagen y le setea los pixeles
+    //recorre la imagen y le setea los pixeles
     function draw(imageData, r, g, b) {
         for (let x = 0; x < width; x++) {
             for (let y = 0; y < height; y++) {
@@ -98,15 +101,13 @@ function saturation() {
         }
     }
     draw(imageData, r, g, b);
-    //Función que setea cada pixel r g y b de la imagen según un criterio
+    //setea cada pixel r g y b de la imagen según un criterio
     function setPixel(imageData, x, y, r, g, b) {
-        //Saco la cuenta de cual sería mi indice
+        //Saco lcual sería mi indice
         let index = (x + y * imageData.width) * 4;
         //Asigno una variable de contraste fija para ir incrementando
         let contraste = 100;
-        /**Después saco el factor de ese contraste, es decir cuanto vamos a ir
-        * aumentandolo según esta cuenta matematica
-        */
+        //Después saco cuanto vamos a ir aumentandolo
         let factor = (259 * (contraste + 255)) / (255 * (259 - contraste));
         //Asigno un valor a r g y b
         r = imageData.data[index + 0];
@@ -120,13 +121,10 @@ function saturation() {
         imageData.data[index + 1] = factor * (g - 128) + 128;
         imageData.data[index + 2] = factor * (b - 128) + 128;
     }
-    //Muestro la imagen en el contexto
     ctx.putImageData(imageData, 0, 0);
 }
 
-//filtro binarizacions
-let btnBinarizacion = document.getElementById("binario");
-btnBinarizacion.addEventListener("click", binarization);
+//funcion de binarizacion
 function binarization() {
     //Obtengo la información de la imagen que esta en el contexto del canvas
     let imageData = ctx.getImageData(0, 0, width, height);
@@ -172,8 +170,6 @@ function binarization() {
     ctx.putImageData(imageData, 0, 0);
 }
 
-let btnSepia = document.getElementById("sepia");
-btnSepia.addEventListener("click", sepia);
 //filtro sepia
 function sepia() {
     //Obtengo la información de la imagen que esta en el contexto del canvas
@@ -207,9 +203,6 @@ function sepia() {
 }
 
 //filtro blur
-
-let btnBlur = document.getElementById("blur");
-btnBlur.addEventListener("click", blur);
 function blur(){
 
 }

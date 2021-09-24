@@ -1,14 +1,14 @@
 "use strict"
 
-//cargar imagen
+//boton cargar imagen
 let imageInput = document.getElementById("imageInput");
 imageInput.addEventListener("change", loadPicture);
 
-//descargar imagen
+//boton descargar imagen
 let btnDescargar = document.getElementById("download");
 btnDescargar.addEventListener("click", savePicture);
 
-//cargar imagen
+//cargar una imagen al canvas desde el disco
 let copia, copia2;
 function loadPicture(e) {
     limpiar();
@@ -59,7 +59,7 @@ function loadPicture(e) {
     
   }
 
-//descargar imagen
+//descargar la imagen actual con el contexto del canvas
 function savePicture() {
     let dnld = document.getElementById("downloadImg");
     let image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"); // devuelve la matriz 

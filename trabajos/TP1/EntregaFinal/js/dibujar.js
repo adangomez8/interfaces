@@ -1,19 +1,18 @@
 "use strict"
 
-document.addEventListener("DOMContentLoaded", function () {
-})
 let canvas = document.querySelector('#canvas');
 let ctx = canvas.getContext('2d');
 let width = canvas.width;
 let height = canvas.height;
 let imageData = ctx.createImageData(width, height);
 
-//lapiz
+//variables del lapiz
 let pencil = false;
 let dibujar = false;
 ctx.lineJoin = "round";
 ctx.lineWidth = 0.5;
 
+//funcion que permite dibujar en el lienzo
 function draw(e) {
 
     let x = e.layerX;
@@ -25,7 +24,7 @@ function draw(e) {
     }
 }
 
-//evento lapiz
+//evento del lapiz
 let btnPencil = document.querySelector("#pencil");
 btnPencil.addEventListener("click", function () {
     pencil = true;
@@ -56,10 +55,10 @@ function movilidad() {
     });
 }
 
-function defColor(color) { // funcion para el color
+function defColor(color) { // funcion para elegir el color
     ctx.strokeStyle = color.value;
 }
 
-function defGrosor(grosor) { //funcion para el grosor de la linea
+function defGrosor(grosor) { //funcion para elegir el grosor de la linea
     ctx.lineWidth = grosor.value;
 }

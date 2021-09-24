@@ -1,13 +1,12 @@
 "use strict"
-
-
+//evento y funcion que limpia el lienzo
 let btn_limpiar = document.getElementById('clean');
 btn_limpiar.addEventListener('click', limpiar);
 function limpiar() { 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-//goma
+//variables de la goma
 let rubber = false;
 let rubberColor = 'white';
 let rubberGrosor = 15;
@@ -20,7 +19,7 @@ btnRubber.addEventListener("click", function () {
     borrar();
 });
 
-//funcion de la goma
+//funcion que haces que la goma borre lo que esta dibujando en el lienzo
 function borrar() {
     dibujar = false;
 
