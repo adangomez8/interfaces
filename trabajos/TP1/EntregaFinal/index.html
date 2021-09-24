@@ -11,28 +11,26 @@
 
 <body>
     <header>
-        <h3 id="titulo">Paint</h3>
+        <h3>Paint</h3>
     </header>
     <div id="div-canvas">
-        <section> <canvas id="canvas" width="800" height="450"> </canvas></section>
+        <section> <canvas id="canvas" width="650" height="400"> </canvas></section>
+        
         <aside>
-            <button class="btn filtros" value="original" id="original"><b>Original</b></button>
-            <p></p>
+            <p>Filtros</p>
+            <button class="btn filtros" value="original" id="original"><b>Original</b></button>            
             <button class="btn filtros" value="negativo" id="negativo"><b>Negativo</b></button>
-            <p></p>
             <button class="btn filtros" value="brillo" id="brillo"><b>Brillo</b></button>
-            <p></p>
             <button class="btn filtros" value="saturacion" id="saturacion"><b>Saturación</b></button>
             <p></p>
-            <button class="btn filtros" value="binarizacion" id="binario"><b>Binarización</b></button>
-            <p></p>
-            <button class="btn filtros" value="sepia" id="sepia"><b>Sepia</b></button>
-            <p></p>
+            <button class="btn filtros" value="binarizacion" id="binario"><b>Binarización</b></button>           
+            <button class="btn filtros" value="sepia" id="sepia"><b>Sepia</b></button>            
             <button class="btn filtros" value="blur" id="blur"><b>Blur</b></button>
         </aside>
     </div>
     <section>
-        <div class="tools">
+        <p>Herramientas</p>
+        <div class="tools">            
             <button id="pencil" class="btn"><i class="fas fa-pencil-alt"></i>Lápiz</button>
             <button id="rubber" class="btn"><i class="fas fa-eraser"></i>Goma</button>
             <button id="clean" class="btn"><i class="fa fa-broom"></i>Limpiar Lienzo</button>

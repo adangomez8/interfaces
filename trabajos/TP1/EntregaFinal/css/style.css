@@ -1,32 +1,30 @@
 body{
-    background-color: #7c7474;
     align-content: center;
     font-family: "Montserrat";
+    background-color: rgb(210, 210, 210);
 }
 canvas{
     background-color: white;
-    border: 1px solid rgba(255, 99, 71, 0.5);
+    border: 1px solid #F3533A;
     margin: 10px;
 }
 footer{
-    background-color: #ff6347;
+    background-color:Tomato;
     color: white;
     text-align: center;
     display: flex;
-}
-header{
-    margin-bottom: 5px;
-    background-color: #ff6347;
-    color: white;
-    width: 25%;
-}
-footer{
     margin-top: 10px;
     justify-content: center;
 }
+header{
+    margin-bottom: 10px;
+    background-color: Tomato;;
+    color: white;
+    text-align: center;
+}
 .btn{
-    background-color: white;
-    color:#ff6347;
+    background-color: tomato;
+    color:white;
     border: 1px solid rgba(255, 99, 71, 0.5);
     border-radius: 6px;
     padding: 10px;
@@ -48,7 +46,7 @@ i{
     -webkit-appearance: none;  
     appearance: none;
     height: 5px; 
-    background: #d3d3d3; 
+    background: white; 
     outline: none; 
     opacity: 0.7; 
     -webkit-transition: .2s; 
@@ -69,8 +67,8 @@ i{
       height: 25px;
   }
 
-  .slidecontainer p, #div-filtros p, #color-picker p{
-      color:#ff6347;
+  .slidecontainer p, #div-filtros p, #color-picker p, p{
+      color:tomato;
   }
   .slidecontainer, #color-picker{
     align-items: center;
@@ -83,13 +81,16 @@ i{
     margin-left: 5px;
 }
 .filtros{
-    padding: 5px;
+    background-color: tomato;
+    color:white;
+    border: 1px solid rgba(255, 99, 71, 0.5);
     border-radius: 6px;
-    color: #f561c9;
-    margin: 5px;
-    font-size: 15px;
-    width: 100px;
-    margin-top: 20px;
+    padding: 10px;
+    font-family: "Montserrat";
+    transition: 0.3s;
+    margin-top:5px;
+
+    
 }
 
 .slidecontainer, #div-filtros, #color-picker{
