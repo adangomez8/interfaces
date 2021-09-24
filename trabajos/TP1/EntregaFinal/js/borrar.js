@@ -2,7 +2,7 @@
 //evento y funcion que limpia el lienzo
 let btn_limpiar = document.getElementById('clean');
 btn_limpiar.addEventListener('click', limpiar);
-function limpiar() { 
+function limpiar() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
@@ -20,14 +20,14 @@ btnRubber.addEventListener("click", function () {
 });
 
 //funcion que haces que la goma borre lo que esta dibujando en el lienzo
-function borrar() {
+function borrar(x1, y1, x2, y2) {
     dibujar = false;
 
     ctx.beginPath();
     ctx.strokeStyle = rubberColor;
     ctx.lineWidth = rubberGrosor;
     ctx.moveTo(x1, y1);
-    ctx.lineTo(x2, y1);
+    ctx.lineTo(x2, y2);
     ctx.stroke();
     ctx.closePath();
 }

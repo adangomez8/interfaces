@@ -1,5 +1,3 @@
-"use strict"
-
 let r;
 let g;
 let b;
@@ -202,7 +200,46 @@ function sepia() {
     ctx.putImageData(imageData, 0, 0);
 }
 
-//filtro blur
-function blur(){
+//funcion que difumina toda la imagen
+function blur() {
+    //trae la imagen del contexto
+    imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    let r, g, b;
+    for (let x = 1; x < canvas.width - 1; x++) {
+        //le coloca a cada pixel el r,g,b promedio de sus pixeles vecinos
+        for (let y = 1; y < canvas.height - 1; y++) {
+            r = Math.floor((getRed(imageData, x, y) + getRed(imageData, x - 1, y) + getRed(imageData, x + 1, y) + getRed(imageData, x - 1, y + 1) + getRed(imageData, x - 1, y - 1) + getRed(imageData, x, y + 1) + getRed(imageData, x, y - 1) + getRed(imageData, x + 1, y + 1) + getRed(imageData, x + 1, y - 1)) / 9);
+            g = Math.floor((getGreen(imageData, x, y) + getGreen(imageData, x - 1, y) + getGreen(imageData, x + 1, y) + getGreen(imageData, x - 1, y + 1) + getGreen(imageData, x - 1, y - 1) + getGreen(imageData, x, y + 1) + getGreen(imageData, x, y - 1) + getGreen(imageData, x + 1, y + 1) + getGreen(imageData, x + 1, y - 1)) / 9);
+            b = Math.floor((getBlue(imageData, x, y) + getBlue(imageData, x - 1, y) + getBlue(imageData, x + 1, y) + getBlue(imageData, x - 1, y + 1) + getBlue(imageData, x - 1, y - 1) + getBlue(imageData, x, y + 1) + getBlue(imageData, x, y - 1) + getBlue(imageData, x + 1, y + 1) + getBlue(imageData, x + 1, y - 1)) / 9);
 
+            setPixel(imageData, x, y, r, g, b, 255);
+        }
+    }
+    ctx.putImageData(imageData, 0, 0);
+}
+
+//funcion para obtener el valor del color rojo de una imagen segun la posicion en la que se encuentre
+function getRed(imagedata, x, y) {
+    let indice = (x + y * imagedata.width) * 4;
+    return imageData.data[indice + 0];
+}
+
+//funcion para obtener el valor del color rojo de una imagen segun la posicion en la que se encuentre
+function getGreen(imagedata, x, y) {
+    let indice = (x + y * imagedata.width) * 4;
+    return imageData.data[indice + 1];
+}
+
+//funcion para obtener el valor del color rojo de una imagen segun la posicion en la que se encuentre
+function getBlue(imagedata, x, y) {
+    let indice = (x + y * imagedata.width) * 4;
+    return imageData.data[indice + 2];
+}
+
+//funcion que transforma la imagen en un arreglo, guardando los colores de cada pixel en una posicion
+function setPixel(imageData, x, y, r, g, b) {
+    let index = (x + y * imageData.width) * 4;
+    imageData.data[index + 0] = r;
+    imageData.data[index + 1] = g;
+    imageData.data[index + 2] = b;
 }
