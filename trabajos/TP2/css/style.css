@@ -1,0 +1,67 @@
+body{
+    background-color: rgb(56, 43, 43);
+}
+#canvas_tablero{
+    margin-top: 10px;
+    margin-left: 20px;
+    background-color: rgb(189, 186, 186);
+}
+
+#canvas_jugador1{
+    margin-top: 5px;
+    margin-left: 250px;
+    border-style: solid;
+    border-color:  rgb(241, 0, 0);
+    background-color: rgb(189, 186, 186);
+    
+}
+
+#canvas_jugador2{
+    margin-top: 5px;
+    margin-left: 20px;
+    border-style: solid;
+    border-color: rgb(26, 219, 0);
+    background-color: rgb(189, 186, 186);
+}
+
+p{
+    color: white;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.inicio_juego{
+    margin-top: 90px;
+}
+
+#canvas_jug1{
+    margin-top: 20px;
+    border-style: solid;
+    border-color:  rgb(241, 0, 0);
+    background-color: rgb(189, 186, 186);
+    
+}
+
+#canvas_jug2{
+    margin-top: 20px;
+    margin-left: 20px;
+    border-style: solid;
+    border-color: rgb(26, 219, 0);
+    background-color: rgb(189, 186, 186);
+}
+
+table{
+    margin-top: 90px;
+    margin-left: 10px;
+}
+
+table, td, tr{
+    border-style: solid;
+    border-color:black;
+}
+
+td{
+    font-size: 35px;
+    background-color: rgb(189, 186, 186);
+    color: rgb(189, 186, 186);
+}
