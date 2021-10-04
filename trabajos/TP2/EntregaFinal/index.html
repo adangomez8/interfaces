@@ -15,7 +15,7 @@
     <div class="container">
 
         <div class="row">
-
+            
             <div class="col-4 inicio_juego">
                 <select name="" id="">
                     <option value="" selected>Tamaño del tablero</option>
@@ -34,96 +34,38 @@
                 <p>
                     Color jugador 1
                 
-                    <input type="color" name="" id="">
+                    <input type="color" name="" id="colorJ1" onchange="defColorJ1(this)">
                 </p>
 
                 <p>
                     Color jugador 2
                 
-                    <input type="color" name="" id="">
+                    <input type="color" name="" id="colorJ2" onchange="defColorJ2(this)">
                 </p>
                 <p></p>
                 <button>
-                    <a href="../TP2/index2.html">Comenzar</a>
+                    <a href="../EntregaFinal/html/index2.html">Comenzar</a>
                 </button>
             </div>
 
             <div class="col-8">
-                <table>
-                <tr>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                </tr>
-                <tr>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                </tr>
-                <tr>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                </tr>
-                <tr>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                </tr>
-                <tr>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                </tr>
-                <tr>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                </tr>
-                <tr>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                    <td><b>| O |</b></td>
-                </tr>
-                </table>
+                <img src="../EntregaFinal/img/tablero2.jpg" alt="" width="470px">
             
-                <canvas id="canvas_jug1" width="250" height="100" > </canvas>
+               <!-- <canvas id="canvas_jug1" width="250" height="100" > </canvas>
             
-                <canvas id="canvas_jug2" width="250" height="100" > </canvas>s
+                <canvas id="canvas_jug2" width="250" height="100" > </canvas>-->
             
             </div>
         
         </div>
     </div>
 
-
 </body>
+
+<script src="js/tipoJuego.js"></script>
+<script src="js/tipoFicha.js"></script>
+<script src="js/inicio.js"></script>
+<!--<script src="js/jugar.js"></script>-->
+<script src="js/fichaRedonda.js"></script>
+<script src="js/fichaCuadrada.js"></script>
 </html>

@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(56, 43, 43);
+    background-color: white;
 }
 #canvas_tablero{
     margin-top: 10px;
@@ -32,12 +32,13 @@ p{
 
 .inicio_juego{
     margin-top: 90px;
+    background-color:  rgb(56, 43, 43);
 }
 
 #canvas_jug1{
     margin-top: 20px;
     border-style: solid;
-    border-color:  rgb(241, 0, 0);
+    border-color:  rgb(119, 15, 15);
     background-color: rgb(189, 186, 186);
     
 }
@@ -46,22 +47,12 @@ p{
     margin-top: 20px;
     margin-left: 20px;
     border-style: solid;
-    border-color: rgb(26, 219, 0);
+    border-color: rgb(230, 216, 22);
     background-color: rgb(189, 186, 186);
 }
 
-table{
-    margin-top: 90px;
+img{
+    margin-top: 30px;
     margin-left: 10px;
 }
 
-table, td, tr{
-    border-style: solid;
-    border-color:black;
-}
-
-td{
-    font-size: 35px;
-    background-color: rgb(189, 186, 186);
-    color: rgb(189, 186, 186);
-}
