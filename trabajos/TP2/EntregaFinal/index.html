@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>TP2</title>
+    <script src="js/inicio.js"></script>-->
+    <title>4 En Linea</title>
 </head>
 
 <body>
@@ -17,6 +18,14 @@
         <div class="row">
             
             <div class="col-4 inicio_juego">
+                <select name="" id="">
+                    <option value="" selected>Jugador</option>
+                    <option value="">Jugador 1</option>
+                    <option value="">Jugador 2</option>
+                </select>
+
+                <p></p>
+
                 <select name="" id="">
                     <option value="" selected>Tamaño del tablero</option>
                     <option value="">5 en linea</option>
@@ -33,13 +42,11 @@
                 </select>
                 <p>
                     Color jugador 1
-                
                     <input type="color" name="" id="colorJ1" onchange="defColorJ1(this)">
                 </p>
 
                 <p>
                     Color jugador 2
-                
                     <input type="color" name="" id="colorJ2" onchange="defColorJ2(this)">
                 </p>
                 <p></p>
@@ -60,8 +67,5 @@
 
 <script src="js/tipoJuego.js"></script>
 <script src="js/tipoFicha.js"></script>
-<!--<script src="js/inicio.js"></script>-->
 <script src="js/jugar.js"></script>
-<script src="js/fichaRedonda.js"></script>
-<script src="js/fichaCuadrada.js"></script>
 </html>
