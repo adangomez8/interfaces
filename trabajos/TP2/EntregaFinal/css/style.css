@@ -1,26 +1,12 @@
+/*------------------------------index------------------------*/
 body{
-    background-color: white;
+    background-color: rgb(207, 162, 37);
+
 }
+
 #canvas_tablero{
     margin-top: 10px;
     margin-left: 20px;
-    background-color: rgb(189, 186, 186);
-}
-
-#canvas_jugador1{
-    margin-top: 5px;
-    margin-left: 250px;
-    border-style: solid;
-    border-color:  rgb(241, 0, 0);
-    background-color: rgb(189, 186, 186);
-    
-}
-
-#canvas_jugador2{
-    margin-top: 5px;
-    margin-left: 20px;
-    border-style: solid;
-    border-color: rgb(26, 219, 0);
     background-color: rgb(189, 186, 186);
 }
 
@@ -30,29 +16,22 @@ p{
     margin-bottom: 25px;
 }
 
+.btn{
+    background-color: #e7e7e7; color: black;
+}
+
+#select{
+    text-align: center;
+    color: black;
+}
 .inicio_juego{
     margin-top: 90px;
-    background-color:  rgb(56, 43, 43);
-}
-
-#canvas_jug1{
-    margin-top: 20px;
-    border-style: solid;
-    border-color:  rgb(119, 15, 15);
-    background-color: rgb(189, 186, 186);
-    
-}
-
-#canvas_jug2{
-    margin-top: 20px;
-    margin-left: 20px;
-    border-style: solid;
-    border-color: rgb(230, 216, 22);
-    background-color: rgb(189, 186, 186);
+    background-color:  rgba(65, 62, 62, 0.733);
+    text-align: center;
+    padding-top: 60px;
 }
 
 img{
-    margin-top: 30px;
+    margin-top: 50px;
     margin-left: 10px;
 }
-
