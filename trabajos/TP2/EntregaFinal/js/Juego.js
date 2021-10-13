@@ -24,7 +24,7 @@
     let tagTableroPU = document.querySelector('#selectTableroPU');
 
     let imgTablero = new Image();
-    imgTablero.src = "./images/fondoTablero2.jpg";
+    imgTablero.src = "./images/fondoTablero.jpg";
 
     let imgFicha = new Image();
     imgFicha.src = "./images/Ficha.png";
