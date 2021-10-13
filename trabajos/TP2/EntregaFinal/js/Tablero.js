@@ -83,7 +83,7 @@ class Tablero {
         this.ctx.closePath();
     }
 
-    //Coloca las fichas para usar de los 2 lados
+    //Coloca las fichas a los costados para cada jugador
     colocarIdleFichas(fichas1, fichas2) {
         let y = 100;
         for (let i = 0; i < fichas1.length; i++) {
@@ -128,7 +128,7 @@ class Tablero {
 
     }
 
-    //Redibuja las fichas todavia no usadas
+    //Redibuja las fichas que todavia no se usaron
     refreshIdleFichas(fichas1, fichas2) {
         let ficha;
         for (let i = 0; i < fichas1.length; i++) {

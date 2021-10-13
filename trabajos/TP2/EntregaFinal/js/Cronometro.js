@@ -10,11 +10,12 @@ class Cronometro {
         this.countDown();
     }
 
+    //cuenta regresiva del cronometro
     countDown() {
         let minutos = this.minutos;
         let segundos = this.segundos;
 
-        this.ticker = setInterval(function() {
+        this.ticker = setInterval(function () {
             if (!endedGame) {
                 if (minutos == 0 && segundos == 0) {
                     timeOut(this.ticker, "Se terminó el tiempo.");
@@ -30,19 +31,18 @@ class Cronometro {
             } else stopTimer(this.ticker);
         }, 1000);
     }
-
-
 }
 
+//detiene el cronometro
 function stopTimer(ticker) {
     clearInterval(ticker);
     fichaSelected = null;
 }
 
+//se termino el tiempo
 function timeOut(ticker, reason) {
     clearInterval(ticker);
     fichaSelected = null;
     endedGame = true;
     endGame(reason);
-    
 }

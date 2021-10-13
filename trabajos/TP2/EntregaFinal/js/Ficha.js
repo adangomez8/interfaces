@@ -43,46 +43,36 @@ class Ficha {
         }
     }
 
-
-
     //en base a la ficha que llama a esta función, se busca recursivamente una linea con el dueño de la ficha
     checkWinGame(cant, limite, orientacion = null) {
 
-        //Cond de corte
+        //Corte
         if (cant == limite) {
             return cant;
         } else {
-            //Estoy en la ficha madre
+            //ficha principal
             if (orientacion == null) {
-                //0 = arriba der
-                //1 = der
-                //2 = abajo der
-                //3 = abajo
-                //4 = abajo izq
-                //5 = izq
-                //6 = arriba izq
-
                 for (let i = 0; i < 4; i++) {
                     switch (i) {
                         case 0:
-                            //Caso diagonal arriba_derecha - abajo_izq
+                            //diagonal arriba_derecha - abajo_izq
                             if (this.checkLine(limite, 0, 4)) {
                                 return true;
                             }
 
                         case 1:
-                            //Caso horizontal derecha-izquierda
+                            //horizontal derecha-izquierda
                             if (this.checkLine(limite, 1, 5)) {
                                 return true;
                             }
 
                         case 2:
-                            //Caso diagonal abajo_derecha - arriba_izquierda
+                            //diagonal abajo_derecha - arriba_izquierda
                             if (this.checkLine(limite, 2, 6)) {
                                 return true;
                             }
                         case 3:
-                            //Caso vertical solo abajo
+                            //vertical solo abajo
                             if (this.checkSingleLine(limite, 3)) {
                                 return true;
                             }
@@ -101,7 +91,7 @@ class Ficha {
         }
     }
 
-    //Pa chequear la ficha de abajo
+    //chequear la ficha de abajo
     checkSingleLine(limite, or) {
         let resultado1 = this.getVecinoCant(this.vecinos[or], 1, limite, or);
         if (resultado1 == limite) return true;
@@ -109,9 +99,6 @@ class Ficha {
 
     //Chequear de a pares
     checkLine(limite, or1, or2) {
-        //Or1 = Orientacion 1
-        //Or2 = Orientacion 2
-
         let resultado1 = 0;
         let resultado2 = 0;
 
@@ -127,7 +114,7 @@ class Ficha {
         }
     }
 
-    //Obtiene recursivamente cuantas fichas con esa orientacion hay
+    //Obtiene recursivamente cuantas fichas hay con esa orientacion
     getVecinoCant(vecino, cant, limite, orientacion) {
         if (vecino != null) {
             if (vecino.jugador == this.jugador) {
