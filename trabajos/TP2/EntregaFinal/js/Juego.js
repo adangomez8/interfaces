@@ -12,8 +12,8 @@ let limite;
 
 let crono;
 
-let fichas1 = [],
-    fichas2 = [];
+let fichas1 = [];
+let fichas2 = [];
 
 let fichaSelected;
 let fichaSelectedPosX;
@@ -158,7 +158,7 @@ function restart() {
 
 //Logica del juego
 function startGame(Jugador1, Jugador2, table) {
-   // clearGameSpace();
+    clearGameSpace();
     fichas1 = [], fichas2 = [];
     let numRandom = Math.round(Math.random() * 10);
 
@@ -278,7 +278,7 @@ function setBtnsColorListeners(clase, jugador) {
     });
 }
 
-/*//Quita los inputs y reglas que ocupan espacio una vez arrancado el juego
+//Saca la configuracion del juego una vez que se empieza a jugar
 function clearGameSpace() {
     document.querySelector(".game_misc").classList.add("game_misc_hidden");
 
@@ -287,7 +287,7 @@ function clearGameSpace() {
         document.querySelector(".canvas_container").classList.remove("canvas_container_top");
         document.querySelector(".banner").classList.remove("banner_margin");
     }, 1000);
-}*/
+}
 
 //Alterna el cartel de "TURNO DE" entre los jugadores
 function toggleTurn(jActual, j1) {
