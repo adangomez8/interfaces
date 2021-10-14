@@ -108,6 +108,12 @@ canvas {
     color: white;
 }
 
+.button_color_1:active, 
+    .button_color_2:active {
+    width: 50px;
+    border: double white;
+}
+
 #selectTablero{
     width: 100%;
     text-align: center;
