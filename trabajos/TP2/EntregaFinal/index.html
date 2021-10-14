@@ -20,87 +20,86 @@
 
 <body>
     <div class="popup_container popup_container_hidden">
-            <div class="popup">
-                <h3 id="popup_reason">Se ha reiniciado.</h3>
-                <button class="btn-restart">Reiniciar</button>
-                <br>
-                <select name="tableros" id="selectTableroPU">
-                    <option value="4x5x3x3">3 en linea</option>
-                    <option value="6x7x4x5" selected>4 en linea</option>
-                    <option value="8x9x5x7">5 en linea</option>
-                </select>
-                
-            </div>
-        </div>
-        <div class="container">
-            <div class="game_misc">
-                <div class="game_config">
-                    <div class="game_config_options">
-                        <div class="game_option">
-                            <h2>Jugador 1</h2>
-                            <div class="player_options">
-                                <input id="nameP1" type="text" placeholder="Nombre">
-                                <button id="#D57864" class="button_color_1">
-                                    <div class="color_rect"></div>
-                                </button>
-                                <button id="#6BD564" class="button_color_1">
-                                    <div class="color_rect"></div>
-                                </button>
-                                <button id="#64ACD5" class="button_color_1">
-                                    <div class="color_rect"></div>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="game_option">
-                            <h2>Jugador 2</h2>
-                            <div class="player_options">
-                                <input id="nameP2" type="text" placeholder="Nombre">
-                                <button id="#5753DB" class="button_color_2">
-                                    <div class="color_rect"></div>
-                                </button>
-                                <button id="#DB536D" class="button_color_2">
-                                    <div class="color_rect"></div>
-                                </button>
-                                <button id="#A1B91A" class="button_color_2">
-                                    <div class="color_rect"></div>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="game_option board_type">
-                            <h2>Tipo de tablero</h2>
-                            <div class="player_options">
-                                <select name="tableros" id="selectTablero">
-                                    <option value="4x5x3x3">3 en linea</option>
-                                    <option value="6x7x4x5" selected>4 en linea</option>
-                                    <option value="8x9x5x7">5 en linea</option>
-                                </select>
+        <div class="popup">
+            <h3 id="popup_reason">Se ha reiniciado.</h3>
+            <button class="btn-restart">Reiniciar</button>
+            <br>
+            <select name="tableros" id="selectTableroReinicio">
+                <option value="4x5x3x3">3 en linea</option>
+                <option value="6x7x4x5" selected>4 en linea</option>
+                <option value="8x9x5x7">5 en linea</option>
+            </select>
 
-                            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="game_misc">
+            <div class="game_config">
+                <div class="game_config_options">
+                    <div class="game_option">
+                        <h2>Jugador 1</h2>
+                        <div class="player_options">
+                            <input id="nameJ1" type="text" placeholder="Nombre">
+                            <button id="#D57864" class="color_1">
+                                <div class="color_rect"></div>
+                            </button>
+                            <button id="#6BD564" class="color_1">
+                                <div class="color_rect"></div>
+                            </button>
+                            <button id="#64ACD5" class="color_1">
+                                <div class="color_rect"></div>
+                            </button>
                         </div>
-                </div>
-            </div>
-        </div>
-        <div class="canvas_container canvas_container_top">
-            <div class="banner banner_margin">
-                <div class="player_info">
-                    <h4 class="hidden">TURNO </h4>
-                    <h3 class="j1">Jugador 1</h3>
-                </div>
-                <div class="match_info">
-                    <button id="btn-sorteo">Comenzar</button>
-                    <div class="timer">
-                        <h4 id="time">00:00</h4>
                     </div>
-                    <button class="btn-restart">Reiniciar</button>
+                    <div class="game_option">
+                        <h2>Jugador 2</h2>
+                        <div class="player_options">
+                            <input id="nameJ2" type="text" placeholder="Nombre">
+                            <button id="#5753DB" class="color_2">
+                                <div class="color_rect"></div>
+                            </button>
+                            <button id="#DB536D" class="color_2">
+                                <div class="color_rect"></div>
+                            </button>
+                            <button id="#A1B91A" class="color_2">
+                                <div class="color_rect"></div>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="player_info">
-                    <h4 class="hidden">TURNO </h4>
-                    <h3 class="j2">Jugador 2</h3>
+                <div class="game_option board_type">
+                    <h2>Tipo de tablero</h2>
+                    <div class="player_options">
+                        <select name="tableros" id="selectTablero">
+                            <option value="4x5x3x3">3 en linea</option>
+                            <option value="6x7x4x5" selected>4 en linea</option>
+                            <option value="8x9x5x7">5 en linea</option>
+                        </select>
+
+                    </div>
                 </div>
             </div>
-            <canvas class="canvas" width="1100" height="900"></canvas>
         </div>
+    </div>
+    <div class="canvas_container canvas_container_top">
+        <div class="banner banner_margin">
+            <div class="player_info">
+                <h4 class="hidden">TURNO </h4>
+                <h3 class="j1">Jugador 1</h3>
+            </div>
+            <div class="match_info">
+                <button id="btn-sorteo">Comenzar</button>
+                <div class="timer">
+                    <h4 id="time">00:00</h4>
+                </div>
+            </div>
+            <div class="player_info">
+                <h4 class="hidden">TURNO </h4>
+                <h3 class="j2">Jugador 2</h3>
+            </div>
+        </div>
+        <canvas class="canvas" width="1100" height="900"></canvas>
+    </div>
 
     <script src="js/Cronometro.js"></script>
     <script src="js/Tablero.js"></script>

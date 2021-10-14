@@ -21,7 +21,7 @@ let fichaSelectedPosY;
 
 //select tablero
 let tagTablero = document.querySelector('#selectTablero');
-let tagTableroPU = document.querySelector('#selectTableroPU');
+let tagTableroPU = document.querySelector('#selectTableroReinicio');
 
 //imagen del fondo del tablero
 let imgTablero = new Image();
@@ -40,8 +40,8 @@ let Jugador2 = new Jugador('#606c9b', 'Jugador 2');
 
 //setea los colores seleccionados por los jugadores
 setBtnColors();
-setBtnsColorListeners("button_color_1", Jugador1);
-setBtnsColorListeners("button_color_2", Jugador2);
+setBtnsColorListeners("color_1", Jugador1);
+setBtnsColorListeners("color_2", Jugador2);
 
 //Cuando se inicia el juego se hace un sorteo para saber quien arranca primero
 document.querySelector('#btn-sorteo').addEventListener("click", function () {
@@ -219,11 +219,11 @@ function startGame(Jugador1, Jugador2, table) {
 //Asigna los nombres segun los inputs
 function setPlayersNames() {
     //Si puso algun nombre se lo setea
-    if (document.querySelector("#nameP1").value !== '') {
-        Jugador1.name = document.querySelector("#nameP1").value;
+    if (document.querySelector("#nameJ1").value !== '') {
+        Jugador1.name = document.querySelector("#nameJ1").value;
     }
-    if (document.querySelector("#nameP2").value !== '') {
-        Jugador2.name = document.querySelector("#nameP2").value;
+    if (document.querySelector("#nameJ2").value !== '') {
+        Jugador2.name = document.querySelector("#nameJ2").value;
     }
 }
 
