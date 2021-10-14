@@ -15,6 +15,9 @@
     height: 100%;
     background-color: var(--background);
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 canvas {
@@ -48,10 +51,6 @@ canvas {
     background-color: white;
     width: 400px;
     height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     border-radius: 5px;
 }
 
@@ -72,7 +71,6 @@ canvas {
 
 .game_misc {
     padding-top: 2.5%;
-    display: flex;
     max-height: 5000px;
 }
 
@@ -87,24 +85,22 @@ canvas {
 }
 
 .game_config {
-    width: 45%;
-    display: flex;
-    align-items: center;
+    width: 50%;
 }
 
 .game_config_options {
     width: fit-content;
-    margin-left: 5%;
-    list-style: none;
     text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .player_options {
+    width: 370px;
+    margin-right: 5px ;
     margin-top: 2.5%;
-    display: flex;
-    align-items: center;
     padding: 2% 0;
-    justify-content: space-evenly;
     background-color: var(--gray);
     border-radius: 5px;
 }
@@ -120,6 +116,18 @@ canvas {
     border: 1px solid white;
     border-radius: 5px;
     color: white;
+}
+
+.button_color_1:active, 
+    .button_color_2:active {
+    width: 50px;
+    border: double white;
+}
+
+#selectTablero{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
 }
 
 #selectTablero option {
@@ -181,7 +189,7 @@ canvas {
     border: 1px solid white;
     background-color: transparent;
     padding: 1.5%;
-    color: white;
+    color: white; 
 }
 
 .player_info {
@@ -192,6 +200,11 @@ canvas {
 .widen {
     width: 20%;
 }
+
+.board_type{
+    margin-left: 50%;
+}
+
 
 .player_info h4 {
     font-size: 1.25rem;
