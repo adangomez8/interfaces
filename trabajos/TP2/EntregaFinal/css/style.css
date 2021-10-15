@@ -149,6 +149,7 @@ canvas {
 }
 
 .canvas_container {
+    margin-top: 30px;;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -170,38 +171,26 @@ canvas {
 }
 
 .match_info {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    /*  */
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    width: 30%;
 }
 
 .match_info button {
     border: 1px solid white;
     background-color: transparent;
-    padding: 1.5%;
+    margin: 5px;
     color: white; 
 }
 
 .player_info {
-    display: flex;
-    align-items: center;
+    text-align: start;
 }
 
 .widen {
     width: 20%;
 }
-
-.board_type{
-    margin-left: 50%;
-}
-
 
 .player_info h4 {
     font-size: 1.25rem;
@@ -227,14 +216,13 @@ canvas {
 .banner {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    border-radius: 10px;
-    width: 95%;
-    height: 50px;
+    width: 45%; 
     background-color: var(--gray);
-    padding-left: 3%;
-    padding-right: 3%;
+    background-color: black;
+    margin-bottom: 10px;
 }
 
 .banner .j1 {
