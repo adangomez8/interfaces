@@ -66,12 +66,16 @@ canvas {
 
 /*------------------------configuracion del juego-----------------------------*/
 
-.game_misc {
+.game_container {
     padding-top: 2.5%;
     max-height: 5000px;
 }
 
-.game_misc_hidden {
+h2{
+    text-align: center;
+}
+
+.game_container_hidden {
     transition: .5s;
     max-height: 0;
     opacity: 0;
@@ -144,16 +148,12 @@ canvas {
 
 /*------------------------turno de cada jugador y tiempo-----------------------------*/
 
-.canvas_container_top {
-    margin-top: 5%;
-}
-
 .canvas_container {
-    margin-top: 30px;;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--background);
 }
 
 .timer {
