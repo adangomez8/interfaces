@@ -280,10 +280,10 @@ function setBtnsColorListeners(clase, jugador) {
 
 //Saca la configuracion del juego una vez que se empieza a jugar
 function clearGameSpace() {
-    document.querySelector(".game_misc").classList.add("game_misc_hidden");
+    document.querySelector(".game_container").classList.add("game_container_hidden");
 
     setTimeout(function () {
-        document.querySelector(".game_misc").classList.add("no_display");
+        document.querySelector(".game_container").classList.add("no_display");
         document.querySelector(".canvas_container").classList.remove("canvas_container_top");
         document.querySelector(".banner").classList.remove("banner_margin");
     }, 1000);
