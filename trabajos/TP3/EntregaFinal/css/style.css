@@ -34,3 +34,28 @@ bottom:-25px;
     0% { background-position: 0px; }
     100% { background-position: -502px; }
 }
+
+.coin{
+    width: 40px;
+    height: 50px;
+    margin-left: 200px;
+    position:absolute;
+    animation:  moverMoneda 1s ease .8s infinite;
+}
+
+@keyframes moverMoneda {
+    0% { 
+        opacity: 1; 
+        transform: rotateX(300deg);
+        width: 40px;
+        height: 50px;
+    }
+    100% { 
+        opacity: 0;
+        transform: rotateX(35deg);
+        width: 0px;
+        height: 0px;
+    }
+}
+
+
