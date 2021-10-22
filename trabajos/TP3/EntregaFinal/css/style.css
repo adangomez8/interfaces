@@ -1,39 +1,58 @@
-
-
+*{
+    background-color: rgb(251 221 181);
+    margin: 0%;
+}
+/*----------animacion del cielo-----------*/
 #fondo {
-    width: 100%;
     background: url('../img/fondo.png') left bottom;
-    animation: moverFondo 14s linear infinite;
+    animation: moverFondo 30s linear infinite;
     background-repeat: repeat-x;
     position:absolute;
+    width: 100%;
 }
-      
-#planta {
-width: 100%;
-height: 200px;
-background: url('../img/plantas.png') left bottom;
-margin-top: 315px;
-background-repeat:  
-repeat-x;
-animation: moverFondo 1s linear infinite;
-position:relative;
-bottom:-25px;
-}
-
-#suelo {
-width: 100%;
-height: 95%;
-background: url('../img/suelo.png') left bottom;
-background-repeat: repeat-x;
-animation: moverFondo 8s linear infinite;
-position:absolute;
-bottom:-25px;
-}
-
+   
 @keyframes moverFondo {
-    0% { background-position: 0px; }
-    100% { background-position: -502px; }
+  100%{
+    background-position-x: -2550px;
+  }
 }
+
+/*----------animacion de las plantas, van un poco mas rapido que el cielo-----------*/
+#planta {
+    width: 100%;
+    height: 200px;
+    background: url('../img/plantas.png') left bottom;
+    margin-top: 315px;
+    background-repeat: repeat-x;
+    animation: moverPlanta 25s linear infinite;
+    position: relative;
+    bottom:-20px;
+}
+
+@keyframes moverPlanta{
+  100%{
+      background-position-x: -2550px;
+  }
+}
+
+/*-----------animacion del suelo------------*/
+#suelo {
+    width: 100%;
+    height: 95%;
+    background: url('../img/suelo.png') left bottom;
+    background-repeat: repeat-x;
+    animation: moverSuelo 20s linear infinite;
+    position:absolute;
+    bottom:-1px;
+}
+
+@keyframes moverSuelo{
+  100%{
+      background-position-x: -2540px;
+  }
+}
+
+/*-----------moneda------------*/
 
 .coin{
     width: 40px;
