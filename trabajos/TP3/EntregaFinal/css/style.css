@@ -1,143 +1,170 @@
-*{
-    /*background-color: rgb(251 221 181);*/
-    margin: 0%;
+* {
+  /*background-color: rgb(251 221 181);*/
+  margin: 0%;
 }
 /*----------animacion del cielo-----------*/
 #fondo {
-    background: url('../img/fondo.png') left bottom;
-    animation: moverFondo 30s linear infinite;
-    background-repeat: repeat-x;
-    position:absolute;
-    width: 100%;
+  background: url("../img/fondo.png") left bottom;
+  animation: moverFondo 30s linear infinite;
+  background-repeat: repeat-x;
+  position: absolute;
+  width: 100%;
 }
-   
+
 @keyframes moverFondo {
-  100%{
+  100% {
     background-position-x: -2550px;
   }
 }
 
 /*----------animacion de las plantas, van un poco mas rapido que el cielo-----------*/
 #planta {
-    width: 100%;
-    height: 200px;
-    background: url('../img/plantas.png') left bottom;
-    margin-top: 315px;
-    background-repeat: repeat-x;
-    animation: moverPlanta 25s linear infinite;
-    position: relative;
-    bottom:-20px;
+  width: 100%;
+  height: 200px;
+  background: url("../img/plantas.png") left bottom;
+  margin-top: 315px;
+  background-repeat: repeat-x;
+  animation: moverPlanta 25s linear infinite;
+  position: relative;
+  bottom: -20px;
 }
 
-@keyframes moverPlanta{
-  100%{
-      background-position-x: -2550px;
+@keyframes moverPlanta {
+  100% {
+    background-position-x: -2550px;
   }
 }
 
 /*-----------animacion del suelo------------*/
 #suelo {
-    width: 100%;
-    height: 95%;
-    background: url('../img/suelo.png') left bottom;
-    background-repeat: repeat-x;
-    animation: moverSuelo 20s linear infinite;
-    position:absolute;
-    bottom:-1px;
+  width: 100%;
+  height: 95%;
+  background: url("../img/suelo.png") left bottom;
+  background-repeat: repeat-x;
+  animation: moverSuelo 20s linear infinite;
+  position: absolute;
+  bottom: -1px;
 }
 
-@keyframes moverSuelo{
-  100%{
-      background-position-x: -2540px;
+@keyframes moverSuelo {
+  100% {
+    background-position-x: -2540px;
   }
 }
 
 /*-----------moneda------------*/
 
 #modena {
-    width:  78px;
-    height:87px;
-    margin-top: 23%; 
-    margin-left: 50%;
-    position: absolute;
-    background: url(../img/moneda.png) left center; 
-    animation: moverMoneda 1s steps(6) infinite;  
+  width: 78px;
+  height: 87px;
+  margin-top: 23%;
+  margin-left: 50%;
+  position: absolute;
+  background: url(../img/moneda.png) left center;
+  animation: moverMoneda 1s steps(6) infinite;
 }
 
 @keyframes moverMoneda {
-    0% {background-position: 0;}
-    100% {background-position: -469px;}
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: -469px;
+  }
 }
 
 @keyframes traslacionMoneda {
-    from {background-position: 0;}
-    to {background-position: -469px;}
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -469px;
+  }
 }
 
 /*--------------animacion de tuberia-------------*/
 #tuberia {
-    width: 61px;
-    height: 103px;
-    bottom:12%;
-    right: 5%;
-    position: absolute;
-    background-image:url(../img/tuberia.png) ; 
-    animation: moverTuberia 8s linear infinite;
+  width: 61px;
+  height: 103px;
+  bottom: 12%;
+  right: 5%;
+  position: absolute;
+  background-image: url(../img/tuberia.png);
+  animation: moverTuberia 8s linear infinite;
 }
 
 @keyframes moverTuberia {
-    to {
-        right: 110%;
-        transform: translateX(120%);
-    }
+  to {
+    right: 110%;
+    transform: translateX(120%);
+  }
 }
 
 #tuberia_baja {
-    width: 61px;
-    height: 64px;
-    bottom:12%;
-    right: 15%;
-    position: absolute;
-    background-image:url(../img/tuberia.png) ; 
-    animation: moverTuberia 7s linear infinite;
+  width: 61px;
+  height: 64px;
+  bottom: 12%;
+  right: 15%;
+  position: absolute;
+  background-image: url(../img/tuberia.png);
+  animation: moverTuberia 7s linear infinite;
 }
 
 @keyframes moverTuberia {
-    to {
-        right: 110%;
-        transform: translateX(120%);
-    }
+  to {
+    right: 110%;
+    transform: translateX(120%);
+  }
 }
 /*-------------animacion de mario caminando---------------*/
 .camina {
+  width: 99px;
+  height: 100px;
+  background-image: url(../img/Mario_camina_adelante.png);
+  position: absolute;
+  bottom: 8%;
+  left: 20%;
+  animation: marioCamina 0.6s steps(10) infinite;
+}
+
+.caminaParaAtras {
     width: 99px;
     height: 100px;
-    background-image: url(../img/Mario_camina_adelante.png);
+    background-image: url(../img/Mario_camina_atras.png);
     position: absolute;
-    bottom:8%;
+    bottom: 8%;
     left: 20%;
-    animation:marioCamina 0.6s steps(10) infinite;
-}
+    animation: marioCamina 0.6s steps(10) infinite;
+  }
 
 /*-------------animacion de mario caminando para adelante-------------*/
 @keyframes marioCamina {
-    100% { background-position: -1594px;
-    }
+  100% {
+    background-position: -1594px;
+  }
 }
 
 /*-------------animacion de mario saltando-------------*/
 .salta {
-    width: 99px;
-    height: 100px;
-    background-image: url(../img/Mario_salta_adelante.png);
-    position: absolute;
-    bottom:8%;
-    left: 20%;
-    animation:marioSalta 0.6s steps(10) forwards;
+  width: 154px;
+  height: 100px;
+  background-image: url(../img/Mario_salta_adelante.png);
+  position: absolute;
+  bottom: 8%;
+  left: 20%;
+  animation: marioSalta 0.6s steps(10) forwards;
 }
 
 /*-------------animacion de mario saltando para adelante----------------*/
 @keyframes marioSalta {
-    35% {bottom: 40%;}
-    100% {background-position: -893px;}
+  30% {
+    bottom: 50%;
+  }
+  50% {
+    bottom: 55%;
+  }
+  100% {
+    bottom: 0%;
+    background-position: -1540px;
+  }
 }
