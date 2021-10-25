@@ -54,31 +54,62 @@
 
 /*-----------moneda------------*/
 
-.coin{
+#modena {
     width: 40px;
-    height: 50px;
-    margin-left: 200px;
-    position:absolute;
-    animation:  moverMoneda 1s ease .8s infinite;
+    height:40px;
+    margin-top: 23%; 
+    margin-left: 50%;
+    position: absolute;
+    background: url(../img/moneda.png); 
+    animation: moverMoneda 1s steps(6) infinite;  
 }
 
 @keyframes moverMoneda {
-    0% { 
-        opacity: 1; 
-        transform: rotateX(300deg);
-        width: 40px;
-        height: 50px;
-    }
-    100% { 
-        opacity: 0;
-        transform: rotateX(35deg);
-        width: 0px;
-        height: 0px;
+    0% {background-position: 0;}
+    100% {background-position: -469px;}
+}
+
+@keyframes traslacionMoneda {
+    from {background-position: 0;}
+    to {background-position: -469px;}
+}
+
+/*--------------animacion de tuberia-------------*/
+#tuberia {
+    width: 61px;
+    height: 103px;
+    bottom:12%;
+    right: 0%;
+    position: absolute;
+    background-image:url(../img/tuberia.png) ; 
+    animation: moverTuberia 8s linear infinite;
+}
+
+@keyframes moverTuberia {
+    to {
+        right: 110%;
+        transform: translateX(120%);
     }
 }
 
-/*-------------animacion de mario---------------*/
-#mario{
+#tuberia_baja {
+    width: 61px;
+    height: 64px;
+    bottom:12%;
+    right: 25%;
+    position: absolute;
+    background-image:url(../img/tuberia.png) ; 
+    animation: moverTuberia 6s linear infinite;
+}
+
+@keyframes moverTuberia {
+    to {
+        right: 110%;
+        transform: translateX(120%);
+    }
+}
+/*-------------animacion de mario caminando---------------*/
+.camina {
     width: 99px;
     height: 100px;
     background-image: url(../img/Mario_camina_adelante.png);
@@ -88,8 +119,25 @@
     animation:marioCamina 0.6s steps(10) infinite;
 }
 
-/*-------------animacion de mario caminando-------------*/
+/*-------------animacion de mario caminando para adelante-------------*/
 @keyframes marioCamina {
     100% { background-position: -1594px;
     }
+}
+
+/*-------------animacion de mario saltando-------------*/
+.salta {
+    width: 99px;
+    height: 100px;
+    background-image: url(../img/Mario_salta_adelante.png);
+    position: absolute;
+    bottom:8%;
+    left: 20%;
+    animation:marioSalta 0.6s steps(10) forwards;
+}
+
+/*-------------animacion de mario saltando para adelante----------------*/
+@keyframes marioSalta {
+    35% {bottom: 40%;}
+    100% {background-position: -893px;}
 }
