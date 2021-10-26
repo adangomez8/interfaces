@@ -118,25 +118,26 @@
     transform: translateX(120%);
   }
 }
+
+/*-------------animacion de mario---------------*/
+#mario{
+  position: absolute;
+  bottom: 8%;
+  left: 20%;
+}
 /*-------------animacion de mario caminando---------------*/
 .camina {
   width: 99px;
   height: 100px;
   background-image: url(../img/Mario_camina_adelante.png);
-  position: absolute;
-  bottom: 8%;
-  left: 20%;
   animation: marioCamina 0.6s steps(10) infinite;
 }
 
 .caminaParaAtras {
-    width: 99px;
-    height: 100px;
-    background-image: url(../img/Mario_camina_atras.png);
-    position: absolute;
-    bottom: 8%;
-    left: 20%;
-    animation: marioCamina 0.6s steps(10) infinite;
+  width: 99px;
+  height: 100px;
+  background-image: url(../img/Mario_camina_atras.png);
+  animation: marioCamina 0.6s steps(10) infinite;
   }
 
 /*-------------animacion de mario caminando para adelante-------------*/
@@ -151,9 +152,6 @@
   width: 154px;
   height: 100px;
   background-image: url(../img/Mario_salta_adelante.png);
-  position: absolute;
-  bottom: 8%;
-  left: 20%;
   animation: marioSalta 0.6s steps(10) forwards;
 }
 

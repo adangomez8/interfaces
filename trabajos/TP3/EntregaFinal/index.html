@@ -14,13 +14,11 @@
   <div class="container">
     <div id="iniciar" class="iniciar">Iniciar</div>
     <div class="reiniciar">Reiniciar</div>
-    <div class="puntos">
-      <h2>Puntos: <input type="value" id="puntos" oninput="sumarPuntos(this.value);" value="0"></h2>
-    </div>
+    <div class="puntos">  Puntos:<span id="puntos"> 0</span>    </div>
     <div class="vidas">
       <h2>Vidas: <input type="value" id="vida" oninput="restarVidas(this.value);" value="3"></h2>
     </div>
-    <div class="explicacion">
+    <div id="explicacion" class="explicacion">
       <!--aca iria la explicacion del juego-->
     </div>
     <div class="tiempo">
@@ -30,11 +28,11 @@
     <div id="fondo">
       <div id="planta">
         <div id="suelo">
-          <div id="mario" class="camina"></div>
+          <div id="mario" class="camina ocultar"></div>
           <!--<div id="mario" class="salta"></div>-->
-          <div id="moneda"></div>
-          <div id="tuberia"></div>
-          <div id="tuberia_baja"></div>
+          <div id="moneda" class="moneda ocultar"></div>
+          <div id="tuberia" class="tuberia ocultar"></div>
+          <!--<div id="tuberia_baja"></div>-->
         </div>
       </div>
     </div>
