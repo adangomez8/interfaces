@@ -9,6 +9,7 @@
   background-repeat: repeat-x;
   position: absolute;
   width: 100%;
+  background-color: rgb(251 221 181);
 }
 
 @keyframes moverFondo {
@@ -85,12 +86,12 @@
 /*--------------animacion de tuberia-------------*/
 #tuberia {
   width: 61px;
-  height: 103px;
+  height: 85px;
   bottom: 12%;
-  right: 5%;
+  right: 3%;
   position: absolute;
   background-image: url(../img/tuberia.png);
-  animation: moverTuberia 8s linear infinite;
+  animation: moverTuberia 9s linear infinite;
 }
 
 @keyframes moverTuberia {
@@ -104,10 +105,10 @@
   width: 61px;
   height: 64px;
   bottom: 12%;
-  right: 15%;
+  right: 20%;
   position: absolute;
-  background-image: url(../img/tuberia.png);
-  animation: moverTuberia 7s linear infinite;
+  background-image: url(../img/tuberia_baja.png);
+  animation: moverTuberia 8s linear infinite;
 }
 
 @keyframes moverTuberia {
