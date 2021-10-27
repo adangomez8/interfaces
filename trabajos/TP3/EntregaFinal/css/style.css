@@ -1,5 +1,5 @@
-* {
-  /*background-color: rgb(251 221 181);*/
+html {
+  background-color: rgb(251 221 181);
   margin: 0%;
 }
 /*----------animacion del cielo-----------*/
@@ -51,6 +51,10 @@
   100% {
     background-position-x: -2540px;
   }
+}
+
+.stopAnimaciones{
+  animation-play-state: paused;
 }
 
 /*-----------moneda------------*/
@@ -167,4 +171,132 @@
     bottom: 0%;
     background-position: -1540px;
   }
+}
+
+/*-------------boton iniciar-------------*/
+.iniciar {
+  font-family: sans-serif;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.iniciar:hover {background-color: #3e8e41}
+
+.iniciar:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+
+/*-------------boton reiniciar-------------*/
+.reiniciar {
+  font-family: sans-serif;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.reiniciar:hover {background-color: #3e8e41}
+
+.reiniciar:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+
+.ocultar {
+  opacity:0;
+}
+
+.desocultar {
+  opacity:1;
+}
+
+/*------------- puntaje-------------*/
+.puntos {
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  height: 70px;
+  width: 200px;
+  left:15%;
+  align-content: left;
+}
+
+/*-------------vidas-------------*/
+.vidas {
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  height: 70px;
+  width: 200px;
+  left:15%;
+  align-content: left;
+}
+
+/*-------------cronometro-------------*/
+.tiempo {
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  height: 70px;
+  width: 30%;
+  left:30%;
+  align-content: center;
+}
+
+/*-------------cartel de explicacion-------------*/
+.explicacion{
+  font-family:sans-serif;
+  color: black;
+  background-color: whitesmoke;
+  font-size: 30px;
+  height: 310px;
+  width: 30%;
+  left:30%;
+  top:20%;
+  align-content: center;
+}
+.oculto{
+  visibility: hidden;
+}
+
+.desoculto{
+  visibility: visible;
+}
+
+.cartel{
+  font-family: sans-serif;
+  left:20%;
+  height: 70px;
+  width: 300px;
+  position: absolute;
+ 
+  animation: apareceCartel 6s ease .2 forwards;
+}
+
+@keyframes apareceCartel{
+  0%{ opacity: 0;
+    font-size: 30px;
+    transform : translateX(10%)}
+  50%{ opacity: 1;
+    font-size: 40px;
+    transform : translateX(30%)}
+  60%{ opacity: 1;
+    font-size: 50px;
+    transform : translateX(60%)}
+  70%{ opacity: 1;
+    font-size: 40px;
+    transform : translateX(90%)}
+  100%{ opacity: 0;
+    font-size: 30px;}
 }

@@ -13,7 +13,7 @@
 <body>
   <div class="container">
     <div id="iniciar" class="iniciar">Iniciar</div>
-    <div class="reiniciar">Reiniciar</div>
+    <div class="reiniciar ocultar">Reiniciar</div>
     <div class="puntos">  Puntos:<span id="puntos"> 0</span>    </div>
     <div class="vidas">
       <h2>Vidas: <input type="value" id="vida" oninput="restarVidas(this.value);" value="3"></h2>
@@ -23,7 +23,7 @@
     </div>
     <div class="tiempo">
       <span id="cartel2">Tiempo <span id="tiempo"> 15:00</span> </span>
-      <span id="cartel1" class="oculto">Has perdido</span>
+      <span id="cartel" class="oculto">Has perdido</span>
     </div>
     <div id="fondo">
       <div id="planta">
@@ -41,5 +41,6 @@
 </body>
 
 <script src="js/main.js"></script>
+<script src="js/cronometro.js"></script>
 
 </html>

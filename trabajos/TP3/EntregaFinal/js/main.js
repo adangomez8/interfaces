@@ -22,13 +22,14 @@ let piso = document.getElementById("piso");
 
 let puntaje = document.getElementById("puntos");
 let time = document.getElementById("tiempo");
+let cartel = document.getElementById("cartel")
 let t = document.getElementById("cartel2");
 let exp = document.querySelector("#explicacion");
 
 let btn1 = document.querySelector(".reiniciar");
 btn1.addEventListener("click", reiniciar);
 let btn2 = document.querySelector(".iniciar");
-btn2.addEventListener("click", iniciar);
+btn2.addEventListener("click", iniciarJuego);
 
 /*reinicia el juego*/
 function reiniciar() {
@@ -64,7 +65,7 @@ function detectarChoque() { }
 /*mario salta al presionar la flecha arriba*/
 document.addEventListener("keydown", event => {
   if (event.code == "ArrowUp") {
-    saltar = true;
+    salta = true;
     saltar(salta)
   }
 });
@@ -87,18 +88,19 @@ function caminarParaAtras(camina){
 
 /*muestra lo que queda tiempo para terminar el juego*/
 function tiempoDeJuego() {
-  if (interval != null) {
-    clearInterval(interval);
-  }
-  cronometro = new Tiempo(10, t);
-  if (fin == false) {
-    interval = setInterval(function () {
-      cronometro.calcularTiempo();
-      if (cronometro.calcularTiempo() < 60 && cronometro.calcularTiempo() > 0) {
-        t.setAttribute("class", "tiempoRojo");
-      }
-    }, MiliSegundos);
-  }
+  let total_time;
+
+    if (min < 10) {
+        total_time = "0" + min;
+    } else total_time = min;
+
+    total_time += ":";
+
+    if (sec < 10) {
+        total_time += "0" + sec;
+    } else total_time += sec;
+
+    document.querySelector("#time").innerHTML = total_time;
 }
 
 /*fin del juego*/
