@@ -33,6 +33,51 @@ btn1.addEventListener("click", reiniciar);
 let btn2 = document.querySelector(".iniciar");
 btn2.addEventListener("click", iniciarJuego);
 
+let vidas = 3;
+let cantVidas = document.getElementById("cantVidas");
+
+function chocaEnemigo(){ 
+  let posMario = mario.getBoundingClientRect();
+  let posEnemigo = enemigo.getBoundingClientRect();
+  
+  let widthEnemigo = posEnemigo.left + posEnemigo.width; 
+  let heightEnemigo = posEnemigo.top + posEnemigo.height;
+  let widthMario = posMario.left + posMario.width;
+  let heightMario = posMario.top + posMario.height;
+      
+  if(posMario.left <= widthEnemigo  && posMario.top <= heightEnemigo && widthMario >= posEnemigo.left && heightMario >= posEnemigo.top) {
+      mario.setAttribute("class","salta");
+      let cantVidas = pierdeVida();
+      if(cantVidas == 0) {
+          alert("game over")
+      }
+  }
+}
+
+function chocaFlor(){ 
+  let posMario = mario.getBoundingClientRect();
+  let posFlor = flor.getBoundingClientRect();
+  
+  let widthFlor = posFlor.left + posFlor.width; 
+  let heightFlor = posFlor.top + posFlor.height;
+  let widthMario = posMario.left + posMario.width;
+  let heightMario = posMario.top + posMario.height;
+      
+  if(posMario.left <= widthFlor  && posMario.top <= heightFlor && widthMario >= posFlor.left && heightMario >= posFlor.top) {
+      mario.setAttribute("class","salta");
+      let cantVidas = pierdeVida();
+      if(cantVidas === 0) {
+          alert("game over")
+      }
+  }
+}
+
+function pierdeVida(){
+  vidas --;
+  cantVidas.innerHTML = vidas;
+}
+
+
 /*reinicia el juego*/
 function reiniciar() {
   window.location.reload();
@@ -43,9 +88,10 @@ function iniciarJuego() {
   jugando = true;
   if (jugando) {
     reacomodarClases();
-    setInterval(detectarChoque, 500);
+    setInterval(chocaEnemigo,500);
+    setInterval(chocaFlor,500);
   }
-  tiempoDeJuego();
+  //tiempoDeJuego();
 }
 
 /*acomoda los elementos necesarios para poder empezaar a jugar*/
@@ -86,7 +132,7 @@ function saltar(salta) {
 mario.addEventListener("animationend", function () { saltar(false) })
 
 /*muestra lo que queda tiempo para terminar el juego*/
-function tiempoDeJuego() {
+/*function tiempoDeJuego() {
   let total_time;
 
     if (min < 10) {
@@ -100,7 +146,7 @@ function tiempoDeJuego() {
     } else total_time += sec;
 
     document.querySelector("#time").innerHTML = total_time;
-}
+}*/
 
 /*fin del juego*/
 function finJuego() {
