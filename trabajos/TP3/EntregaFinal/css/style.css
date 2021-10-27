@@ -155,10 +155,10 @@ html {
   right: 0%;
   position: absolute;
   background-image: url(../img/enemigo.png);
-  animation: moverFlor 6s linear infinite;
+  animation: moverEnemigo 6s linear infinite;
 }
 
-@keyframes moverFlor {
+@keyframes moverEnemigo {
   to {
     right: 110%;
     transform: translateX(120%);

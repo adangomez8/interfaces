@@ -44,8 +44,8 @@ function iniciarJuego() {
 
 /*acomoda los elementos necesarios para poder empezaar a jugar*/
 function reacomodarClases() {
-  btn1.classList.remove("iniciar");
-  btn1.classList.add("ocultar");
+  btn2.classList.remove("iniciar");
+  btn2.classList.add("ocultar");
   mario.classList.remove("ocultar");
   moneda.classList.remove("ocultar");
   tuberia.classList.remove("ocultar");
@@ -81,7 +81,20 @@ function ocultarAnimaciones() {
 }
 
 /*detecta si mario choco contra un obstaculo*/
-function detectarChoque() { }
+function chocaTuberia() {
+  let posMario = mario.getBoundingClientRect();
+  let posTuberia = tuberia.getBoundingClientRect();
+
+  let widthTuberia = posTuberia.left + posTuberia.width; 
+  let heightTuberia = posTuberia.top + posTuberia.height;
+  let widthMario = posMario.left + posMario.width;
+  let heightMario = posMario.top + posMario.height;
+
+  if(posMario.left <= widthTuberia  && posMario.top <= heightTuberia && widthMario >= posTuberia.left && heightMario >= posTuberia.top) {
+      //mario.setAttribute("class","stopAnimaciones");
+      alert("Choco tuberia");
+  }
+ }
 
 function chocaEnemigo(){ 
   let posMario = mario.getBoundingClientRect();
@@ -89,17 +102,16 @@ function chocaEnemigo(){
   
   let widthEnemigo = posEnemigo.left + posEnemigo.width; 
   let heightEnemigo = posEnemigo.top + posEnemigo.height;
-  let widthMario = posMario.left + posMario.width -50;
-  let heightMario = posMario.top + posMario.height -50;
+  let widthMario = posMario.left + posMario.width;
+  let heightMario = posMario.top + posMario.height;
       
   if(posMario.left <= widthEnemigo  && posMario.top <= heightEnemigo && widthMario >= posEnemigo.left && heightMario >= posEnemigo.top) {
       mario.setAttribute("class","muere");
       pierdeVida();
       if(cantVidas == 0) {
-          
+          alert("Game over");
           pausarAnimaciones();
           ocultarAnimaciones();
-          swal("Game over");
       }
   }
 }
@@ -110,23 +122,22 @@ function chocaFlor(){
   
   let widthFlor = posFlor.left + posFlor.width ; 
   let heightFlor = posFlor.top + posFlor.height;
-  let widthMario = posMario.left + posMario.width -50;
-  let heightMario = posMario.top + posMario.height -50;
+  let widthMario = posMario.left + posMario.width;
+  let heightMario = posMario.top + posMario.height;
       
   if(posMario.left <= widthFlor  && posMario.top <= heightFlor && widthMario >= posFlor.left && heightMario >= posFlor.top) {
       mario.setAttribute("class","muere");
       pierdeVida();
       if(cantVidas == 0) {
-          
+          alert("Game over");
           pausarAnimaciones();
           ocultarAnimaciones();
-          swal("Game over");
       }
   }
 }
 
 function pierdeVida(){
-  vidas --;
+  vidas--;
   cantVidas.innerHTML = vidas;
 }
 
@@ -155,30 +166,13 @@ mario.addEventListener("animationend", function () {
   salta = false;
   cambiarAnimacion() })
 
-/*muestra lo que queda tiempo para terminar el juego*/
-/*function tiempoDeJuego() {
-  let total_time;
-
-    if (min < 10) {
-        total_time = "0" + min;
-    } else total_time = min;
-
-    total_time += ":";
-
-    if (sec < 10) {
-        total_time += "0" + sec;
-    } else total_time += sec;
-
-    document.querySelector("#time").innerHTML = total_time;
-}*/
-
 /*fin del juego*/
 function finJuego() {
   mario.setAttribute("class","muere");
   //pausarAnimaciones();
-  swal("Game over");
+  alert("Game over");
   btn2.classList.remove("ocultar");
-  btn1.classList.add("desocultar");
+  btn2.classList.add("desocultar");
 }
 
 /*va sumando los puntos*/
