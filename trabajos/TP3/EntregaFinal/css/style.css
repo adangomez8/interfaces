@@ -77,6 +77,7 @@ html {
   position: absolute;
   background: url(../img/moneda.png) left center;
   animation: moverMoneda 6s steps(6) infinite;
+  overflow: visible;
 }
 
 @keyframes moverMoneda {
@@ -93,19 +94,19 @@ html {
   100%{right: 100%;background-position: -470px; }
 }
 
-.agarrarMoneda {
+.agarraMoneda {
   width: 66px;
   height: 64px;
-  right: 0%;
+  right: 60%;
   bottom: 50%;
   margin-top: 23%;
   margin-left: 50%;
   position: absolute;
-  background-image: url(../img/agarrar_moneda.png);
-  animation: agarrarMoneda 1s steps(1) forwards;
+  background: url(../img/agarrar_moneda.png) no-repeat;
+  animation: agarraMoneda 1s steps(1) forwards;
 }
 
-@keyframes agarrarMoneda {
+@keyframes agarraMoneda {
   0% {background-position: 0;}
     100% {background-position: -806px;}
 }
@@ -179,12 +180,6 @@ html {
   animation: marioCamina 0.6s steps(10) infinite;
 }
 
-.caminaParaAtras {
-  width: 99px;
-  height: 100px;
-  background-image: url(../img/Mario_camina_atras.png);
-  animation: marioCamina 0.6s steps(10) infinite;
-  }
 
 /*-------------animacion de mario caminando para adelante-------------*/
 @keyframes marioCamina {
@@ -219,10 +214,10 @@ html {
 .muere {
   width: 143px;
   height: 69px;
-  margin-top: 24%;
+  margin-top: 25%;
   margin-left: 25%;
   position: absolute;
-  background-image: url(../img/Mario_muere.png) left center no-repeat; 
+  background: url(../img/Mario_muere.png) no-repeat; 
   animation: morir 2s steps(1) forwards;  
 }
 
@@ -307,17 +302,6 @@ html {
   color: black;
 }
 
-/*-------------cronometro-------------*/
-.tiempo {
-  font-family: sans-serif;
-  color: rgb(0, 0, 0);
-  font-size: 30px;
-  height: 70px;
-  width: 30%;
-  left:30%;
-  background-color: rgb(251 221 181);
-}
-
 /*-------------cartel de explicacion-------------*/
 .explicacion{
   font-family:sans-serif;
@@ -330,37 +314,10 @@ html {
   top:20%;
   align-content: center;
 }
-.oculto{
+.ocultar{
   visibility: hidden;
 }
 
-.desoculto{
+.desocultar{
   visibility: visible;
-}
-
-.cartel{
-  font-family: sans-serif;
-  left:20%;
-  height: 70px;
-  width: 300px;
-  position: absolute;
- 
-  animation: apareceCartel 6s ease .2 forwards;
-}
-
-@keyframes apareceCartel{
-  0%{ opacity: 0;
-    font-size: 30px;
-    transform : translateX(10%)}
-  50%{ opacity: 1;
-    font-size: 40px;
-    transform : translateX(30%)}
-  60%{ opacity: 1;
-    font-size: 50px;
-    transform : translateX(60%)}
-  70%{ opacity: 1;
-    font-size: 40px;
-    transform : translateX(90%)}
-  100%{ opacity: 0;
-    font-size: 30px;}
 }
