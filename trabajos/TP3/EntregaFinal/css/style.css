@@ -93,6 +93,23 @@ html {
   100%{right: 100%;background-position: -470px; }
 }
 
+.agarrarMoneda {
+  width: 66px;
+  height: 64px;
+  right: 0%;
+  bottom: 50%;
+  margin-top: 23%;
+  margin-left: 50%;
+  position: absolute;
+  background-image: url(../img/agarrar_moneda.png);
+  animation: agarrarMoneda 1s steps(1) forwards;
+}
+
+@keyframes agarrarMoneda {
+  0% {background-position: 0;}
+    100% {background-position: -806px;}
+}
+
 /*--------------animacion de tuberia-------------*/
 #tuberia {
   width: 61px;
@@ -196,6 +213,22 @@ html {
     bottom: 0%;
     background-position: -1540px;
   }
+}
+
+/*--------------animacio de mario muere--------------*/
+.muere {
+  width: 143px;
+  height: 69px;
+  margin-top: 24%;
+  margin-left: 25%;
+  position: absolute;
+  background-image: url(../img/Mario_muere.png) left center no-repeat; 
+  animation: morir 2s steps(1) forwards;  
+}
+
+@keyframes morir {
+  0% {background-position: 0;}
+  100% {background-position: -1810px;}
 }
 
 /*-------------boton iniciar-------------*/

@@ -2,12 +2,11 @@
 
 let salta = false;
 let camina = false;
-let morir = false;
+let muere = false;
 
 let puntos = 0;
 let cronometro = null;
 let interval;
-const MiliSegundos = 1000;
 
 let jugando = false;
 let fin = false;
@@ -46,7 +45,7 @@ function chocaEnemigo(){
   let heightMario = posMario.top + posMario.height;
       
   if(posMario.left <= widthEnemigo  && posMario.top <= heightEnemigo && widthMario >= posEnemigo.left && heightMario >= posEnemigo.top) {
-      mario.setAttribute("class","salta");
+      mario.setAttribute("class","muere");
       let cantVidas = pierdeVida();
       if(cantVidas == 0) {
           alert("game over")
@@ -64,7 +63,7 @@ function chocaFlor(){
   let heightMario = posMario.top + posMario.height;
       
   if(posMario.left <= widthFlor  && posMario.top <= heightFlor && widthMario >= posFlor.left && heightMario >= posFlor.top) {
-      mario.setAttribute("class","salta");
+      mario.setAttribute("class","muere");
       let cantVidas = pierdeVida();
       if(cantVidas === 0) {
           alert("game over")
@@ -88,8 +87,10 @@ function iniciarJuego() {
   jugando = true;
   if (jugando) {
     reacomodarClases();
+
     setInterval(chocaEnemigo,500);
     setInterval(chocaFlor,500);
+    setInterval(agarrarMoneda,500);
   }
   //tiempoDeJuego();
 }
@@ -152,9 +153,9 @@ mario.addEventListener("animationend", function () { saltar(false) })
 function finJuego() {
   jugando = false;
   fin = true;
+  mario.setAttribute("class","muere");
   pausarAnimaciones();
   clearInterval(interval);
-  cronometro.detenerTiempo();
   btn2.classList.remove("ocultar");
   btn2.classList.add("desocultar");
 }
@@ -169,11 +170,32 @@ function pausarAnimaciones() {
   piso.style.animationPlayState = "paused";
   moneda.style.animationPlayState = "paused";
   flor.style.animationPlayState = "paused";
+  enemigo.style.animationPlayState = "paused";
 }
 
 /*va sumando los puntos*/
 function sumarPuntos() {
-  puntos++;
+  puntos += 5;
   puntaje.innerHTML = puntos;
 }
 
+/*verifica si agarro la moneda y suma puntos en caso de agarrarla*/
+function agarrarMoneda() {
+  let posCamina = mario.getBoundingClientRect();
+  let posMoneda = moneda.getBoundingClientRect();
+  let caminaW = posCamina.left + posCamina.width;
+  let caminaH = posCamina.top + posCamina.height;
+  let monedaW = posMoneda.left + posMoneda.width;
+
+  if (posCamina.left <= monedaW && posCamina.top <= posMoneda.top && caminaW >= posMoneda.left && caminaH >= posMoneda.top) {
+    sumarPuntos();
+    moneda.setAttribute("class", "agarrarMoneda");
+    setTimeout(mostrarMoneda, 2000);
+  }
+}
+
+function mostrarMoneda() {
+  moneda.setAttribute("class", "moneda");
+}
+
+iniciarJuego();
