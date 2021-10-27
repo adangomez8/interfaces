@@ -2,6 +2,14 @@ html {
   background-color: rgb(251 221 181);
   margin: 0%;
 }
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 50px;
+}
+
 /*----------animacion del cielo-----------*/
 #fondo {
   background: url("../img/fondo.png") left bottom;
@@ -88,7 +96,7 @@ html {
 /*--------------animacion de tuberia-------------*/
 #tuberia {
   width: 61px;
-  height: 85px;
+  height: 64px;
   bottom: 12%;
   right: 0%;
   position: absolute;
@@ -255,9 +263,15 @@ html {
   color: rgb(0, 0, 0);
   font-size: 30px;
   height: 70px;
-  width: 200px;
-  left:15%;
   align-content: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cantVidas{
+  width: 10px;
+  color: black;
 }
 
 /*-------------cronometro-------------*/
@@ -268,7 +282,7 @@ html {
   height: 70px;
   width: 30%;
   left:30%;
-  align-content: center;
+  background-color: rgb(251 221 181);
 }
 
 /*-------------cartel de explicacion-------------*/

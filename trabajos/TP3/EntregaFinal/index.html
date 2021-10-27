@@ -16,14 +16,15 @@
     <div class="reiniciar ocultar">Reiniciar</div>
     <div class="puntos">  Puntos:<span id="puntos"> 0</span>    </div>
     <div class="vidas">
-      <h2>Vidas: <input type="value" id="vida" oninput="restarVidas(this.value);" value="3"></h2>
-    </div>
-    <div id="explicacion" class="explicacion">
-      <!--aca iria la explicacion del juego-->
+      <div>Vidas:</div>
+      <div class="cantVidas">
+        <span id="cantVidas">3</span>
+      </div>
     </div>
     <div class="tiempo">
       <span id="cartel2">Tiempo <span id="tiempo"> 15:00</span> </span>
       <span id="cartel" class="oculto">Has perdido</span>
+    </div>
     </div>
     <div id="fondo">
       <div id="planta">
@@ -34,11 +35,12 @@
           <div id="tuberia" class="tuberia ocultar"></div>
           <div id="flor" class="flor ocultar"></div>
           <div id="enemigo" class="enemigo ocultar"></div>
-          <!--<div id="tuberia_baja"></div>-->
         </div>
       </div>
     </div>
-  </div>
+    <div id="explicacion" class="explicacion">
+      <!--aca iria la explicacion del juego-->
+    </div>
 
 </body>
 
