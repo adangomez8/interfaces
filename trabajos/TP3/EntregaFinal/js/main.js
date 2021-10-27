@@ -148,10 +148,8 @@ document.addEventListener("keydown", event => {
     cambiarAnimacion()
   }
   else {
-    if(event.code == "ArrowRight") {
       camina = true;
-      cambiarAnimacion()
-    }
+      cambiarAnimacion();
   }
 });
 
@@ -171,8 +169,8 @@ function finJuego() {
   mario.setAttribute("class","muere");
   //pausarAnimaciones();
   alert("Game over");
-  btn2.classList.remove("ocultar");
-  btn2.classList.add("desocultar");
+  btn1.classList.remove("ocultar");
+  btn1.classList.add("desocultar");
 }
 
 /*va sumando los puntos*/
