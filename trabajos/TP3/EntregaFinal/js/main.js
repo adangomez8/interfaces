@@ -35,15 +35,11 @@ function reiniciar() {
 
 /*inicia el juego*/
 function iniciarJuego() {
-  jugando = true;
-  if (jugando) {
-    reacomodarClases();
-
     setInterval(chocaEnemigo,500);
     setInterval(chocaFlor,500);
     setInterval(agarrarMoneda,500);
-  }
-  //tiempoDeJuego();
+    reacomodarClases();
+
 }
 
 /*acomoda los elementos necesarios para poder empezaar a jugar*/
@@ -129,7 +125,7 @@ document.addEventListener("keydown", event => {
   else {
     if(event.code == "ArrowRight") {
       camina = true;
-      cambiarAnimacion();
+      cambiarAnimacion()
     }
   }
 });
@@ -141,7 +137,9 @@ function cambiarAnimacion() {
   else
     mario.setAttribute("class", "camina");
 }
-mario.addEventListener("animationend", function () { cambiarAnimacion(false) })
+mario.addEventListener("animationend", function () { 
+  salta = false;
+  cambiarAnimacion() })
 
 /*muestra lo que queda tiempo para terminar el juego*/
 /*function tiempoDeJuego() {
