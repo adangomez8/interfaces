@@ -15,6 +15,8 @@ let fin = false;
 let mario = document.querySelector("#mario");
 let tuberia = document.querySelector("#tuberia");
 let moneda = document.querySelector("#moneda");
+let flor = document.querySelector("#flor");
+let enemigo = document.querySelector("#enemigo");
 
 let fondo = document.getElementById("fondo");
 let planta = document.getElementById("planta");
@@ -53,9 +55,13 @@ function reacomodarClases() {
   mario.classList.remove("ocultar");
   moneda.classList.remove("ocultar");
   tuberia.classList.remove("ocultar");
+  flor.classList.remove("ocultar"); 
+  enemigo.classList.remove("ocultar");
   mario.classList.add("camina");
   moneda.classList.add("moneda");
   tuberia.classList.add("tuberia");
+  flor.classList.add("flor");
+  enemigo.classList.add("enemigo");
   explicacion.classList.add("ocultar");
 }
 
@@ -78,13 +84,6 @@ function saltar(salta) {
     mario.setAttribute("class", "camina");
 }
 mario.addEventListener("animationend", function () { saltar(false) })
-
-/*
-function caminarParaAtras(camina){
-    if(camina){
-    mario.setAttribute("class","caminaParaAtras");
-    }
-}*/
 
 /*muestra lo que queda tiempo para terminar el juego*/
 function tiempoDeJuego() {
@@ -123,7 +122,7 @@ function pausarAnimaciones() {
   planta.style.animationPlayState = "paused";
   piso.style.animationPlayState = "paused";
   moneda.style.animationPlayState = "paused";
-
+  flor.style.animationPlayState = "paused";
 }
 
 /*va sumando los puntos*/
