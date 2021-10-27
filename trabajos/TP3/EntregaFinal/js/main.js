@@ -46,9 +46,12 @@ function chocaEnemigo(){
       
   if(posMario.left <= widthEnemigo  && posMario.top <= heightEnemigo && widthMario >= posEnemigo.left && heightMario >= posEnemigo.top) {
       mario.setAttribute("class","muere");
-      let cantVidas = pierdeVida();
-      if(cantVidas == 0) {
-          alert("game over")
+      //alert("widthEnemigo: " + widthEnemigo + "heigthEnemigo= " + heightEnemigo + "WidthMario: " + widthMario + "heigthMario: " + heightMario);
+      //alert("LeftMario: " + Math.floor(posMario.left) + "RigthMario: " + Math.floor(posMario.right) + "LeftEnemigo: " + Math.floor(posEnemigo.left) + "RigthEnemigo: " + Math.floor(posEnemigo.right))
+      pierdeVida();
+      if(vidas == 0) {
+          alert("game over");
+          pausarAnimaciones();
       }
   }
 }
@@ -64,10 +67,26 @@ function chocaFlor(){
       
   if(posMario.left <= widthFlor  && posMario.top <= heightFlor && widthMario >= posFlor.left && heightMario >= posFlor.top) {
       mario.setAttribute("class","muere");
-      let cantVidas = pierdeVida();
-      if(cantVidas === 0) {
-          alert("game over")
+      pierdeVida();
+      if(vidas == 0) {
+          alert("game over");
+          pausarAnimaciones();
       }
+  }
+}
+
+function chocaTuberia(){ 
+  let posMario = mario.getBoundingClientRect();
+  let posTuberia = tuberia.getBoundingClientRect();
+  
+  let widthTuberia = posTuberia.left + posTuberia.width; 
+  let heightTuberia = posTuberia.top + posTuberia.height;
+  let widthMario = posMario.left + posMario.width;
+  let heightMario = posMario.top + posMario.height;
+      
+  if(posMario.left <= widthTuberia  && posMario.top <= heightTuberia && widthMario >= posTuberia.left && heightMario >= posTuberia.top) {
+      //mario.setAttribute("class","stopAnimaciones");
+      alert("Choco tuberia");
   }
 }
 
@@ -111,9 +130,6 @@ function reacomodarClases() {
   enemigo.classList.add("enemigo");
   explicacion.classList.add("ocultar");
 }
-
-/*detecta si mario choco contra un obstaculo*/
-function detectarChoque() { }
 
 /*mario salta al presionar la flecha arriba*/
 document.addEventListener("keydown", event => {
@@ -197,5 +213,3 @@ function agarrarMoneda() {
 function mostrarMoneda() {
   moneda.setAttribute("class", "moneda");
 }
-
-iniciarJuego();
