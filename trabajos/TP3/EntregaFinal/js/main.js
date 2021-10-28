@@ -158,7 +158,6 @@ mario.addEventListener("animationend", function () {
 /*fin del juego*/
 function finJuego() {
   mario.setAttribute("class", "muere");
-  alert("GAME OVER :(")
   btn1.classList.remove("ocultar");
   btn1.classList.add("desocultar");
 }
@@ -178,8 +177,8 @@ function agarrarMoneda() {
   let monedaW = posMoneda.left + posMoneda.width;
 
   if (posCamina.left <= monedaW && posCamina.top <= posMoneda.top && caminaW >= posMoneda.left && caminaH >= posMoneda.top) {
-    sumarPuntos();
     moneda.setAttribute("class", "agarraMoneda");
+    sumarPuntos();
     setTimeout(mostrarMoneda, 2000);
   }
 }
