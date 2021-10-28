@@ -257,6 +257,7 @@ html {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  opacity:1;
 }
 
 .reiniciar:hover {background-color: #3e8e41}
@@ -308,11 +309,12 @@ html {
   color: black;
   background-color: whitesmoke;
   font-size: 30px;
-  height: 310px;
+  height: 70%;
   width: 30%;
   left:30%;
   top:20%;
   align-content: center;
+  position: absolute;
 }
 .ocultar{
   visibility: hidden;
