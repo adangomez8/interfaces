@@ -51,7 +51,7 @@ function reacomodarClases() {
   tuberia.classList.remove("ocultar");
   flor.classList.remove("ocultar");
   enemigo.classList.remove("ocultar");
-  mario.classList.add("camina");
+  mario.classList.add("marioCamina");
   moneda.classList.add("moneda");
   tuberia.classList.add("tuberia");
   flor.classList.add("flor");
@@ -92,7 +92,7 @@ function chocaEnemigo() {
   if (posMario.left <= widthEnemigo && posMario.top <= heightEnemigo && widthMario >= posEnemigo.left && heightMario >= posEnemigo.top) {
     pierdeVida();
     if (vidas == 0) {
-      mario.setAttribute("class", "muere");
+      mario.setAttribute("class", "marioMuere");
       pausarAnimaciones();
       ocultarAnimaciones();
       finJuego();
@@ -113,7 +113,7 @@ function chocaFlor() {
   if (posMario.left <= widthFlor && posMario.top <= heightFlor && widthMario >= posFlor.left && heightMario >= posFlor.top) {
     pierdeVida();
     if (vidas == 0) {
-      mario.setAttribute("class", "muere");
+      mario.setAttribute("class", "marioMuere");
       pausarAnimaciones();
       ocultarAnimaciones();
       finJuego();
@@ -145,10 +145,10 @@ document.addEventListener("keydown", event => {
 
 function cambiarAnimacion() {
   if (salta) {
-    mario.setAttribute("class", "salta");
+    mario.setAttribute("class", "marioSalta");
   }
   else
-    mario.setAttribute("class", "camina");
+    mario.setAttribute("class", "marioSamina");
 }
 mario.addEventListener("animationend", function () {
   salta = false;
@@ -157,7 +157,7 @@ mario.addEventListener("animationend", function () {
 
 /*fin del juego*/
 function finJuego() {
-  mario.setAttribute("class", "muere");
+  mario.setAttribute("class", "marioMuere");
   btn1.classList.remove("ocultar");
   btn1.classList.add("desocultar");
 }

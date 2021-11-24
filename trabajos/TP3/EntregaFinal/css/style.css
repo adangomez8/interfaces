@@ -149,16 +149,19 @@ html {
 
 /*--------------animacion de enemigo-------------*/
 #enemigo {
-  width: 42px;
-  height: 36px;
+  width: 23px;
+  height: 19px;
   bottom: 12%;
   right: 0%;
   position: absolute;
-  background-image: url(../img/enemigo.png);
-  animation: moverEnemigo 6s linear infinite;
+  background-image: url(../img/hongo.png);
+  animation: moverHongo 6s linear infinite;
 }
 
-@keyframes moverEnemigo {
+@keyframes moverHongo {
+  100% {
+    background-position: -46px;
+  }
   to {
     right: 110%;
     transform: translateX(120%);
@@ -174,26 +177,26 @@ html {
 }
 /*-------------animacion de mario caminando---------------*/
 .camina {
-  width: 99px;
-  height: 100px;
+  width: 28px;
+  height: 18px;
   background-image: url(../img/Mario_camina_adelante.png);
-  animation: marioCamina 0.6s steps(10) infinite;
+  animation: marioCamina 0.6s steps(4) infinite;
 }
 
 
 /*-------------animacion de mario caminando para adelante-------------*/
 @keyframes marioCamina {
   100% {
-    background-position: -1594px;
+    background-position: -111px;
   }
 }
 
 /*-------------animacion de mario saltando-------------*/
-.salta {
-  width: 154px;
-  height: 100px;
+.marioSalta {
+  width: 28px;
+  height: 18px;
   background-image: url(../img/Mario_salta_adelante.png);
-  animation: marioSalta 0.6s steps(10) forwards;
+  animation: marioSalta 0.6s steps(3) forwards;
 }
 
 /*-------------animacion de mario saltando para adelante----------------*/
@@ -206,14 +209,14 @@ html {
   }
   100% {
     bottom: 0%;
-    background-position: -1540px;
+    background-position: -84px;
   }
 }
 
 /*--------------animacio de mario muere--------------*/
-.muere {
-  width: 143px;
-  height: 69px;
+.Mariomuere {
+  width: 18px;
+  height: 18px;
   margin-top: 25%;
   margin-left: 25%;
   position: absolute;
@@ -222,8 +225,70 @@ html {
 }
 
 @keyframes morir {
-  0% {background-position: 0;}
-  100% {background-position: -1810px;}
+  0% {margin-bottom: 25%;}
+  50% {margin-bottom: 100%;}
+  100% {margin-bottom: 50%;}
+}
+
+/*-------------animacion de luigi---------------*/
+#luigi{
+  position: absolute;
+  bottom: 8%;
+  left: 20%;
+}
+/*-------------animacion de luigi caminando---------------*/
+.camina {
+  width: 28px;
+  height: 18px;
+  background-image: url(../img/Luigi_camina_adelante.png);
+  animation: luigiCamina 0.6s steps(4) infinite;
+}
+
+
+/*-------------animacion de luigi caminando para adelante-------------*/
+@keyframes luigiCamina {
+  100% {
+    background-position: -111px;
+  }
+}
+
+/*-------------animacion de luigi saltando-------------*/
+.luigiSalta {
+  width: 28px;
+  height: 18px;
+  background-image: url(../img/Luigi_salta_adelante.png);
+  animation: luigiSalta 0.6s steps(3) forwards;
+}
+
+/*-------------animacion de luigi saltando para adelante----------------*/
+@keyframes luigiSalta {
+  30% {
+    bottom: 50%;
+  }
+  50% {
+    bottom: 55%;
+  }
+  100% {
+    bottom: 0%;
+    background-position: -84px;
+  }
+}
+
+/*--------------animacio de luigi muere--------------*/
+.luigiMuere {
+  width: 18px;
+  height: 18px;
+  margin-top: 25%;
+  margin-left: 25%;
+  position: absolute;
+  background: url(../img/Luigi_muere.png) no-repeat; 
+  animation: morir 2s steps(1) forwards;  
+}
+
+@keyframes morir {
+  0% {margin-bottom: 25%;}
+  50% {margin-bottom: 100%;}
+  100% {margin-bottom: 50%;}
 }
 
 /*-------------boton iniciar-------------*/
