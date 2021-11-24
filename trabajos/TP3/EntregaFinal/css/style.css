@@ -1,23 +1,19 @@
 html {
-  background-color: rgb(251 221 181);
   margin: 0%;
 }
 
-.container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  height: 50px;
+/*----------animacion del fondo-----------*/
+.fondo {
+  width: 100%;
+  height: 236px;
+  position: absolute;
+  animation: moverFondo 30s linear infinite;
+  bottom: 150px;
+
 }
 
-/*----------animacion del cielo-----------*/
-#fondo {
-  background: url("../img/fondo.png") left bottom;
-  animation: moverFondo 30s linear infinite;
-  background-repeat: repeat-x;
-  position: absolute;
-  width: 100%;
-  background-color: rgb(251 221 181);
+.fondo1 {
+  background: url(../img/fondo1.png) repeat-x;
 }
 
 @keyframes moverFondo {
@@ -26,57 +22,18 @@ html {
   }
 }
 
-/*----------animacion de las plantas, van un poco mas rapido que el cielo-----------*/
-#planta {
-  width: 100%;
-  height: 200px;
-  background: url("../img/plantas.png") left bottom;
-  margin-top: 315px;
-  background-repeat: repeat-x;
-  animation: moverPlanta 25s linear infinite;
-  position: relative;
-  bottom: -20px;
-}
-
-@keyframes moverPlanta {
-  100% {
-    background-position-x: -2550px;
-  }
-}
-
-/*-----------animacion del suelo------------*/
-#suelo {
-  width: 100%;
-  height: 95%;
-  background: url("../img/suelo.png") left bottom;
-  background-repeat: repeat-x;
-  animation: moverSuelo 20s linear infinite;
-  position: absolute;
-  bottom: -1px;
-}
-
-@keyframes moverSuelo {
-  100% {
-    background-position-x: -2540px;
-  }
-}
-
-.stopAnimaciones{
-  animation-play-state: paused;
-}
-
 /*-----------moneda------------*/
 
 #moneda {
-  width: 78px;
-  height: 86px;
+  width: 10px;
+  height: 15px;
   right: 0%;
   margin-top: 23%;
   margin-left: 50%;
-  bottom: 50%;
+  bottom: 40%;
   position: absolute;
   background: url(../img/moneda.png) left center;
-  animation: moverMoneda 6s steps(6) infinite;
+  animation: moverMoneda 15s steps(6) infinite;
   overflow: visible;
 }
 
@@ -94,50 +51,15 @@ html {
   100%{right: 100%;background-position: -470px; }
 }
 
-.agarraMoneda {
-  width: 66px;
-  height: 64px;
-  right: 60%;
-  bottom: 50%;
-  margin-top: 23%;
-  margin-left: 50%;
-  position: absolute;
-  background: url(../img/agarrar_moneda.png) no-repeat;
-  animation: agarraMoneda 1s steps(1) forwards;
-}
-
-@keyframes agarraMoneda {
-  0% {background-position: 0;}
-    100% {background-position: -806px;}
-}
-
-/*--------------animacion de tuberia-------------*/
-#tuberia {
-  width: 61px;
-  height: 64px;
-  bottom: 12%;
-  right: 0%;
-  position: absolute;
-  background-image: url(../img/tuberia.png);
-  animation: moverTuberia 9s linear infinite;
-}
-
-@keyframes moverTuberia {
-  to {
-    right: 110%;
-    transform: translateX(120%);
-  }
-}
-
 /*--------------animacion de flor-------------*/
 #flor {
-  width: 42px;
-  height: 50px;
+  width: 23px;
+  height: 26px;
   bottom: 12%;
   right: 0%;
   position: absolute;
   background-image: url(../img/flor.png);
-  animation: moverFlor 8s linear infinite;
+  animation: moverFlor 12s linear infinite;
 }
 
 @keyframes moverFlor {
@@ -149,13 +71,24 @@ html {
 
 /*--------------animacion de enemigo-------------*/
 #enemigo {
-  width: 23px;
-  height: 19px;
-  bottom: 12%;
-  right: 0%;
-  position: absolute;
-  background-image: url(../img/hongo.png);
-  animation: moverHongo 6s linear infinite;
+    width: 16px;
+    height: 19px;
+    bottom: 10%;
+    right: 0%;
+    position: absolute;
+    background-image: url(../img/hongo.png);
+    animation: moverHongo 6s linear infinite;
+  }
+  
+  @keyframes moverHongo {
+    100% {
+      background-position: -46px;
+    }
+    to {
+      right: 110%;
+      transform: translateX(120%);
+    }
+  
 }
 
 @keyframes moverHongo {
@@ -171,15 +104,15 @@ html {
 /*-------------animacion de mario---------------*/
 #mario{
   position: absolute;
-  bottom: 8%;
+  bottom: 10%;
   left: 20%;
 }
 /*-------------animacion de mario caminando---------------*/
-.marioCamina {
+.camina {
   width: 28px;
   height: 18px;
   background-image: url(../img/Mario_camina_adelante.png);
-  animation: marioCamina 0.6s steps(4) infinite;
+  animation: marioCamina 0.5s steps(4) infinite;
 }
 
 /*-------------animacion de mario caminando para adelante-------------*/
@@ -212,7 +145,7 @@ html {
 }
 
 /*--------------animacio de mario muere--------------*/
-.marioMuere {
+.Mariomuere {
   width: 18px;
   height: 18px;
   margin-top: 25%;
@@ -222,18 +155,26 @@ html {
   animation: morir 2s steps(1) forwards;  
 }
 
+@keyframes morir {
+  0% {margin-bottom: 25%;}
+  50% {margin-bottom: 100%;}
+  100% {margin-bottom: 50%;}
+}
+
+/*-------------animacion de luigi---------------*/
 #luigi{
   position: absolute;
-  bottom: 8%;
+  bottom: 10%;
   left: 20%;
 }
 /*-------------animacion de luigi caminando---------------*/
-.luigiCamina {
+.luigicamina {
   width: 28px;
   height: 18px;
   background-image: url(../img/Luigi_camina_adelante.png);
   animation: luigiCamina 0.6s steps(4) infinite;
 }
+
 
 /*-------------animacion de luigi caminando para adelante-------------*/
 @keyframes luigiCamina {
@@ -280,6 +221,9 @@ html {
   50% {margin-bottom: 100%;}
   100% {margin-bottom: 50%;}
 }
+
+
+
 
 /*-------------boton iniciar-------------*/
 .iniciar {
