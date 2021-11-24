@@ -148,7 +148,7 @@ function cambiarAnimacion() {
     mario.setAttribute("class", "marioSalta");
   }
   else
-    mario.setAttribute("class", "marioSamina");
+    mario.setAttribute("class", "marioCamina");
 }
 mario.addEventListener("animationend", function () {
   salta = false;

@@ -168,7 +168,6 @@ html {
   }
 }
 
-
 /*-------------animacion de mario---------------*/
 #mario{
   position: absolute;
@@ -176,13 +175,12 @@ html {
   left: 20%;
 }
 /*-------------animacion de mario caminando---------------*/
-.camina {
+.marioCamina {
   width: 28px;
   height: 18px;
   background-image: url(../img/Mario_camina_adelante.png);
   animation: marioCamina 0.6s steps(4) infinite;
 }
-
 
 /*-------------animacion de mario caminando para adelante-------------*/
 @keyframes marioCamina {
@@ -214,7 +212,7 @@ html {
 }
 
 /*--------------animacio de mario muere--------------*/
-.Mariomuere {
+.marioMuere {
   width: 18px;
   height: 18px;
   margin-top: 25%;
@@ -224,26 +222,18 @@ html {
   animation: morir 2s steps(1) forwards;  
 }
 
-@keyframes morir {
-  0% {margin-bottom: 25%;}
-  50% {margin-bottom: 100%;}
-  100% {margin-bottom: 50%;}
-}
-
-/*-------------animacion de luigi---------------*/
 #luigi{
   position: absolute;
   bottom: 8%;
   left: 20%;
 }
 /*-------------animacion de luigi caminando---------------*/
-.camina {
+.luigiCamina {
   width: 28px;
   height: 18px;
   background-image: url(../img/Luigi_camina_adelante.png);
   animation: luigiCamina 0.6s steps(4) infinite;
 }
-
 
 /*-------------animacion de luigi caminando para adelante-------------*/
 @keyframes luigiCamina {
@@ -304,7 +294,9 @@ html {
   font-size: 16px;
 }
 
-.iniciar:hover {background-color: #3e8e41}
+.iniciar:hover {
+  background-color: #3e8e41
+}
 
 .iniciar:active {
   background-color: #3e8e41;
@@ -325,7 +317,9 @@ html {
   opacity:1;
 }
 
-.reiniciar:hover {background-color: #3e8e41}
+.reiniciar:hover {
+  background-color: #3e8e41
+}
 
 .reiniciar:active {
   background-color: #3e8e41;
@@ -381,6 +375,7 @@ html {
   align-content: center;
   position: absolute;
 }
+
 .ocultar{
   visibility: hidden;
 }
