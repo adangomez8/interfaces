@@ -9,7 +9,6 @@ let puntos = 0;
 let puntaje = document.getElementById("puntos");
 
 let mario = document.querySelector("#mario");
-let tuberia = document.querySelector("#tuberia");
 let moneda = document.querySelector("#moneda");
 let flor = document.querySelector("#flor");
 let enemigo = document.querySelector("#enemigo");
@@ -48,12 +47,10 @@ function reacomodarClases() {
   btn2.classList.add("ocultar");
   mario.classList.remove("ocultar");
   moneda.classList.remove("ocultar");
-  tuberia.classList.remove("ocultar");
   flor.classList.remove("ocultar");
   enemigo.classList.remove("ocultar");
   mario.classList.add("marioCamina");
   moneda.classList.add("moneda");
-  tuberia.classList.add("tuberia");
   flor.classList.add("flor");
   enemigo.classList.add("enemigo");
   explicacion.classList.add("ocultar");
@@ -63,7 +60,6 @@ function reacomodarClases() {
 function pausarAnimaciones() {
 
   mario.style.animationPlayState = "paused";
-  tuberia.style.animationPlayState = "paused";
   fondo.style.animationPlayState = "paused";
   planta.style.animationPlayState = "paused";
   piso.style.animationPlayState = "paused";
@@ -74,7 +70,6 @@ function pausarAnimaciones() {
 
 function ocultarAnimaciones() {
   moneda.classList.add("ocultar");
-  tuberia.classList.remove("ocultar");
   flor.classList.remove("ocultar");
   enemigo.classList.remove("ocultar");
 }

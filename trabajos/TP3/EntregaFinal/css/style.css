@@ -2,14 +2,20 @@ html {
   margin: 0%;
 }
 
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 50px;
+}
+
 /*----------animacion del fondo-----------*/
 .fondo {
+  margin-top: 10%;
   width: 100%;
-  height: 236px;
+  height: 300px;
   position: absolute;
-  animation: moverFondo 30s linear infinite;
-  bottom: 150px;
-
+  animation: moverFondo 15s linear infinite;
 }
 
 .fondo1 {
@@ -18,8 +24,20 @@ html {
 
 @keyframes moverFondo {
   100% {
-    background-position-x: -2550px;
+    background-position-x: -2686px;
   }
+}
+
+.perder{
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/gameover_mario.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 200px;
+  color: white;
+
+  
 }
 
 /*-----------moneda------------*/
@@ -33,22 +51,316 @@ html {
   bottom: 40%;
   position: absolute;
   background: url(../img/moneda.png) left center;
-  animation: moverMoneda 15s steps(6) infinite;
+  animation: moverMoneda 5s steps(6) infinite;
   overflow: visible;
 }
 
 @keyframes moverMoneda {
-  0%{right: 0% }
-  10%{right: 10% }
-  20%{right: 20% }
-  30%{right: 30% }
-  40%{right: 40% }
-  50%{right: 50% }
-  60%{right: 60% }
-  70%{right: 70% }
-  80%{right: 80% }
-  90%{right: 90% }
-  100%{right: 100%;background-position: -470px; }
+  0% {
+    right: 0%;
+  }
+  1% {
+    right: 1%;
+  }
+  2% {
+    right: 2%;
+  }
+  3% {
+    right: 3%;
+  }
+  4% {
+    right: 4%;
+  }
+  5% {
+    right: 5%;
+  }
+  6% {
+    right: 6%;
+  }
+  7% {
+    right: 7%;
+  }
+  8% {
+    right: 8%;
+  }
+  9% {
+    right: 9%;
+  }
+  10% {
+    right: 10%;
+  }
+  11% {
+    right: 11%;
+  }
+  12% {
+    right: 12%;
+  }
+  13% {
+    right: 13%;
+  }
+  14% {
+    right: 14%;
+  }
+  15% {
+    right: 15%;
+  }
+  16% {
+    right: 16%;
+  }
+  17% {
+    right: 17%;
+  }
+  18% {
+    right: 18%;
+  }
+  19% {
+    right: 19%;
+  }
+  20% {
+    right: 20%;
+  }
+  21% {
+    right: 21%;
+  }
+  22% {
+    right: 22%;
+  }
+  23% {
+    right: 23%;
+  }
+  24% {
+    right: 24%;
+  }
+  25% {
+    right: 25%;
+    background-position: -47px;
+  }
+  26% {
+    right: 26%;
+  }
+  27% {
+    right: 27%;
+  }
+  28% {
+    right: 28%;
+  }
+  29% {
+    right: 29%;
+  }
+  30% {
+    right: 30%;
+  }
+  31% {
+    right: 31%;
+  }
+  32% {
+    right: 32%;
+  }
+  33% {
+    right: 33%;
+  }
+  34% {
+    right: 34%;
+  }
+  35% {
+    right: 35%;
+  }
+  36% {
+    right: 36%;
+  }
+  37% {
+    right: 37%;
+  }
+  38% {
+    right: 38%;
+  }
+  39% {
+    right: 39%;
+  }
+  40% {
+    right: 40%;
+  }
+  41% {
+    right: 41%;
+  }
+  42% {
+    right: 42%;
+  }
+  43% {
+    right: 43%;
+  }
+  44% {
+    right: 44%;
+  }
+  45% {
+    right: 45%;
+  }
+  46% {
+    right: 46%;
+  }
+  47% {
+    right: 47%;
+  }
+  48% {
+    right: 48%;
+  }
+  49% {
+    right: 49%;
+  }
+  50% {
+    right: 50%;
+  }
+  51% {
+    right: 51%;
+  }
+  52% {
+    right: 52%;
+  }
+  53% {
+    right: 53%;
+  }
+  54% {
+    right: 54%;
+  }
+  55% {
+    right: 55%;
+  }
+  56% {
+    right: 56%;
+  }
+  57% {
+    right: 57%;
+  }
+  58% {
+    right: 58%;
+  }
+  59% {
+    right: 59%;
+  }
+  60% {
+    right: 60%;
+  }
+  61% {
+    right: 61%;
+  }
+  62% {
+    right: 62%;
+  }
+  63% {
+    right: 63%;
+  }
+  64% {
+    right: 64%;
+  }
+  65% {
+    right: 65%;
+  }
+  66% {
+    right: 66%;
+  }
+  67% {
+    right: 67%;
+  }
+  68% {
+    right: 68%;
+  }
+  69% {
+    right: 69%;
+  }
+  70% {
+    right: 70%;
+  }
+  71% {
+    right: 71%;
+  }
+  72% {
+    right: 72%;
+  }
+  73% {
+    right: 73%;
+  }
+  74% {
+    right: 74%;
+  }
+  75% {
+    right: 75%;
+  }
+  76% {
+    right: 76%;
+  }
+  77% {
+    right: 77%;
+  }
+  78% {
+    right: 78%;
+  }
+  79% {
+    right: 79%;
+  }
+  80% {
+    right: 80%;
+  }
+  81% {
+    right: 81%;
+  }
+  82% {
+    right: 82%;
+  }
+  83% {
+    right: 83%;
+  }
+  84% {
+    right: 84%;
+  }
+  85% {
+    right: 85%;
+  }
+  86% {
+    right: 86%;
+  }
+  87% {
+    right: 87%;
+  }
+  88% {
+    right: 88%;
+  }
+  89% {
+    right: 89%;
+  }
+  90% {
+    right: 90%;
+  }
+  91% {
+    right: 91%;
+  }
+  92% {
+    right: 92%;
+  }
+  93% {
+    right: 93%;
+  }
+  94% {
+    right: 94%;
+  }
+  95% {
+    right: 95%;
+  }
+  96% {
+    right: 96%;
+  }
+  97% {
+    right: 97%;
+  }
+  98% {
+    right: 98%;
+  }
+  99% {
+    right: 99%;
+  }
+  100% {
+    right: 100%;
+    background-position: -470px;
+  }
 }
 
 /*--------------animacion de flor-------------*/
@@ -59,66 +371,651 @@ html {
   right: 0%;
   position: absolute;
   background-image: url(../img/flor.png);
-  animation: moverFlor 12s linear infinite;
+  animation: moverFlor 5s steps(2) infinite;
 }
 
 @keyframes moverFlor {
-  to {
-    right: 110%;
-    transform: translateX(120%);
+  0% {
+    right: 0%;
+  }
+  1% {
+    right: 1%;
+  }
+  2% {
+    right: 2%;
+  }
+  3% {
+    right: 3%;
+  }
+  4% {
+    right: 4%;
+  }
+  5% {
+    right: 5%;
+  }
+  6% {
+    right: 6%;
+  }
+  7% {
+    right: 7%;
+  }
+  8% {
+    right: 8%;
+  }
+  9% {
+    right: 9%;
+  }
+  10% {
+    right: 10%;
+  }
+  11% {
+    right: 11%;
+  }
+  12% {
+    right: 12%;
+  }
+  13% {
+    right: 13%;
+  }
+  14% {
+    right: 14%;
+  }
+  15% {
+    right: 15%;
+  }
+  16% {
+    right: 16%;
+  }
+  17% {
+    right: 17%;
+  }
+  18% {
+    right: 18%;
+  }
+  19% {
+    right: 19%;
+  }
+  20% {
+    right: 20%;
+  }
+  21% {
+    right: 21%;
+  }
+  22% {
+    right: 22%;
+  }
+  23% {
+    right: 23%;
+  }
+  24% {
+    right: 24%;
+  }
+  25% {
+    right: 25%;
+    background-position: -47px;
+  }
+  26% {
+    right: 26%;
+  }
+  27% {
+    right: 27%;
+  }
+  28% {
+    right: 28%;
+  }
+  29% {
+    right: 29%;
+  }
+  30% {
+    right: 30%;
+  }
+  31% {
+    right: 31%;
+  }
+  32% {
+    right: 32%;
+  }
+  33% {
+    right: 33%;
+  }
+  34% {
+    right: 34%;
+  }
+  35% {
+    right: 35%;
+  }
+  36% {
+    right: 36%;
+  }
+  37% {
+    right: 37%;
+  }
+  38% {
+    right: 38%;
+  }
+  39% {
+    right: 39%;
+  }
+  40% {
+    right: 40%;
+  }
+  41% {
+    right: 41%;
+  }
+  42% {
+    right: 42%;
+  }
+  43% {
+    right: 43%;
+  }
+  44% {
+    right: 44%;
+  }
+  45% {
+    right: 45%;
+  }
+  46% {
+    right: 46%;
+  }
+  47% {
+    right: 47%;
+  }
+  48% {
+    right: 48%;
+  }
+  49% {
+    right: 49%;
+  }
+  50% {
+    right: 50%;
+  }
+  51% {
+    right: 51%;
+  }
+  52% {
+    right: 52%;
+  }
+  53% {
+    right: 53%;
+  }
+  54% {
+    right: 54%;
+  }
+  55% {
+    right: 55%;
+  }
+  56% {
+    right: 56%;
+  }
+  57% {
+    right: 57%;
+  }
+  58% {
+    right: 58%;
+  }
+  59% {
+    right: 59%;
+  }
+  60% {
+    right: 60%;
+  }
+  61% {
+    right: 61%;
+  }
+  62% {
+    right: 62%;
+  }
+  63% {
+    right: 63%;
+  }
+  64% {
+    right: 64%;
+  }
+  65% {
+    right: 65%;
+  }
+  66% {
+    right: 66%;
+  }
+  67% {
+    right: 67%;
+  }
+  68% {
+    right: 68%;
+  }
+  69% {
+    right: 69%;
+  }
+  70% {
+    right: 70%;
+  }
+  71% {
+    right: 71%;
+  }
+  72% {
+    right: 72%;
+  }
+  73% {
+    right: 73%;
+  }
+  74% {
+    right: 74%;
+  }
+  75% {
+    right: 75%;
+  }
+  76% {
+    right: 76%;
+  }
+  77% {
+    right: 77%;
+  }
+  78% {
+    right: 78%;
+  }
+  79% {
+    right: 79%;
+  }
+  80% {
+    right: 80%;
+  }
+  81% {
+    right: 81%;
+  }
+  82% {
+    right: 82%;
+  }
+  83% {
+    right: 83%;
+  }
+  84% {
+    right: 84%;
+  }
+  85% {
+    right: 85%;
+  }
+  86% {
+    right: 86%;
+  }
+  87% {
+    right: 87%;
+  }
+  88% {
+    right: 88%;
+  }
+  89% {
+    right: 89%;
+  }
+  90% {
+    right: 90%;
+  }
+  91% {
+    right: 91%;
+  }
+  92% {
+    right: 92%;
+  }
+  93% {
+    right: 93%;
+  }
+  94% {
+    right: 94%;
+  }
+  95% {
+    right: 95%;
+  }
+  96% {
+    right: 96%;
+  }
+  97% {
+    right: 97%;
+  }
+  98% {
+    right: 98%;
+  }
+  99% {
+    right: 99%;
+  }
+  100% {
+    right: 100%;
   }
 }
 
 /*--------------animacion de enemigo-------------*/
 #enemigo {
-    width: 16px;
-    height: 19px;
-    bottom: 10%;
-    right: 0%;
-    position: absolute;
-    background-image: url(../img/hongo.png);
-    animation: moverHongo 6s linear infinite;
-  }
-  
-  @keyframes moverHongo {
-    100% {
-      background-position: -46px;
-    }
-    to {
-      right: 110%;
-      transform: translateX(120%);
-    }
-  
+  width: 16px;
+  height: 19px;
+  bottom: 10%;
+  right: 0%;
+  position: absolute;
+  background-image: url(../img/hongo.png);
+  animation: moverHongo 4s infinite;
 }
 
 @keyframes moverHongo {
-  100% {
-    background-position: -46px;
+  0% {
+    right: 5%;
   }
-  to {
-    right: 110%;
-    transform: translateX(120%);
+  1% {
+    right: 6%;
+  }
+  2% {
+    right: 7%;
+  }
+  3% {
+    right: 8%;
+  }
+  4% {
+    right: 9%;
+  }
+  5% {
+    right: 10%;
+  }
+  6% {
+    right: 11%;
+  }
+  7% {
+    right: 12%;
+  }
+  8% {
+    right: 13%;
+  }
+  9% {
+    right: 14%;
+  }
+  10% {
+    right: 15%;
+  }
+  11% {
+    right: 16%;
+  }
+  12% {
+    right: 17%;
+  }
+  13% {
+    right: 18%;
+  }
+  14% {
+    right: 19%;
+  }
+  15% {
+    right: 20%;
+  }
+  16% {
+    right: 21%;
+  }
+  17% {
+    right: 22%;
+  }
+  18% {
+    right: 23%;
+  }
+  19% {
+    right: 24%;
+  }
+  20% {
+    right: 25%;
+  }
+  21% {
+    right: 26%;
+  }
+  22% {
+    right: 27%;
+  }
+  23% {
+    right: 28%;
+  }
+  24% {
+    right: 29%;
+  }
+  25% {
+    right: 30%;
+  }
+  26% {
+    right: 31%;
+  }
+  27% {
+    right: 32%;
+  }
+  28% {
+    right: 33%;
+  }
+  29% {
+    right: 34%;
+  }
+  30% {
+    right: 35%;
+    }
+  31% {
+    right: 36%;
+  }
+  32% {
+    right: 37%;
+  }
+  33% {
+    right: 38%;
+  }
+  34% {
+    right: 39%;
+  }
+  35% {
+    right: 40%;
+  }
+  36% {
+    right: 41%;
+  }
+  37% {
+    right: 42%;
+  }
+  38% {
+    right: 43%;
+  }
+  39% {
+    right: 44%;
+  }
+  40% {
+    right: 45%;
+  }
+  41% {
+    right: 46%;
+  }
+  42% {
+    right: 47%;
+  }
+  43% {
+    right: 48%;
+  }
+  44% {
+    right: 49%;
+  }
+  45% {
+    right: 50%;
+  }
+  46% {
+    right: 51%;
+  }
+  47% {
+    right: 52%;
+  }
+  48% {
+    right: 53%;
+  }
+  49% {
+    right: 54%;
+  }
+  50% {
+    right: 55%;
+  }
+  51% {
+    right: 56%;
+  }
+  52% {
+    right: 57%;
+  }
+  53% {
+    right: 58%;
+  }
+  54% {
+    right: 59%;
+  }
+  55% {
+    right: 60%;
+  }
+  56% {
+    right: 61%;
+  }
+  57% {
+    right: 62%;
+  }
+  58% {
+    right: 63%;
+  }
+  59% {
+    right: 64%;
+  }
+  60% {
+    right: 65%;
+  }
+  61% {
+    right: 66%;
+  }
+  62% {
+    right: 67%;
+  }
+  63% {
+    right: 68%;
+  }
+  64% {
+    right: 69%;
+  }
+  65% {
+    right: 70%;
+  }
+  66% {
+    right: 71%;
+  }
+  67% {
+    right: 72%;
+  }
+  68% {
+    right: 73%;
+  }
+  69% {
+    right: 74%;
+  }
+  70% {
+    right: 75%;
+  }
+  71% {
+    right: 76%;
+  }
+  72% {
+    right: 77%;
+  }
+  73% {
+    right: 78%;
+  }
+  74% {
+    right: 79%;
+  }
+  75% {
+    right: 80%;
+  }
+  76% {
+    right: 81%;
+  }
+  77% {
+    right: 82%;
+  }
+  78% {
+    right: 83%;
+  }
+  79% {
+    right: 84%;
+  }
+  80% {
+    right: 85%;
+  }
+  81% {
+    right: 86%;
+  }
+  82% {
+    right: 87%;
+  }
+  83% {
+    right: 88%;
+  }
+  84% {
+    right: 89%;
+  }
+  85% {
+    right: 90%;
+  }
+  86% {
+    right: 91%;
+  }
+  87% {
+    right: 92%;
+  }
+  88% {
+    right: 93%;
+  }
+  89% {
+    right: 94%;
+  }
+  90% {
+    right: 95%;
+  }
+  91% {
+    right: 96%;
+  }
+  92% {
+    right: 97%;
+  }
+  93% {
+    right: 98%;
+  }
+  94% {
+    right: 99%;
+  }
+  95% {
+    right: 100%;
+  }
+  96% {
+    right: 0%;
+  }
+  97% {
+    right: 1%;
+  }
+  98% {
+    right: 2%;
+  }
+  99% {
+    right: 3%;
+  }
+  100% {
+    right: 4%;
   }
 }
 
 /*-------------animacion de mario---------------*/
-#mario{
+#mario {
   position: absolute;
   bottom: 10%;
   left: 20%;
 }
 /*-------------animacion de mario caminando---------------*/
-.camina {
-  width: 28px;
-  height: 18px;
+.marioCamina {
+  width: 35px;
+  height: 34px;
   background-image: url(../img/Mario_camina_adelante.png);
-  animation: marioCamina 0.5s steps(4) infinite;
+  animation: marioCamina 0.5s steps(3) infinite;
 }
 
 /*-------------animacion de mario caminando para adelante-------------*/
 @keyframes marioCamina {
   100% {
-    background-position: -111px;
+    background-position: -104px;
   }
 }
 
@@ -133,10 +1030,10 @@ html {
 /*-------------animacion de mario saltando para adelante----------------*/
 @keyframes marioSalta {
   30% {
-    bottom: 50%;
+    bottom: 30%;
   }
   50% {
-    bottom: 55%;
+    bottom: 44%;
   }
   100% {
     bottom: 0%;
@@ -145,24 +1042,30 @@ html {
 }
 
 /*--------------animacio de mario muere--------------*/
-.Mariomuere {
+.marioMuere {
   width: 18px;
   height: 18px;
   margin-top: 25%;
   margin-left: 25%;
   position: absolute;
-  background: url(../img/Mario_muere.png) no-repeat; 
-  animation: morir 2s steps(1) forwards;  
+  background: url(../img/Mario_muere.png) no-repeat;
+  animation: morir 2s steps(1) forwards;
 }
 
 @keyframes morir {
-  0% {margin-bottom: 25%;}
-  50% {margin-bottom: 100%;}
-  100% {margin-bottom: 50%;}
+  0% {
+    margin-bottom: 25%;
+  }
+  50% {
+    margin-bottom: 100%;
+  }
+  100% {
+    margin-bottom: 50%;
+  }
 }
 
 /*-------------animacion de luigi---------------*/
-#luigi{
+#luigi {
   position: absolute;
   bottom: 10%;
   left: 20%;
@@ -174,7 +1077,6 @@ html {
   background-image: url(../img/Luigi_camina_adelante.png);
   animation: luigiCamina 0.6s steps(4) infinite;
 }
-
 
 /*-------------animacion de luigi caminando para adelante-------------*/
 @keyframes luigiCamina {
@@ -212,23 +1114,27 @@ html {
   margin-top: 25%;
   margin-left: 25%;
   position: absolute;
-  background: url(../img/Luigi_muere.png) no-repeat; 
-  animation: morir 2s steps(1) forwards;  
+  background: url(../img/Luigi_muere.png) no-repeat;
+  animation: morir 2s steps(1) forwards;
 }
 
 @keyframes morir {
-  0% {margin-bottom: 25%;}
-  50% {margin-bottom: 100%;}
-  100% {margin-bottom: 50%;}
+  0% {
+    margin-bottom: 25%;
+  }
+  50% {
+    margin-bottom: 100%;
+  }
+  100% {
+    margin-bottom: 50%;
+  }
 }
-
-
-
 
 /*-------------boton iniciar-------------*/
 .iniciar {
+  margin-top: 10px;
   font-family: sans-serif;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -239,7 +1145,7 @@ html {
 }
 
 .iniciar:hover {
-  background-color: #3e8e41
+  background-color: #3e8e41;
 }
 
 .iniciar:active {
@@ -250,7 +1156,7 @@ html {
 /*-------------boton reiniciar-------------*/
 .reiniciar {
   font-family: sans-serif;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -258,11 +1164,11 @@ html {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  opacity:1;
+  opacity: 1;
 }
 
 .reiniciar:hover {
-  background-color: #3e8e41
+  background-color: #3e8e41;
 }
 
 .reiniciar:active {
@@ -271,11 +1177,11 @@ html {
 }
 
 .ocultar {
-  opacity:0;
+  opacity: 0;
 }
 
 .desocultar {
-  opacity:1;
+  opacity: 1;
 }
 
 /*------------- puntaje-------------*/
@@ -285,7 +1191,7 @@ html {
   font-size: 30px;
   height: 70px;
   width: 200px;
-  left:15%;
+  left: 15%;
   align-content: left;
 }
 
@@ -301,29 +1207,45 @@ html {
   justify-content: space-around;
 }
 
-.cantVidas{
+.cantVidas {
   width: 10px;
   color: black;
 }
 
 /*-------------cartel de explicacion-------------*/
-.explicacion{
-  font-family:sans-serif;
+.explicacion {
+  font-family: sans-serif;
   color: black;
-  background-color: whitesmoke;
-  font-size: 30px;
+  background-color: rgb(232, 248, 0);
+  font-size: 20px;
   height: 70%;
-  width: 30%;
-  left:30%;
-  top:20%;
+  width: 80%;
+  left: 10%;
+  top: 20%;
   align-content: center;
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.ocultar{
+.cartel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.elegirPersonaje,
+.elegirMapa {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.ocultar {
   visibility: hidden;
 }
 
-.desocultar{
+.desocultar {
   visibility: visible;
 }
