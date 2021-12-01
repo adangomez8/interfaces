@@ -1,0 +1,409 @@
+html {
+  margin: 0%;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 50px;
+}
+
+.muere{
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/gameover_mario.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 200px;
+  color: white; 
+}
+
+/*----------animacion del fondo-----------*/
+#fondo {
+  width: 100%;
+  height: 224px;
+  position: absolute;
+  animation: moverFondo 30s linear infinite;
+  bottom: 250px;
+}
+
+.fondo1 {
+  background: url(../img/fondo1.png) repeat-x;
+}
+
+.fondo2 {
+  background: url(../img/fondo2.jpg) repeat-x;
+}
+
+@keyframes moverFondo {
+  100% {
+    background-position-x: -2550px;
+  }
+}
+
+#nubes {
+  width: 100%;
+  height: 170px;
+  position: absolute;
+  background: url(../img/nubes.png) repeat-x;
+  bottom: 50px;
+  animation: moverFondo 30s linear infinite;
+}
+
+#suelo {
+  width: 100%;
+  height: 37px;
+  position: absolute;
+  background: url(../img/piso.png) repeat-x;
+  bottom: -30px;
+  animation: moverFondo 20s linear infinite;
+}
+
+#planta {
+  width: 100%;
+  height: 55px;
+  position: absolute;
+  background: url(../img/plantas.png) repeat-x;
+  bottom: 6px;
+  animation: moverFondo 25s linear infinite;
+}
+
+/*-----------moneda------------*/
+
+#moneda {
+  width: 38px;
+  height: 40px;
+  right: 0%;
+  margin-top: 23%;
+  margin-left: 50%;
+  bottom: 30%;
+  position: absolute;
+  background: url(../img/moneda.png) left center;
+  animation: moverMoneda 5s steps(1) infinite;
+  overflow: visible;
+}
+
+@keyframes moverMoneda {
+
+    0% {
+      right: 0%
+    }
+  
+    20% {
+      right: 20%
+    }
+  
+    40% {
+      right: 40%
+    }
+  
+    50% {
+      right: 50%
+    }
+  
+    60% {
+      right: 60%
+    }
+  
+    70% {
+      right: 70%
+    }
+  
+    80% {
+      right: 80%
+    }
+  
+    90% {
+      right: 90%
+    }
+  
+    100% {
+      right: 100%;
+      background-position: -960px;
+    }
+  
+  }
+
+  .agarraMoneda {
+    right: 60%;
+    bottom: 55%;
+    width: 200px;
+    height: 211px;
+    margin-top: 23%;
+    margin-left: 50%;
+    position: absolute;
+    background: url(../img/agarrar_moneda.png) left center no-repeat; 
+    animation: agarrar 0.5s steps(1) forwards;  
+}
+
+@keyframes agarrar {
+  0% {background-position: 0;}
+  100% {background-position: -806px;}
+}
+
+/*--------------animacion de flor-------------*/
+#flor {
+  width: 16px;
+  height: 26px;
+  bottom: 2%;
+  right: 0%;
+  position: absolute;
+  background: url(../img/flor.png) left center;
+  animation: moverFlor 10s linear infinite;
+}
+
+@keyframes moverFlor {
+  to {
+    right: 110%;
+    transform: translateX(120%);
+  }
+}
+
+/*--------------animacion de enemigo-------------*/
+#enemigo {
+  width: 16px;
+  height: 19px;
+  bottom: 3px;
+  right: 0%;
+  position: absolute;
+  background-image: url(../img/hongo.png);
+  animation: moverHongo 14s linear infinite;
+}
+
+@keyframes moverHongo {
+  to {
+    right: 110%;
+    transform: translateX(120%);
+  }
+}
+
+/*-------------animacion de mario---------------*/
+#mario{
+  position: absolute;
+  bottom: 4px;
+  left: 20%;
+}
+/*-------------animacion de mario caminando---------------*/
+.marioCamina {
+  width: 26px;
+  height: 37px;
+  background-image: url(../img/Mario_camina_adelante.png);
+  animation: marioCamina 0.5s steps(4) infinite;
+}
+
+/*-------------animacion de mario caminando para adelante-------------*/
+@keyframes marioCamina {
+  100% {
+    background-position: -111px;
+  }
+}
+
+/*-------------animacion de mario saltando-------------*/
+.marioSalta {
+  width: 22px;
+  height: 37px;
+  background: url(../img/Mario_salta_adelante.png);
+  animation: marioSalta 0.6s steps(2) forwards;
+}
+
+/*-------------animacion de mario saltando para adelante----------------*/
+@keyframes marioSalta {
+  30% {
+    bottom: 50%;
+  }
+  50% {
+    bottom: 55%;
+  }
+  100% {
+    bottom: 0%;
+    background-position: -84px;
+  }
+}
+
+
+/*-------------animacion de luigi---------------*/
+#luigi{
+  position: absolute;
+  bottom: 4px;
+  left: 20%;
+}
+/*-------------animacion de luigi caminando---------------*/
+.luigiCamina {
+  width: 26px;
+  height: 37px;
+  background-image: url(../img/Luigi_camina_adelante.png);
+  animation: luigiCamina 0.5s steps(4) infinite;
+}
+
+
+/*-------------animacion de luigi caminando para adelante-------------*/
+@keyframes luigiCamina {
+  100% {
+    background-position: -111px;
+  }
+}
+
+/*-------------animacion de luigi saltando-------------*/
+.luigiSalta {
+  width: 22px;
+  height: 37px;
+  background-image: url(../img/Luigi_salta_adelante.png);
+  animation: luigiSalta 0.6s steps(1) forwards;
+}
+
+/*-------------animacion de luigi saltando para adelante----------------*/
+@keyframes luigiSalta {
+  30% {
+    bottom: 50%;
+  }
+  50% {
+    bottom: 55%;
+  }
+  100% {
+    bottom: 0%;
+    background-position: -84px;
+  }
+}
+
+/*-------------boton iniciar-------------*/
+.iniciar {
+  margin-top: 5px;
+  font-family: sans-serif;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.iniciar:hover {
+  background-color: #3e8e41;
+}
+
+.iniciar:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+
+/*-------------boton reiniciar-------------*/
+.reiniciar {
+  font-family: sans-serif;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  opacity: 1;
+}
+
+.reiniciar:hover {
+  background-color: #3e8e41;
+}
+
+.reiniciar:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+
+.ocultar {
+  opacity: 0;
+}
+
+.desocultar {
+  opacity: 1;
+}
+
+/*------------- puntaje-------------*/
+.puntos {
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  height: 70px;
+  width: 200px;
+  left: 15%;
+  align-content: left;
+}
+
+/*-------------vidas-------------*/
+.vidas {
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  height: 70px;
+  align-content: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cantVidas {
+  width: 10px;
+  color: black;
+}
+
+
+/*-------------cartel de explicacion-------------*/
+.explicacion {
+  font-family: sans-serif;
+  color: black;
+  background-color: rgb(232, 248, 0);
+  font-size: 20px;
+  height: 70%;
+  width: 80%;
+  left: 10%;
+  top: 20%;
+  align-content: center;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+}
+
+.cartel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.com{
+  margin-top: 20px;
+}
+
+.instrucciones{
+  margin-left: 15px;
+}
+
+.elegirPersonaje,
+.elegirMapa {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.avatar1{
+  position: relative;
+  align-items: center;
+  background: url(../img/mario.png);
+  background-repeat: no-repeat;
+}
+
+.avatar2{
+  position: relative;
+  align-items: center;
+  background: url(../img/luigi.png);
+  background-repeat: no-repeat;
+}
+
+.ocultar {
+  visibility: hidden;
+}
+
+.desocultar {
+  visibility: visible;
+}
