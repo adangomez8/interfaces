@@ -83,7 +83,7 @@ function reiniciar() {
 
 /*inicia el juego*/
 function iniciarJuego() {
- if (avatar != null && mapa != null) {
+  if (avatar != null && mapa != null) {
     elegirPersonaje.setAttribute("class", "ocultar");
     explicacion.classList.add("ocultar");
     setInterval(chocaEnemigo, 500);
@@ -147,7 +147,10 @@ function chocaEnemigo() {
   let widthMario = posMario.left + posMario.width;
   let heightMario = posMario.top + posMario.height;
 
-  if (posMario.left <= widthEnemigo && posMario.top <= heightEnemigo && widthMario >= posEnemigo.left && heightMario >= posEnemigo.top) {
+  if (posMario.left <= widthEnemigo && 
+      posMario.top <= heightEnemigo && 
+      widthMario >= posEnemigo.left && 
+      heightMario >= posEnemigo.top) {
     pierdeVida();
     if (vidas == 0) {
       pausarAnimaciones();
@@ -241,8 +244,8 @@ function agarrarMoneda() {
 
   if (posCamina.left <= monedaW && posCamina.top <= posMoneda.top && caminaW >= posMoneda.left && caminaH >= posMoneda.top) {
     sumarPuntos();
-    moneda.setAttribute("class","agarraMoneda");
-    setTimeout(mostrarMoneda, 2000);
+    moneda.setAttribute("class", "ocultar");
+    setTimeout(mostrarMoneda, 1000);
   }
 }
 
