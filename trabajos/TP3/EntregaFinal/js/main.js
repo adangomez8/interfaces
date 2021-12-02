@@ -12,7 +12,7 @@ let mario = document.querySelector("#mario");
 //let tuberia = document.querySelector("#tuberia");
 let moneda = document.querySelector("#moneda");
 let flor = document.querySelector("#flor");
-let enemigo = document.querySelector("#enemigo");
+//let enemigo = document.querySelector("#enemigo");
 
 let fondo = document.getElementById("fondo");
 let planta = document.getElementById("planta");
@@ -86,7 +86,7 @@ function iniciarJuego() {
   if (avatar != null && mapa != null) {
     elegirPersonaje.setAttribute("class", "ocultar");
     explicacion.classList.add("ocultar");
-    setInterval(chocaEnemigo, 500);
+    //setInterval(chocaEnemigo, 500);
     setInterval(chocaFlor, 500);
     setInterval(agarrarMoneda, 500);
     reacomodarClases();
@@ -101,7 +101,7 @@ function reacomodarClases() {
   moneda.classList.remove("ocultar");
   //tuberia.classList.remove("ocultar");
   flor.classList.remove("ocultar");
-  enemigo.classList.remove("ocultar");
+  //enemigo.classList.remove("ocultar");
 
   if (avatar == "avatar1") {
     mario.classList.add("marioCamina");
@@ -113,7 +113,7 @@ function reacomodarClases() {
   moneda.classList.add("moneda");
   //tuberia.classList.add("tuberia");
   flor.classList.add("flor");
-  enemigo.classList.add("enemigo");
+  //enemigo.classList.add("enemigo");
   explicacion.classList.add("ocultar");
 }
 
@@ -127,30 +127,30 @@ function pausarAnimaciones() {
   piso.style.animationPlayState = "paused";
   moneda.style.animationPlayState = "paused";
   flor.style.animationPlayState = "paused";
-  enemigo.style.animationPlayState = "paused";
+  //enemigo.style.animationPlayState = "paused";
 }
 
 function ocultarAnimaciones() {
   moneda.classList.add("ocultar");
   //tuberia.classList.remove("ocultar");
   flor.classList.remove("ocultar");
-  enemigo.classList.remove("ocultar");
+  //enemigo.classList.remove("ocultar");
 }
 
 
-function chocaEnemigo() {
+/*function chocaEnemigo() {
   let posMario = mario.getBoundingClientRect();
-  let posEnemigo = enemigo.getBoundingClientRect();
+  //let posEnemigo = enemigo.getBoundingClientRect();
 
-  let widthEnemigo = posEnemigo.left + posEnemigo.width;
-  let heightEnemigo = posEnemigo.top + posEnemigo.height;
+  //let widthEnemigo = posEnemigo.left + posEnemigo.width;
+  //let heightEnemigo = posEnemigo.top + posEnemigo.height;
   let widthMario = posMario.left + posMario.width;
   let heightMario = posMario.top + posMario.height;
 
-  if (posMario.left <= widthEnemigo && 
-      posMario.top <= heightEnemigo && 
-      widthMario >= posEnemigo.left && 
-      heightMario >= posEnemigo.top) {
+  //if (posMario.left <= widthEnemigo && 
+      //posMario.top <= heightEnemigo && 
+      //widthMario >= posEnemigo.left && 
+      //heightMario >= posEnemigo.top) {
     pierdeVida();
     if (vidas == 0) {
       pausarAnimaciones();
@@ -159,7 +159,7 @@ function chocaEnemigo() {
       muere = true;
     }
   }
-}
+}*/
 
 function chocaFlor() {
   let posMario = mario.getBoundingClientRect();
@@ -170,7 +170,10 @@ function chocaFlor() {
   let widthMario = posMario.left + posMario.width;
   let heightMario = posMario.top + posMario.height;
 
-  if (posMario.left <= widthFlor && posMario.top <= heightFlor && widthMario >= posFlor.left && heightMario >= posFlor.top) {
+  if (posMario.left <= widthFlor && 
+    widthMario >= posFlor.left && 
+    heightMario >= posFlor.top &&
+    posMario.top <= heightFlor ){ 
     pierdeVida();
     if (vidas == 0) {
       pausarAnimaciones();
@@ -241,8 +244,12 @@ function agarrarMoneda() {
   let caminaW = posCamina.left + posCamina.width;
   let caminaH = posCamina.top + posCamina.height;
   let monedaW = posMoneda.left + posMoneda.width;
+  let monedaH = posMoneda.top + posMoneda.height;
 
-  if (posCamina.left <= monedaW && posCamina.top <= posMoneda.top && caminaW >= posMoneda.left && caminaH >= posMoneda.top) {
+  if (posCamina.left <= monedaW && 
+    caminaW >= posMoneda.left && 
+    caminaH >= posMoneda.top && 
+    posCamina.top <= monedaH) {
     sumarPuntos();
     moneda.setAttribute("class", "ocultar");
     setTimeout(mostrarMoneda, 1000);
