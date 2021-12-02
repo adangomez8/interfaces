@@ -125,3 +125,166 @@ nav{
     flex-direction: row;
     justify-content: flex-start;
 }
+
+/*perfil publicaciones*/
+
+.perfil-portada{
+    position: absolute;
+    width: 903px;
+    height: 386px;
+    left: 265px;
+    top: 87px;
+
+    border-radius: 12px;
+}
+
+.portada{
+    position: absolute;
+    width: 900px;
+    height: 277px;
+    left: 2px;
+    top: -13px;
+}
+
+.foto{
+    position: absolute;
+    left: 6.76%;
+    right: 76.63%;
+    top: 52.33%;
+    bottom: 8.81%;
+    
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 47px;
+}
+
+.perfil{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 0px;
+    top: 0px;
+    border-radius: 100px;
+}
+
+.nombre{
+    position: absolute;
+    width: 202px;
+    height: 29px;
+    left: 277px;
+    top: 310px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #3F4444;
+}
+
+.seguidos{
+    position: absolute;
+    width: 82px;
+    height: 29px;
+    left: 277px;
+    top: 340px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #3F4444;
+}
+
+.seguidores{
+    position: absolute;
+    width: 120px;
+    height: 29px;
+    left: 372px;
+    top: 340px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #3F4444;
+}
+
+.pub-mg-fotos{
+    position: absolute;
+    width: 462px;
+    height: 33.75px;
+    left: 255px;
+    top: -50px;
+}
+
+.pub{
+    position: absolute;
+    width: 193px;
+    height: 28px;
+    left: 255px;
+    top: 542px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #3F4444;
+}
+
+.mg{
+    position: absolute;
+    width: 100px;
+    height: 28px;
+    left: 504px;
+    top: 542px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #3F4444;
+
+}
+
+.fotos{
+    position: absolute;
+    width: 61px;
+    height: 28px;
+    left: 656px;
+    top: 542px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #3F4444;
+}
