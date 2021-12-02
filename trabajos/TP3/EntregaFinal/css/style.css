@@ -402,25 +402,6 @@ html {
       background-position: -38px;
     }
   }
-  
-  
-
-  .agarraMoneda {
-    right: 60%;
-    bottom: 55%;
-    width: 200px;
-    height: 211px;
-    margin-top: 23%;
-    margin-left: 50%;
-    position: absolute;
-    background: url(../img/agarrar_moneda.png) left center no-repeat; 
-    animation: agarrar 0.5s steps(1) forwards;  
-}
-
-@keyframes agarrar {
-  0% {background-position: 0;}
-  100% {background-position: -806px;}
-}
 
 /*--------------animacion de flor-------------*/
 #flor {
@@ -445,8 +426,30 @@ html {
 }
 }
 
+#flor2 {
+  width: 16px;
+  height: 26px;
+  bottom: 4px;
+  right: 0%;
+  position: absolute;
+  background: url(../img/flor.png) left center;
+  animation: moverFlor2 4s linear infinite;
+}
+
+@keyframes moverFlor2 {
+  0%{
+    right: 25%
+}
+50%{
+    right: 75%;
+}
+100%{
+    right: 24%;
+}
+}
+
 /*--------------animacion de enemigo-------------*/
-#enemigo {
+/*#enemigo {
   width: 16px;
   height: 19px;
   bottom: 4px;
@@ -466,7 +469,7 @@ html {
 100%{
     right: 100%;
 }
-}
+}*/
 
 /*-------------animacion de mario---------------*/
 #mario{
@@ -519,21 +522,24 @@ html {
 #luigi{
   position: absolute;
   bottom: 4px;
-  left: 20%;
+  left: 15%;
 }
 /*-------------animacion de luigi caminando---------------*/
 .luigiCamina {
   width: 26px;
   height: 37px;
   background-image: url(../img/Luigi_camina_adelante.png);
-  animation: luigiCamina 0.5s steps() infinite;
+  animation: luigiCamina 0.5s steps(3) infinite;
 }
 
 
 /*-------------animacion de luigi caminando para adelante-------------*/
 @keyframes luigiCamina {
+  0% {
+    background-position: 0;
+}
   100% {
-    background-position: -111px;
+    background-position: -78px;
   }
 }
 
@@ -548,10 +554,10 @@ html {
 /*-------------animacion de luigi saltando para adelante----------------*/
 @keyframes luigiSalta {
   30% {
-    bottom: 50%;
+    bottom: 15%;
   }
   50% {
-    bottom: 55%;
+    bottom: 35%;
   }
   100% {
     bottom: 0%;
