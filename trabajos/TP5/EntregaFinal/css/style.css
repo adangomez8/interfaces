@@ -293,7 +293,7 @@ nav{
     position: absolute;
     width: 706px;
     height: 693px;
-    left: 125px;
+    left: 175px;
     top: 596px;
 
     background: #F4F5F5;
@@ -327,4 +327,238 @@ nav{
     top: 0px;
 
     border-radius: 100px;
+}
+
+.nombre-pub{
+    position: absolute;
+    width: 146px;
+    height: 21px;
+    left: 89px;
+    top: 20px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #3F4444;
+}
+
+.fecha-pub{
+    position: absolute;
+    width: 79px;
+    height: 21px;
+    left: 89px;
+    top: 40px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #3F4444;
+}
+
+.img-pub{
+    position: absolute;
+width: 704px;
+height: 435px;
+left: 2px;
+top: 90px;
+}
+
+.barra2{
+    position: absolute;
+    width: 656.27px;
+    height: 160px;
+    left: -300px;
+    top: -580px;
+}
+
+.icono-mg{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 365px;
+    top: 1177px;
+}
+
+.icono-coment{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 548px;
+    top: 1177px;
+}
+
+.icono-comp{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 735px;
+    top: 1177px;
+}
+
+.like{
+    position: absolute;
+    width: 75px;
+    height: 21px;
+    left: 399px;
+    top: 1184px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #3F4444;
+}
+
+.coment{
+    position: absolute;
+    width: 80px;
+    height: 21px;
+    left: 582px;
+    top: 1184px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #3F4444;
+}
+
+.comp{
+    position: absolute;
+    width: 81px;
+    height: 21px;
+    left: 769px;
+    top: 1184px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #3F4444;
+}
+
+.foto.coment{
+    position: absolute;
+    left: 769px;
+    right: 76.88%;
+    top: 52.28%;
+    bottom: 45.6%;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 47px;
+}
+
+.foto-com{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 320px;
+    top: 1210px;
+    border-radius: 100px;
+}
+
+#comentario{
+    position: absolute;
+    width: 568.6px;
+    height: 41.71px;
+    left: 380px;
+    top: 1214px;
+}
+
+.publicacion2{
+    position: absolute;
+    width: 706px;
+    height: 693px;
+    left: 175px;
+    top: 1299px;
+
+    background: #F4F5F5;
+    border-radius: 12px;
+}
+
+.sugerencias{
+    position: absolute;
+    width: 316.98px;
+    height: 246.7px;
+    left: 896px;
+    top: 596px;
+
+    background: #F4F5F5;
+    border-radius: 12px;
+    transform: rotate(0.42deg);
+}
+
+.sugerencias h3{
+    position: absolute;
+    width: 133px;
+    height: 28px;
+    left: 20px;
+    top: 6px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #3F4444;
+}
+
+.sugerencias p{
+    position: relative;
+    width: 182px;
+    height: 47px;
+    left: 10px;
+    top: 26px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    
+    color: #3F4444;
+    
 }
