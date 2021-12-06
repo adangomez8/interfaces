@@ -774,3 +774,48 @@ top: 90px;
     background: #F4F5F5;
     border-radius: 12px;
 }
+
+.publicacion3{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(244, 245, 245);
+    margin-top: 510px;
+    width: 700px;
+    font-family: Roboto;
+    color: rgb(63, 68, 68);
+    border-radius: 12px;
+    position: relative;
+    left: 200px;
+}
+
+.sugerencias-mg{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: rgb(244, 245, 245);
+    margin-top: -690px;
+    left: 927px;
+    margin-right: 24px;
+    height: 224px;
+    width: 246px;
+    padding: 10px;
+    font-family: Roboto;
+    color: rgb(63, 68, 68);
+    border-radius: 12px;
+}
+
+.contactos-mg{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: rgb(244, 245, 245);
+    margin-top: 20px;
+    left: 927px;
+    margin-right: 24px;
+    height: 427px;
+    width: 246px;
+    padding: 10px;
+    font-family: Roboto;
+    color: rgb(63, 68, 68);
+    border-radius: 12px;
+}
