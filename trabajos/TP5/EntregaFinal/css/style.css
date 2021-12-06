@@ -2,6 +2,14 @@
 
 }
 
+.ocultar {
+    opacity: 0;
+ }
+  
+.desocultar {
+    opacity: 1;
+}
+
 /*Iniciar sesión*/
 
 .login{
@@ -26,6 +34,7 @@
 .carevet-login{
     font-size: 50px;
     color: rgb(10, 94, 92);
+    font-family: Roboto;
 }
 
 .form-regist-login{
@@ -33,13 +42,15 @@
     margin-top: 96px;
 }
 
-.form-login.h2{
+.titulo-login{
     font-size: 30px;
+    font-family: Roboto;
     color: rgb(63, 68, 68);
 }
 
 label{
     font-size: 15px;
+    font-family: Roboto;
     color: rgb(63, 68, 68);
 }
 
@@ -58,7 +69,8 @@ input{
     border-radius: 12px;
     margin-top: 34px;
     font-size: 25px;
-    color: white;
+    color: white;    
+    font-family: Roboto;
 }
 
 .olvidar-contraseña{
@@ -66,6 +78,7 @@ input{
     font-size: 15px;
     text-align: center;
     margin-top: 25px;
+    font-family: Roboto;
 }
 
 .registrarse-login{
@@ -81,6 +94,7 @@ input{
     border-radius: 12px;
     font-size: 25px;
     color: white;
+    font-family: Roboto;
 }
 
 /*Registrarse*/
@@ -91,9 +105,6 @@ input{
     justify-content: flex-start;
 }
 
-.especializacion{
-    color: rgb(63, 68, 68);
-}
 
 /*-----------------------------------------REVISAR------------------------------------------------*/
 
@@ -102,21 +113,24 @@ input{
     margin-left: 0%;
     font-size: 14px;
     border: 1px solid  rgb(217, 255, 5);
+    font-family: Roboto;
+    color: rgb(63, 68, 68);
 }
 
 .bases-condiciones{
     font-size: 16px;
+    font-family: Roboto;
     color: rgb(63, 68, 68);
 }
 
 /*-----------------------------------------------------------------------------------------------*/
 
-/*Inicio*/
+/*Nav*/
 
 nav{
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: rgb(244, 245, 245);
 }
 
@@ -124,8 +138,306 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
 }
 
+.buscador{
+    margin-left: 10px;
+    height: 33px;
+}
+
+.ini-chat-perfil{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo-ini-linea{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+#logo-ini{
+    margin-top:3px;
+}
+
+.linea-ini{
+    margin-bottom: -18px;
+    margin-top: -10px;
+}
+
+.logo-chat{
+    display: flex;
+    flex-direction: column; 
+    margin-right: 20px; 
+}
+
+.logo-perfil-linea{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#logo-chat{
+    margin-top:3px;
+}
+
+#logo-perfil-selec{
+    border-radius: 60px;
+    margin-top: 5px;
+}
+
+#logo-perfil{
+    border-radius: 60px;
+    margin-top: 3   px;
+}
+
+.linea-perfil{
+    margin-bottom: -13px;
+    margin-top: -10px;
+}
+
+.logo-chat-linea{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Inicio*/
+
+.inicio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.datos-cuenta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 24px;
+    margin-top: 10px;
+    background-color: rgb(244, 245, 245);
+    font-family: Roboto;
+    color: rgb(63, 68, 68);
+}
+
+.nombre-inicio{
+    font-size: 30px; 
+    font-family: Roboto;
+    color: rgb(63, 68, 68);   
+}
+
+.profesion-inicio{
+    font-size: 24px;
+    font-family: Roboto;
+    color: rgb(63, 68, 68);
+}
+
+.crear-publicacion{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(244, 245, 245);
+    margin-top: 10px;
+    font-family: Roboto;
+    color: rgb(63, 68, 68);
+}
+
+.cartel-salir{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Roboto;
+    color: rgb(63, 68, 68);
+}
+
+.btn-salir{
+    padding: 5px;
+}
+
+.lineaPublicar{
+    text-align: center;
+}
+
+.cartel-crearPublicacion{
+    margin-left: 35%;
+}
+
+.btn-crear-public{
+    background-color: rgb(3, 166, 93);
+    width: 80%;
+    height: 40px;
+    border: 1px solid  rgb(3, 166, 93);
+    border-radius: 12px;
+    margin-top: 17px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: white;
+    margin-left: 10%;
+}
+
+.img-video-subir{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.publicacion{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(244, 245, 245);
+    margin-top: 10px;
+    width: 700px;
+    font-family: Roboto;
+    color: rgb(63, 68, 68);
+}
+
+.fotoPerfil-nombre-fecha-publicacion{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.fotoPerfil-publicacion{
+    align-items: center;
+}
+
+.nombre-fecha-publicacion{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px    ;
+}
+
+.nombre-publicacion{
+    font-size: 18px;
+    margin-bottom: -25px;
+}
+
+.fecha-publicacion{
+    font-size: 16px;
+}
+
+.fotosPublicadas-inicio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logoMgSelec-cantMg-cantComent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.lineaMgComenComp{
+    margin-top: 5px;
+    text-align: center;
+}
+
+.mg-coment-compar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5px;
+    margin-left: 15%;
+}
+
+.meGusta:hover{
+    color: rgb(50, 93, 246);
+}
+
+.meGustaSelec{
+    color: rgb(50, 93, 246);
+}
+
+.fotoPerfil-comentarPublicacion, .fotoPerfil-crearPublicacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.inputComentar{
+    margin-top: 10px;
+}
+
+#inputComentar{
+    width: 569px;
+}
+
+.sugerencias-contacto{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(244, 245, 245);
+    margin-top: 10px;
+    margin-right: 24px;
+    height: 670px;
+    padding: 10px;
+    font-family: Roboto;
+    color: rgb(63, 68, 68);
+}
+
+.sugerencias.titulo, .contactos-titulo{
+    font-size: 23px;
+}
+
+.datos-btnSeguir-sugerencias{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.datosSuegerencia{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nombre-sugerencia{
+    font-size: 18px;
+}
+
+.especialidad-sugerencia{
+    font-size: 13px;
+}
+
+.especialidad-seg-div{
+    margin-top: -11px;
+}
+
+.btnSeguir-suger{
+    border-radius: 47px;
+    border: solid rgb(3, 166, 93);
+    background-color: rgb(3, 166, 93);
+    color: white;
+    margin-left: 5px;
+}
+
+.between-suge-contac{
+    background-color: white;
+    height: 10px;
+}
+
+.fotoPerfil-nombre-videollamada-llamada{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.videollamada-llamada-contacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
 /*perfil publicaciones*/
 
 .perfil-portada{
