@@ -293,7 +293,7 @@ nav{
     position: absolute;
     width: 706px;
     height: 693px;
-    left: 175px;
+    left: 199px;
     top: 596px;
 
     background: #F4F5F5;
@@ -506,7 +506,7 @@ top: 90px;
     position: absolute;
     width: 706px;
     height: 693px;
-    left: 175px;
+    left: 199px;
     top: 1299px;
 
     background: #F4F5F5;
@@ -516,8 +516,8 @@ top: 90px;
 .sugerencias{
     position: absolute;
     width: 316.98px;
-    height: 246.7px;
-    left: 896px;
+    height: 296.7px;
+    left: 926px;
     top: 596px;
 
     background: #F4F5F5;
@@ -548,17 +548,99 @@ top: 90px;
     position: relative;
     width: 182px;
     height: 47px;
-    left: 10px;
-    top: 26px;
-    
+
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
     line-height: 21px;
     display: flex;
     align-items: center;
     
     color: #3F4444;
     
+}
+
+.p1{
+    left: 20px;
+    top: 28px;
+    font-size: 18px;
+}
+
+.p2{
+    left: 20px;
+    top: -13px;
+    font-size: 15px;
+}
+
+.p3{
+    left: 20px;
+    top: -30px;
+    font-size: 18px;
+}
+
+.p4{
+    left: 20px;
+    top: -69px;
+    font-size: 15px;
+}
+
+.p5{
+    left: 20px;
+    top: -90px;
+    font-size: 18px;
+}
+
+.p6{
+    left: 20px;
+    top: -130px;
+    font-size: 15px;
+}
+
+.p7{
+    left: 20px;
+    top: -149px;
+    font-size: 18px;
+}
+
+.p8{
+    left: 20px;
+    top: -189px;
+    font-size: 15px;
+}
+
+.button{
+    position: absolute;
+    width: 93px;
+    height: 43px;
+    left: 197px;
+    
+    background: #03A65D;
+    border-radius: 22px;
+
+    color: white;
+    font-family: Roboto;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button1{
+    left: 197px;
+    top: 36px;
+}
+
+.button2{
+    left: 197px;
+    top: 107px;
+}
+
+.button3{
+    left: 197px;
+    top: 173px;
+}
+
+.button4{
+    left: 197px;
+    top: 240px;
 }
