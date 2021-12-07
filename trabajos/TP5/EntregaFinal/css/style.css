@@ -625,6 +625,8 @@ nav{
 }
 
 .pub{
+    display: flex;
+    flex-direction: column;
     position: absolute;
     width: 193px;
     height: 28px;
@@ -644,6 +646,8 @@ nav{
 }
 
 .mg{
+    display: flex;
+    flex-direction: column;
     position: absolute;
     width: 100px;
     height: 28px;
@@ -664,6 +668,8 @@ nav{
 }
 
 .fotos{
+    display: flex;
+    flex-direction: column;
     position: absolute;
     width: 61px;
     height: 28px;
@@ -835,4 +841,37 @@ top: 90px;
     font-family: Roboto;
     color: rgb(63, 68, 68);
     border-radius: 12px;
+}
+
+
+/*Perfil-fotos*/
+
+.seccion-fotos{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px 200px 200px;
+    margin-left: 14%;
+    margin-top: 500px;
+    margin-bottom: 20px;
+    width: 1050px;
+    height: 850px;
+    background-color: rgb(10, 94, 92);
+    border-radius: 12px;
+}
+
+.fotosPerfil-fotos{
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.fotoPerfil-fotos1{
+    border: solid 1px rgb(63, 68, 68);
+    margin-left: 10px;
+    border-radius: 12px;
+}
+
+@media only screen and (max-width: 360px) { 
+
+
 }
