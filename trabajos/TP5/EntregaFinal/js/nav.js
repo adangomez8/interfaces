@@ -64,7 +64,7 @@ function verPerfil(){
 function cerrarSesion(){
     menuDesplegable.classList.add("oculto")
     menuDesplegable.classList.remove("desocultar")
-    document.location.href ="EntregaFinal/index.html";
+    document.location.href ="../index.html";
 }
 
 function mostrarMenu(){

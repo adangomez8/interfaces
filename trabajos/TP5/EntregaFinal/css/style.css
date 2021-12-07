@@ -199,6 +199,29 @@ nav{
     margin-top:3px;
 }
 
+.parallax-ini{
+    animation: girarLogo 3s forwards;
+}
+
+@keyframes girarLogo{
+    0%{
+        opacity: 0;
+        transform: rotate(0deg);
+        width: 10px;
+        height: 10px;
+    }
+    60%{
+        width: 30px;
+        height: 30px;
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(360deg);
+        width: 37px;
+        height: 37px;
+    }
+}
+
 .linea-ini{
     margin-bottom: -18px;
     margin-top: -10px;
@@ -210,11 +233,19 @@ nav{
     margin-right: 20px; 
 }
 
+.parallax-chat{
+    animation: girarLogo 3s forwards;
+}
+
+
 .logo-perfil-linea{
     display: flex;
     flex-direction: column;
 }
 
+.parallax-perfil{
+    animation: girarLogo 3s forwards; 
+}
 
 #logo-chat{
     margin-top:3px;
@@ -982,7 +1013,183 @@ top: 90px;
     border-radius: 12px;
 }
 
-@media only screen and (max-width: 360px) { 
+/*Mensajes*/
 
+.seccion-mensajes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
+.chat{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(244, 245, 245);
+    margin-top: 10px;
+    margin-left: 220px;
+    height: 500px;
+    width: 800px;
+}
+
+.buscador-mensajes{
+    width: 310px;
+}
+
+.lista-chat{
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+}
+
+.titulo-msj{
+    text-align: center; 
+    color: rgb(63, 68, 68)
+}
+
+.mensaje-chat{
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.chat-selec{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+}
+
+.buscar-chat{
+    margin-bottom: 5px;
+}
+
+.chat-selec:hover{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(147, 155, 155);
+}
+
+.datos-chat{
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 1px rgb(63, 68, 68);
+    
+}
+
+.datos-contacto-chat{
+    display: flex;
+    flex-direction: row;;
+    justify-content: flex-start;
+}
+
+.nombre-chat-abierto{
+    font-size: 18px;
+    margin-top: 10px;
+    justify-content: flex-start;
+}
+
+.opciones-llamada-chat-abierto{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: 195px;
+    margin-top: 10px;
+}
+
+.llamada-contacto{
+    margin-left: 15px;  
+}
+
+.conversacion-chat{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 180px;
+}
+
+.conver-der{
+    width: 50;
+    background-color: rgb(10, 94, 92);
+    border-radius: 12px;
+    margin-left: 150px;     
+}
+
+.conver-izq{
+    width: 200px;
+    background-color: rgb(3, 166, 93); 
+    border-radius: 12px; 
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.msj-chat{
+    color: white;
+    padding: 5px;
+}
+
+.msj-chat-der{
+    color: white;
+    padding: 5px;
+}
+.conver-visto{
+    position: absolute;
+    color: red;
+    margin-left: 320px;
+}
+
+.emogi-escribir-enviar{
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+}
+
+#emogi:hover, #llamada-contacto:hover, #videollamada-contacto:hover{
+    background-color: rgb(147, 155, 155);
+}
+
+.escribir{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.videollamada{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(196, 196, 196);
+    width: 1240px;
+    height: 510px;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.nombre-persona-videollamada{
+    color: rgb(63, 68, 68);
+    font-size: 24px;
+    margin-left: 30px;
+}
+
+.integrantes-videollamada{
+    display: flex;
+    flex-direction: column;
+}   
+
+.img-persona1-videollamada{
+    margin-left: 450px;
+    margin-top: 50px;
+}
+
+.img-persona2-videollamada{
+    width: 270px;
+    margin-left: 950px;
+    margin-top: -140px;
+    background-color: rgb(63, 68, 68);  
+    padding: 20px;
+}
+
+.mic-cam-finllama{
+    margin-top: 80px;
+    margin-left: 410px;
+}
+
+.logos-lladamada-propio{
+    margin-top: -55px;
+    margin-left: 1110px;
 }
