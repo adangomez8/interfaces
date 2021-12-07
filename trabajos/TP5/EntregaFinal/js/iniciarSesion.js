@@ -9,7 +9,7 @@ function crearCuenta(){
     cargar.classList.remove("oculto");
     cargar.classList.add("cargando");
     cargando.classList.remove("oculto");
-    setTimeout(registrar, 5000);
+    setTimeout(registrar, 4040);
 }
 
 function registrar(){

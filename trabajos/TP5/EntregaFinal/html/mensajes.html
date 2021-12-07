@@ -1,270 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="shortcut icon" href="../img/Logo.png" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <title>Carevet</title>
-  </head>
 
-  <body>
-    <nav>
-      <div class="logo-buscador-nav">
-        <div class="logo-nav">
-          <img src="../img/Logo.png" alt="" width="52px" height="56px" />
-        </div>
-        <div class="buscador">
-          <div>
-            <svg
-              width="35"
-              height="30"
-              viewBox="0 0 26 23"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9.8415 0.0812073C11.6542 0.0811729 13.429 0.53991 14.9551 1.40299C16.4812 2.26607 17.6947 3.49727 18.4515 4.95051C19.2084 6.40375 19.4768 8.01803 19.225 9.60183C18.9732 11.1856 18.2118 12.6725 17.031 13.8859L25.2583 21.1445L24.2277 22.0538L15.9989 14.7939C14.8384 15.6695 13.4552 16.2846 11.9671 16.587C10.479 16.8893 8.9302 16.8698 7.45249 16.5303C5.97478 16.1907 4.61199 15.5411 3.48018 14.6367C2.34836 13.7323 1.48107 12.6 0.952149 11.3362C0.423231 10.0724 0.248365 8.71451 0.442442 7.37823C0.63652 6.04195 1.19379 4.76684 2.06679 3.66151C2.9398 2.55619 4.10267 1.65338 5.45637 1.03C6.81007 0.406607 8.31448 0.0811037 9.8415 0.0812073ZM9.8415 1.36728C7.71514 1.36728 5.67587 2.11251 4.17231 3.43903C2.66874 4.76556 1.82405 6.5647 1.82405 8.44069C1.82405 10.3167 2.66874 12.1158 4.17231 13.4423C5.67587 14.7689 7.71514 15.5141 9.8415 15.5141C11.9679 15.5141 14.0071 14.7689 15.5107 13.4423C17.0143 12.1158 17.8589 10.3167 17.8589 8.44069C17.8589 6.5647 17.0143 4.76556 15.5107 3.43903C14.0071 2.11251 11.9679 1.36728 9.8415 1.36728Z"
-                fill="#3F4444"
-              />
-            </svg>
-            <input type="search" name="" id="" placeholder="Buscar" />
-          </div>
-        </div>
-      </div>
-      <div class="ini-chat-perfil">
-        <div class="logo-ini-linea">
-          <div class="logo-ini">
-            <svg
-              id="logo-ini"
-              width="37"
-              height="37"
-              viewBox="0 0 41 41"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M40.1375 19.6125L21.3875 0.862514C21.1533 0.629701 20.8365 0.499023 20.5063 0.499023C20.1761 0.499023 19.8592 0.629701 19.625 0.862514L0.875034 19.6125C0.670251 19.8516 0.563244 20.1592 0.575395 20.4738C0.587547 20.7884 0.717962 21.0869 0.94058 21.3095C1.1632 21.5321 1.46162 21.6625 1.77622 21.6747C2.09081 21.6868 2.39841 21.5798 2.63753 21.375L20.5 3.51251L38.3625 21.3875C38.6017 21.5923 38.9093 21.6993 39.2239 21.6872C39.5384 21.675 39.8369 21.5446 40.0595 21.322C40.2821 21.0994 40.4125 20.8009 40.4247 20.4863C40.4368 20.1717 40.3298 19.8641 40.125 19.625L40.1375 19.6125Z"
-                fill="#3F4444"
-              />
-              <path
-                d="M33 38H26.75V25.5H14.25V38H8V20.5L5.5 23V38C5.5 38.663 5.76339 39.2989 6.23223 39.7678C6.70107 40.2366 7.33696 40.5 8 40.5H16.75V28H24.25V40.5H33C33.663 40.5 34.2989 40.2366 34.7678 39.7678C35.2366 39.2989 35.5 38.663 35.5 38V22.7L33 20.2V38Z"
-                fill="#3F4444"
-              />
-            </svg>
-          </div>
-        </div>
-        <div class="logo-chat-linea">
-          <div class="logo-chat parallax-chat">
-            <svg
-              id="logo-chat"
-              width="37"
-              height="37"
-              viewBox="0 0 37 37"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6.375 0.625H30.75C32.2418 0.625 33.6726 1.21763 34.7275 2.27252C35.7824 3.32742 36.375 4.75816 36.375 6.25V23.125C36.375 24.6168 35.7824 26.0476 34.7275 27.1025C33.6726 28.1574 32.2418 28.75 30.75 28.75H22.1512L15.2006 35.7006C14.9384 35.9628 14.6043 36.1413 14.2407 36.2136C13.877 36.2859 13.5001 36.2488 13.1575 36.1069C12.815 35.965 12.5222 35.7248 12.3161 35.4165C12.1101 35.1082 12.0001 34.7458 12 34.375V28.75H6.375C4.88316 28.75 3.45242 28.1574 2.39752 27.1025C1.34263 26.0476 0.75 24.6168 0.75 23.125V6.25C0.75 4.75816 1.34263 3.32742 2.39752 2.27252C3.45242 1.21763 4.88316 0.625 6.375 0.625ZM30.75 2.5H6.375C5.38044 2.5 4.42661 2.89509 3.72335 3.59835C3.02009 4.30161 2.625 5.25544 2.625 6.25V23.125C2.625 24.1196 3.02009 25.0734 3.72335 25.7766C4.42661 26.4799 5.38044 26.875 6.375 26.875H13.875V34.375L21.375 26.875H30.75C31.7446 26.875 32.6984 26.4799 33.4016 25.7766C34.1049 25.0734 34.5 24.1196 34.5 23.125V6.25C34.5 5.25544 34.1049 4.30161 33.4016 3.59835C32.6984 2.89509 31.7446 2.5 30.75 2.5ZM6.375 8.125H30.75V10H6.375V8.125ZM6.375 13.75H28.875V15.625H6.375V13.75ZM6.375 19.375H21.375V21.25H6.375V19.375Z"
-                fill="#0A5E5C"
-              />
-            </svg>
-          </div>
-          <div class="linea-ini">
-            <svg
-              width="37"
-              height="4"
-              viewBox="0 0 48 3"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line
-                y1="1.75"
-                x2="48"
-                y2="1.75"
-                stroke="#0A5E5C"
-                stroke-width="2.5"
-              />
-            </svg>
-          </div>
-        </div>
-        <div class="logo-perfil">
-          <img
-            src="../img/perfil.jpg"
-            alt="perfil"
-            width="40"
-            height="40"
-            id="logo-perfil"
-          />
-        </div>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="shortcut icon" href="../img/Logo.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <title>Carevet</title>
+</head>
 
-    <div class="seccion-mensajes">
-      <div class="chat">
-        <div class="lista-chat">
-          <div class="titulo-msj">
-            <h3>Mensajes</h3>
-          </div>
-          <div class="buscar-chat">
-            <input
-              type="search"
-              name=""
-              id=""
-              placeholder="Buscar mensajes"
-              class="buscador-mensajes"
-            />
-          </div>
-          <div class="chat-selec">
-            <div class="fotoPerfil-publicacion">
-              <img
-                src="../img/medico_veterinario.jpg"
-                alt="perfil"
-                width="45"
-                height="45"
-                id="logo-perfil"
-              />
-            </div>
-            <div class="nombre-fecha-publicacion">
-              <div class="nombre-publicacion">
-                <p>Medicos Veterinarios</p>
-              </div>
-              <div class="mensaje-chat">
-                <p>Muchas gracias, estamos en contacto...</p>
-              </div>
-            </div>
-          </div>
-          <div class="chat-selec">
-            <div class="fotoPerfil-publicacion">
-              <img
-                src="../img/david tylor.png"
-                alt="perfil"
-                width="45"
-                height="45"
-                id="logo-perfil"
-              />
-            </div>
-            <div class="nombre-fecha-publicacion">
-              <div class="nombre-publicacion">
-                <p>David Taylor</p>
-              </div>
-              <div class="mensaje-chat">
-                <p>
-                    <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.997559 2.72584L2.97381 4.23417L6.14714 0.607507L5.51964 0.0591736L2.85964 3.09917L1.50256 2.06334L0.997559 2.72584ZM9.06381 0.607507L8.43631 0.0591736L5.78256 3.09209L5.46881 2.84126L4.94797 3.49209L5.88422 4.24126L9.06381 0.607507Z" fill="#3F4444"/>
-                        </svg>
-                        Genial quedamos asi!!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="chat-selec">
-            <div class="fotoPerfil-publicacion">
-              <img
-                src="../img/miguel lopez.jpg"
-                alt="perfil"
-                width="45"
-                height="45"
-                id="logo-perfil"
-              />
-            </div>
-            <div class="nombre-fecha-publicacion">
-              <div class="nombre-publicacion">
-                <p>Miguel Lopez</p>
-              </div>
-              <div class="mensaje-chat">
-                <p>Ok.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mensajes">
-            <div class="datos-chat">
-                <div class="datos-contacto-chat">
-                    <div class="fotoPerfil-publicacion">
-                        <img
-                        src="../img/medico_veterinario.jpg"
-                        alt="perfil"
-                        width="45"
-                        height="45"
-                        id="logo-perfil"
-                        />
-                    </div>
-                    <div class="nombre-chat-abierto">
-                        <p>Medicos Veterinarios</p>
-                    </div>
-                </div>
-                <div class="opciones-llamada-chat-abierto">
-                    <div class="videollamada-contacto">
-                        <svg id="videollamada-contacto" width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M4.875 0.5C2.66586 0.5 0.875 2.29086 0.875 4.5V11.5C0.875 13.7091 2.66586 15.5 4.875 15.5H20.2912C20.9588 15.5 21.5 14.9588 21.5 14.2912C21.5 13.3928 22.4454 12.8083 23.2491 13.2099L25.7778 14.4734C26.3965 14.7834 27.125 14.3336 27.125 13.6416V2.35923C27.125 1.66676 26.3961 1.21654 25.7769 1.52656L23.2486 2.7896C22.4451 3.191 21.5 2.60669 21.5 1.7085C21.5 1.04106 20.9589 0.5 20.2915 0.5H4.875ZM2.75 6.375C2.75 4.16586 4.54086 2.375 6.75 2.375H15.625C17.8341 2.375 19.625 4.16586 19.625 6.375V9.625C19.625 11.8341 17.8341 13.625 15.625 13.625H6.75C4.54086 13.625 2.75 11.8341 2.75 9.625V6.375ZM22.5365 5.2552C23.7832 4.63186 25.25 5.53841 25.25 6.93225V9.06775C25.25 10.4616 23.7832 11.3681 22.5365 10.7448C21.9013 10.4272 21.5 9.77795 21.5 9.06775V6.93225C21.5 6.22205 21.9013 5.57281 22.5365 5.2552Z"
-                                fill="#0A5E5C" />
-                        </svg>
-                    </div>
-                    <div class="llamada-contacto">
-                        <svg id="llamada-contacto" width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.4195 0.54062L4.58517 0.182287C5.67934 -0.15313 6.84609 0.389578 7.31517 1.45L8.24576 3.5625C8.65092 4.48229 8.42667 5.56458 7.68892 6.2375L5.63709 8.11041C5.76276 9.23125 6.15492 10.3344 6.81142 11.4198C7.43519 12.47 8.27179 13.3892 9.27167 14.1229L11.7363 13.3312C12.6712 13.0323 13.6884 13.3771 14.2604 14.1865L15.5962 16.0719C16.2624 17.0135 16.1433 18.3115 15.3167 19.1094L14.4305 19.9646C13.5487 20.8156 12.2888 21.125 11.1242 20.775C8.37359 19.95 5.84509 17.501 3.53759 13.4281C1.22684 9.34895 0.411087 5.88645 1.09142 3.04479C1.37742 1.84895 2.2625 0.895828 3.4195 0.54062Z" fill="#0A5E5C"/>
-                        </svg>
-                            
-                    </div>
-                </div>
-            </div>
-            <div class="conversacion-chat">
-                <div class="conver-der">
-                    <div><label class="msj-chat-der">Hola, quería saber cuando puedo pasar por
-                    colsultorio hacerle una consulta?</label></div>
-                </div>
-                <div class="conver-izq">
-                    <div><label class="msj-chat">Buenas tardes, esta semana no voy a estar trabajando. La semana que viene podría ser.</label></div>
-                </div>
-                <div class="conver-der">
-                    <label class="msj-chat-der">Muchas gracias, estamos en contacto la semana que viene</label>                    
-                    <div class="visto-chat">
-                        <div class="conver-visto"><svg width="20" height="20" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.997559 2.72584L2.97381 4.23417L6.14714 0.607507L5.51964 0.0591736L2.85964 3.09917L1.50256 2.06334L0.997559 2.72584ZM9.06381 0.607507L8.43631 0.0591736L5.78256 3.09209L5.46881 2.84126L4.94797 3.49209L5.88422 4.24126L9.06381 0.607507Z" fill="#3F4444"/>
-                        </svg>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <div class="emogi-escribir-enviar">
-                <div class="emogi">
-                    <svg id="emogi" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.4375 9.45834C16.3695 9.45834 17.125 8.75878 17.125 7.89584C17.125 7.03289 16.3695 6.33334 15.4375 6.33334C14.5055 6.33334 13.75 7.03289 13.75 7.89584C13.75 8.75878 14.5055 9.45834 15.4375 9.45834Z" fill="#3F4444"/>
-                        <path d="M7.5625 9.45834C8.49448 9.45834 9.25 8.75878 9.25 7.89584C9.25 7.03289 8.49448 6.33334 7.5625 6.33334C6.63052 6.33334 5.875 7.03289 5.875 7.89584C5.875 8.75878 6.63052 9.45834 7.5625 9.45834Z" fill="#3F4444"/>
-                        <path d="M11.4887 0.0833321C5.27875 0.0833321 0.25 4.75 0.25 10.5C0.25 16.25 5.27875 20.9167 11.4887 20.9167C17.71 20.9167 22.75 16.25 22.75 10.5C22.75 4.75 17.71 0.0833321 11.4887 0.0833321ZM11.5 18.8333C6.5275 18.8333 2.5 15.1042 2.5 10.5C2.5 5.89583 6.5275 2.16667 11.5 2.16667C16.4725 2.16667 20.5 5.89583 20.5 10.5C20.5 15.1042 16.4725 18.8333 11.5 18.8333ZM11.5 14.6667C9.835 14.6667 8.40625 13.8229 7.61875 12.5833H5.74C6.19201 13.6574 6.9837 14.58 8.01144 15.2305C9.03918 15.881 10.2551 16.229 11.5 16.229C12.7449 16.229 13.9608 15.881 14.9886 15.2305C16.0163 14.58 16.808 13.6574 17.26 12.5833H15.3812C14.605 13.8229 13.165 14.6667 11.5 14.6667Z" fill="#3F4444"/>
-                    </svg>                        
-                </div>
-                <div class="escribir">
-                    <input
-                    type="search"
-                    name=""
-                    id=""
-                    placeholder="Escribe aquí..."
-                    class="escribir-mensajes"
-                    />
-                </div>
-                <div class="enviar">
-                    <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21.7394 11.1802L1.31707 0.940913C1.23407 0.899409 1.13885 0.889644 1.04852 0.911616C0.840999 0.962886 0.711604 1.17285 0.762874 1.38281L2.86737 9.98144C2.8991 10.1108 2.99432 10.2158 3.12127 10.2573L6.72723 11.4951L3.12371 12.7329C2.99676 12.7769 2.90155 12.8794 2.87225 13.0088L0.762874 21.6196C0.740901 21.71 0.750667 21.8052 0.792171 21.8857C0.887386 22.0786 1.12176 22.1567 1.31707 22.0615L21.7394 11.8809C21.8151 11.8442 21.8762 11.7808 21.9152 11.7075C22.0104 11.5122 21.9323 11.2778 21.7394 11.1802ZM3.1701 19.1733L4.39813 14.1538L11.6052 11.6807C11.6613 11.6611 11.7077 11.6172 11.7272 11.5586C11.7614 11.4561 11.7077 11.3462 11.6052 11.3096L4.39813 8.83886L3.17498 3.83886L18.507 11.5268L3.1701 19.1733V19.1733Z" fill="#3F4444"/>
-                    </svg>                        
-                </div>
-            </div>
-        </div>
+<body>
+  <nav>
+    <div class="logo-buscador-nav">
+      <div class="logo-nav">
+        <img src="../img/Logo.png" alt="" width="52px" height="56px" />
       </div>
-      <div class="publicidad-chat">
-          <img src="../img/foto_0000000620210129204654.jpg" alt="" width="300px" height="200px">
+      <div class="buscador">
+        <div>
+          <svg width="35" height="30" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.8415 0.0812073C11.6542 0.0811729 13.429 0.53991 14.9551 1.40299C16.4812 2.26607 17.6947 3.49727 18.4515 4.95051C19.2084 6.40375 19.4768 8.01803 19.225 9.60183C18.9732 11.1856 18.2118 12.6725 17.031 13.8859L25.2583 21.1445L24.2277 22.0538L15.9989 14.7939C14.8384 15.6695 13.4552 16.2846 11.9671 16.587C10.479 16.8893 8.9302 16.8698 7.45249 16.5303C5.97478 16.1907 4.61199 15.5411 3.48018 14.6367C2.34836 13.7323 1.48107 12.6 0.952149 11.3362C0.423231 10.0724 0.248365 8.71451 0.442442 7.37823C0.63652 6.04195 1.19379 4.76684 2.06679 3.66151C2.9398 2.55619 4.10267 1.65338 5.45637 1.03C6.81007 0.406607 8.31448 0.0811037 9.8415 0.0812073ZM9.8415 1.36728C7.71514 1.36728 5.67587 2.11251 4.17231 3.43903C2.66874 4.76556 1.82405 6.5647 1.82405 8.44069C1.82405 10.3167 2.66874 12.1158 4.17231 13.4423C5.67587 14.7689 7.71514 15.5141 9.8415 15.5141C11.9679 15.5141 14.0071 14.7689 15.5107 13.4423C17.0143 12.1158 17.8589 10.3167 17.8589 8.44069C17.8589 6.5647 17.0143 4.76556 15.5107 3.43903C14.0071 2.11251 11.9679 1.36728 9.8415 1.36728Z"
+              fill="#3F4444" />
+          </svg>
+          <input type="search" name="" id="" placeholder="Buscar" />
+        </div>
       </div>
     </div>
-  </body>
+    <div class="ini-chat-perfil">
+      <div class="logo-ini-linea">
+        <div class="logo-ini">
+          <a href="inicio.html"><svg id="logo-ini" width="37" height="37" viewBox="0 0 41 41" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M40.1375 19.6125L21.3875 0.862514C21.1533 0.629701 20.8365 0.499023 20.5063 0.499023C20.1761 0.499023 19.8592 0.629701 19.625 0.862514L0.875034 19.6125C0.670251 19.8516 0.563244 20.1592 0.575395 20.4738C0.587547 20.7884 0.717962 21.0869 0.94058 21.3095C1.1632 21.5321 1.46162 21.6625 1.77622 21.6747C2.09081 21.6868 2.39841 21.5798 2.63753 21.375L20.5 3.51251L38.3625 21.3875C38.6017 21.5923 38.9093 21.6993 39.2239 21.6872C39.5384 21.675 39.8369 21.5446 40.0595 21.322C40.2821 21.0994 40.4125 20.8009 40.4247 20.4863C40.4368 20.1717 40.3298 19.8641 40.125 19.625L40.1375 19.6125Z"
+              fill="#3F4444" />
+            <path
+              d="M33 38H26.75V25.5H14.25V38H8V20.5L5.5 23V38C5.5 38.663 5.76339 39.2989 6.23223 39.7678C6.70107 40.2366 7.33696 40.5 8 40.5H16.75V28H24.25V40.5H33C33.663 40.5 34.2989 40.2366 34.7678 39.7678C35.2366 39.2989 35.5 38.663 35.5 38V22.7L33 20.2V38Z"
+              fill="#3F4444" />
+          </svg></a>
+        </div>
+      </div>
+      <div class="logo-chat-linea">
+        <div class="logo-chat parallax-chat">
+          <a href="mensajes.html"></a><svg id="logo-chat" width="37" height="37" viewBox="0 0 37 37" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M6.375 0.625H30.75C32.2418 0.625 33.6726 1.21763 34.7275 2.27252C35.7824 3.32742 36.375 4.75816 36.375 6.25V23.125C36.375 24.6168 35.7824 26.0476 34.7275 27.1025C33.6726 28.1574 32.2418 28.75 30.75 28.75H22.1512L15.2006 35.7006C14.9384 35.9628 14.6043 36.1413 14.2407 36.2136C13.877 36.2859 13.5001 36.2488 13.1575 36.1069C12.815 35.965 12.5222 35.7248 12.3161 35.4165C12.1101 35.1082 12.0001 34.7458 12 34.375V28.75H6.375C4.88316 28.75 3.45242 28.1574 2.39752 27.1025C1.34263 26.0476 0.75 24.6168 0.75 23.125V6.25C0.75 4.75816 1.34263 3.32742 2.39752 2.27252C3.45242 1.21763 4.88316 0.625 6.375 0.625ZM30.75 2.5H6.375C5.38044 2.5 4.42661 2.89509 3.72335 3.59835C3.02009 4.30161 2.625 5.25544 2.625 6.25V23.125C2.625 24.1196 3.02009 25.0734 3.72335 25.7766C4.42661 26.4799 5.38044 26.875 6.375 26.875H13.875V34.375L21.375 26.875H30.75C31.7446 26.875 32.6984 26.4799 33.4016 25.7766C34.1049 25.0734 34.5 24.1196 34.5 23.125V6.25C34.5 5.25544 34.1049 4.30161 33.4016 3.59835C32.6984 2.89509 31.7446 2.5 30.75 2.5ZM6.375 8.125H30.75V10H6.375V8.125ZM6.375 13.75H28.875V15.625H6.375V13.75ZM6.375 19.375H21.375V21.25H6.375V19.375Z"
+              fill="#0A5E5C" />
+          </svg></a>
+        </div>
+        <div class="linea-ini">
+          <svg width="37" height="4" viewBox="0 0 48 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="1.75" x2="48" y2="1.75" stroke="#0A5E5C" stroke-width="2.5" />
+          </svg>
+        </div>
+      </div>
+      <div class="logo-perfil" id="logoPerfil">
+        <img src="../img/perfil.jpg" alt="perfil" width="40" height="40" id="logo-perfil">
+      </div>
+    </div>
+  </nav>
+  <div id="menuDesplegable" class="desplegable oculto">
+    <div class="perfil">
+      <p id="perfil" class="ver-perfil">Ver perfil</p>
+    </div>
+    <div class="salir">
+      <p id="salir" class="cerrarSesion">Cerrar sesión</p>
+    </div>
+  </div>
+  <div class="seccion-mensajes">
+    <div class="chat">
+      <div class="lista-chat">
+        <div class="titulo-msj">
+          <h3>Mensajes</h3>
+        </div>
+        <div class="buscar-chat">
+          <input type="search" name="" id="" placeholder="Buscar mensajes" class="buscador-mensajes" />
+        </div>
+        <div class="chat-selec">
+          <div class="fotoPerfil-publicacion">
+            <img src="../img/medico_veterinario.jpg" alt="perfil" width="45" height="45" id="logo-perfil" />
+          </div>
+          <div class="nombre-fecha-publicacion">
+            <div class="nombre-publicacion">
+              <p>Medicos Veterinarios</p>
+            </div>
+            <div class="mensaje-chat">
+              <p>Muchas gracias, estamos en contacto...</p>
+            </div>
+          </div>
+        </div>
+        <div class="chat-selec">
+          <div class="fotoPerfil-publicacion">
+            <img src="../img/david tylor.png" alt="perfil" width="45" height="45" id="logo-perfil" />
+          </div>
+          <div class="nombre-fecha-publicacion">
+            <div class="nombre-publicacion">
+              <p>David Taylor</p>
+            </div>
+            <div class="mensaje-chat">
+              <p>
+                <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0.997559 2.72584L2.97381 4.23417L6.14714 0.607507L5.51964 0.0591736L2.85964 3.09917L1.50256 2.06334L0.997559 2.72584ZM9.06381 0.607507L8.43631 0.0591736L5.78256 3.09209L5.46881 2.84126L4.94797 3.49209L5.88422 4.24126L9.06381 0.607507Z"
+                    fill="#3F4444" />
+                </svg>
+                Genial quedamos asi!!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="chat-selec">
+          <div class="fotoPerfil-publicacion">
+            <img src="../img/miguel lopez.jpg" alt="perfil" width="45" height="45" id="logo-perfil" />
+          </div>
+          <div class="nombre-fecha-publicacion">
+            <div class="nombre-publicacion">
+              <p>Miguel Lopez</p>
+            </div>
+            <div class="mensaje-chat">
+              <p>Ok.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mensajes">
+        <div class="datos-chat">
+          <div class="datos-contacto-chat">
+            <div class="fotoPerfil-publicacion">
+              <img src="../img/medico_veterinario.jpg" alt="perfil" width="45" height="45" id="logo-perfil" />
+            </div>
+            <div class="nombre-chat-abierto">
+              <p>Medicos Veterinarios</p>
+            </div>
+          </div>
+          <div class="opciones-llamada-chat-abierto">
+            <div class="videollamada-contacto">
+              <a href="videollamda.html"><svg id="videollamada-contacto" width="28" height="16" viewBox="0 0 28 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.875 0.5C2.66586 0.5 0.875 2.29086 0.875 4.5V11.5C0.875 13.7091 2.66586 15.5 4.875 15.5H20.2912C20.9588 15.5 21.5 14.9588 21.5 14.2912C21.5 13.3928 22.4454 12.8083 23.2491 13.2099L25.7778 14.4734C26.3965 14.7834 27.125 14.3336 27.125 13.6416V2.35923C27.125 1.66676 26.3961 1.21654 25.7769 1.52656L23.2486 2.7896C22.4451 3.191 21.5 2.60669 21.5 1.7085C21.5 1.04106 20.9589 0.5 20.2915 0.5H4.875ZM2.75 6.375C2.75 4.16586 4.54086 2.375 6.75 2.375H15.625C17.8341 2.375 19.625 4.16586 19.625 6.375V9.625C19.625 11.8341 17.8341 13.625 15.625 13.625H6.75C4.54086 13.625 2.75 11.8341 2.75 9.625V6.375ZM22.5365 5.2552C23.7832 4.63186 25.25 5.53841 25.25 6.93225V9.06775C25.25 10.4616 23.7832 11.3681 22.5365 10.7448C21.9013 10.4272 21.5 9.77795 21.5 9.06775V6.93225C21.5 6.22205 21.9013 5.57281 22.5365 5.2552Z"
+                  fill="#0A5E5C" />
+              </svg></a>
+            </div>
+            <div class="llamada-contacto">
+              <a href="videollamda.html"><svg id="llamada-contacto" width="17" height="21" viewBox="0 0 17 21" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.4195 0.54062L4.58517 0.182287C5.67934 -0.15313 6.84609 0.389578 7.31517 1.45L8.24576 3.5625C8.65092 4.48229 8.42667 5.56458 7.68892 6.2375L5.63709 8.11041C5.76276 9.23125 6.15492 10.3344 6.81142 11.4198C7.43519 12.47 8.27179 13.3892 9.27167 14.1229L11.7363 13.3312C12.6712 13.0323 13.6884 13.3771 14.2604 14.1865L15.5962 16.0719C16.2624 17.0135 16.1433 18.3115 15.3167 19.1094L14.4305 19.9646C13.5487 20.8156 12.2888 21.125 11.1242 20.775C8.37359 19.95 5.84509 17.501 3.53759 13.4281C1.22684 9.34895 0.411087 5.88645 1.09142 3.04479C1.37742 1.84895 2.2625 0.895828 3.4195 0.54062Z"
+                  fill="#0A5E5C" />
+              </svg></a>
 
-  <script src="../js/main.js"></script>
+            </div>
+          </div>
+        </div>
+        <div class="conversacion-chat">
+          <div class="conver-der">
+            <div><label class="msj-chat-der">Hola, quería saber cuando puedo pasar por
+                colsultorio hacerle una consulta?</label></div>
+          </div>
+          <div class="conver-izq">
+            <div><label class="msj-chat">Buenas tardes, esta semana no voy a estar trabajando. La semana que viene
+                podría ser.</label></div>
+          </div>
+          <div class="conver-der">
+            <label class="msj-chat-der">Muchas gracias, estamos en contacto la semana que viene</label>
+            <div class="visto-chat">
+              <div class="conver-visto"><svg width="20" height="20" viewBox="0 0 10 5" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0.997559 2.72584L2.97381 4.23417L6.14714 0.607507L5.51964 0.0591736L2.85964 3.09917L1.50256 2.06334L0.997559 2.72584ZM9.06381 0.607507L8.43631 0.0591736L5.78256 3.09209L5.46881 2.84126L4.94797 3.49209L5.88422 4.24126L9.06381 0.607507Z"
+                    fill="#3F4444" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="emogi-escribir-enviar">
+          <div class="emogi">
+            <svg id="emogi" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15.4375 9.45834C16.3695 9.45834 17.125 8.75878 17.125 7.89584C17.125 7.03289 16.3695 6.33334 15.4375 6.33334C14.5055 6.33334 13.75 7.03289 13.75 7.89584C13.75 8.75878 14.5055 9.45834 15.4375 9.45834Z"
+                fill="#3F4444" />
+              <path
+                d="M7.5625 9.45834C8.49448 9.45834 9.25 8.75878 9.25 7.89584C9.25 7.03289 8.49448 6.33334 7.5625 6.33334C6.63052 6.33334 5.875 7.03289 5.875 7.89584C5.875 8.75878 6.63052 9.45834 7.5625 9.45834Z"
+                fill="#3F4444" />
+              <path
+                d="M11.4887 0.0833321C5.27875 0.0833321 0.25 4.75 0.25 10.5C0.25 16.25 5.27875 20.9167 11.4887 20.9167C17.71 20.9167 22.75 16.25 22.75 10.5C22.75 4.75 17.71 0.0833321 11.4887 0.0833321ZM11.5 18.8333C6.5275 18.8333 2.5 15.1042 2.5 10.5C2.5 5.89583 6.5275 2.16667 11.5 2.16667C16.4725 2.16667 20.5 5.89583 20.5 10.5C20.5 15.1042 16.4725 18.8333 11.5 18.8333ZM11.5 14.6667C9.835 14.6667 8.40625 13.8229 7.61875 12.5833H5.74C6.19201 13.6574 6.9837 14.58 8.01144 15.2305C9.03918 15.881 10.2551 16.229 11.5 16.229C12.7449 16.229 13.9608 15.881 14.9886 15.2305C16.0163 14.58 16.808 13.6574 17.26 12.5833H15.3812C14.605 13.8229 13.165 14.6667 11.5 14.6667Z"
+                fill="#3F4444" />
+            </svg>
+          </div>
+          <div class="escribir">
+            <input type="search" name="" id="" placeholder="Escribe aquí..." class="escribir-mensajes" />
+          </div>
+          <div class="enviar">
+            <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M21.7394 11.1802L1.31707 0.940913C1.23407 0.899409 1.13885 0.889644 1.04852 0.911616C0.840999 0.962886 0.711604 1.17285 0.762874 1.38281L2.86737 9.98144C2.8991 10.1108 2.99432 10.2158 3.12127 10.2573L6.72723 11.4951L3.12371 12.7329C2.99676 12.7769 2.90155 12.8794 2.87225 13.0088L0.762874 21.6196C0.740901 21.71 0.750667 21.8052 0.792171 21.8857C0.887386 22.0786 1.12176 22.1567 1.31707 22.0615L21.7394 11.8809C21.8151 11.8442 21.8762 11.7808 21.9152 11.7075C22.0104 11.5122 21.9323 11.2778 21.7394 11.1802ZM3.1701 19.1733L4.39813 14.1538L11.6052 11.6807C11.6613 11.6611 11.7077 11.6172 11.7272 11.5586C11.7614 11.4561 11.7077 11.3462 11.6052 11.3096L4.39813 8.83886L3.17498 3.83886L18.507 11.5268L3.1701 19.1733V19.1733Z"
+                fill="#3F4444" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="publicidad-chat">
+      <img src="../img/foto_0000000620210129204654.jpg" alt="" width="300px" height="200px">
+    </div>
+  </div>
+</body>
+
+<script src="../js/nav.js"></script>
+
 </html>
