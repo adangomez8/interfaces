@@ -73,21 +73,40 @@ input{
     font-family: Roboto;
 }
 
-.mensaje{
-	position:absolute;
-	top:45px;
-    margin: 5px 5px 0px 5px;
+.cargarPag{
+    width: 1024;
+    height: 768;
     display: flex;
-    color: #EC3C3C;
-    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
 }
 
-.msjOculto {
+.oculto{
     display: none;
 }
 
-input.error {
-	border: #EC3C3C solid 1px;
+.cargar{
+    width: 70px;
+    height:66px;
+    background: url(../img/loading.png) left center no-repeat; 
+    animation: cargando 5s steps(12) infinite;  
+    z-index: 9999;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-top: 325px;
+}
+
+@keyframes cargando {
+    0% {background-position: 0;}
+    100% {background-position: -819px;}
+}
+
+.cargando{
+    margin-top: 325px;
+    margin-right: 250px;
+    color: rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    font-size: 20px;
 }
 
 .olvidar-contraseña{
@@ -129,7 +148,6 @@ input.error {
     text-align: left;
     margin-left: 0%;
     font-size: 14px;
-    border: 1px solid  rgb(217, 255, 5);
     font-family: Roboto;
     color: rgb(63, 68, 68);
 }
@@ -139,7 +157,6 @@ input.error {
     font-family: Roboto;
     color: rgb(63, 68, 68);
 }
-
 /*-----------------------------------------------------------------------------------------------*/
 
 /*Nav*/

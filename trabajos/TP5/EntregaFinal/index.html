@@ -27,7 +27,10 @@
         </div>
 
         <div class="form-regist-login">
-
+            <div class="cargarPag">
+                <div id="cargar" class="oculto"></div>
+                <p id="cargando" class="oculto cargando">Cargando...</p>
+            </div>
             <div>
                 <div class="titulo-login">
                     <h2>Iniciar sesión</h2>
@@ -37,18 +40,16 @@
                         <label for="">Email</label>
                         <div>
                             <input type="text" name="email" id="email">
-                            <p id="error" class="msjOculto"></p>
                         </div>
                     </div>
                     <div>
                         <label for="">Contraseña</label>
                         <div>
                             <input type="text" name="contraseña" id="contraseña">
-                            <p id="error1" class="msjOculto"></p>
                         </div>
                     </div>
                     <div>
-                        <button class="btn-iniciar-session" id="iniciarSesion">Iniciar sesión</button>
+                        <button class="btn-iniciar-session" type="button" onclick="location= 'html/inicio.html'">Iniciar sesión</button>
                     </div>    
                 </form>
             </div>
