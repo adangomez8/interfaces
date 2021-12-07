@@ -32,17 +32,23 @@
                 <div class="titulo-login">
                     <h2>Iniciar sesión</h2>
                 </div>
-                <form action="">
+                <form>
                     <div>
                         <label for="">Email</label>
-                        <div><input type="text" name="email" id="email"></div>
+                        <div>
+                            <input type="text" name="email" id="email">
+                            <p id="error" class="msjOculto"></p>
+                        </div>
                     </div>
                     <div>
                         <label for="">Contraseña</label>
-                        <div><input type="text" name="contraseña" id="contraseña"></div>
+                        <div>
+                            <input type="text" name="contraseña" id="contraseña">
+                            <p id="error1" class="msjOculto"></p>
+                        </div>
                     </div>
                     <div>
-                        <button class="btn-iniciar-session"><a href="../html/inicio.html">Iniciar sesión</a></button>
+                        <button class="btn-iniciar-session" id="iniciarSesion">Iniciar sesión</button>
                     </div>    
                 </form>
             </div>
@@ -52,7 +58,7 @@
             </div>
 
             <div class="registrarse-login">
-                <button class="btn-registrarse-login"><a href="../EntregaFinal/html/registrarse.html">Crear cuenta</a></button>
+                <button class="btn-registrarse-login" id="registrarse">Crear cuenta</button>
             </div>
         
         </div>
@@ -61,6 +67,6 @@
 
 </body>
 
-<script src="js/main.js"></script>
+<script src="js/iniciarSesion.js"></script>
 
 </html>

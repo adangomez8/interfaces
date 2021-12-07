@@ -73,6 +73,23 @@ input{
     font-family: Roboto;
 }
 
+.mensaje{
+	position:absolute;
+	top:45px;
+    margin: 5px 5px 0px 5px;
+    display: flex;
+    color: #EC3C3C;
+    font-size: 10px;
+}
+
+.msjOculto {
+    display: none;
+}
+
+input.error {
+	border: #EC3C3C solid 1px;
+}
+
 .olvidar-contraseña{
     color: rgb(58, 180, 233);
     font-size: 15px;
