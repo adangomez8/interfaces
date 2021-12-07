@@ -31,6 +31,29 @@
     height: 100px;
 }
 
+#logo-login-{
+    animation: girarLogo-login 3s forwards;
+}
+
+@keyframes girarLogo-login{
+    0%{
+        opacity: 0;
+        width: 10%;
+        height: 10%;
+        transform: translate(50px, 0);
+    }
+    60%{
+        opacity: .8;
+    }
+    100%{
+        opacity: 1;
+        width: 190px;
+        height: 200px;
+        transform: translate(0px, 0);
+    }
+}
+
+
 .carevet-login{
     font-size: 50px;
     color: rgb(10, 94, 92);
@@ -278,6 +301,11 @@ nav{
     height: 97px;
     left: 1160px;
     background:rgb(244, 245, 245);
+}
+
+.menuDeBusquedas{
+    display: flex;
+    flex-direction: column;
 }
 
 .perfil{

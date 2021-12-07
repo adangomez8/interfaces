@@ -19,7 +19,7 @@
     <nav>
       <div class="logo-buscador-nav">
         <div class="logo-nav">
-          <img src="../img/Logo.png" alt="" width="52px" height="56px" />
+          <a href="../html/inicio.html"><img src="../img/Logo.png" alt="" width="52px" height="56px" /></a>
         </div>
         <div class="buscador">
           <div>
@@ -42,7 +42,7 @@
       <div class="ini-chat-perfil">
         <div class="logo-ini-linea">
           <div class="logo-ini">
-            <svg
+            <a href="../html/inicio.html"><svg
               id="logo-ini"
               width="37"
               height="37"
@@ -58,7 +58,7 @@
                 d="M33 38H26.75V25.5H14.25V38H8V20.5L5.5 23V38C5.5 38.663 5.76339 39.2989 6.23223 39.7678C6.70107 40.2366 7.33696 40.5 8 40.5H16.75V28H24.25V40.5H33C33.663 40.5 34.2989 40.2366 34.7678 39.7678C35.2366 39.2989 35.5 38.663 35.5 38V22.7L33 20.2V38Z"
                 fill="#3F4444"
               />
-            </svg>
+            </svg></a>          
           </div>
         </div>
         <div class="logo-chat-linea">
@@ -95,7 +95,7 @@
             </svg>
           </div>
         </div>
-        <div class="logo-perfil">
+        <div class="logo-perfil" id="logoPerfil">
           <img
             src="../img/perfil.jpg"
             alt="perfil"
@@ -106,6 +106,14 @@
         </div>
       </div>
     </nav>
+    <div id="menuDesplegable" class="desplegable oculto">
+      <div class="perfil">
+          <p id="perfil" class="ver-perfil">Ver perfil</p>
+      </div>
+      <div class="salir">
+          <p id="salir" class="cerrarSesion">Cerrar sesión</p>
+      </div>
+  </div>
 
     <div class="seccion-mensajes">
       <div class="chat">
@@ -203,16 +211,16 @@
                 </div>
                 <div class="opciones-llamada-chat-abierto">
                     <div class="videollamada-contacto">
-                        <svg id="videollamada-contacto" width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <a href="../html/videollamda.html"><svg id="videollamada-contacto" width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M4.875 0.5C2.66586 0.5 0.875 2.29086 0.875 4.5V11.5C0.875 13.7091 2.66586 15.5 4.875 15.5H20.2912C20.9588 15.5 21.5 14.9588 21.5 14.2912C21.5 13.3928 22.4454 12.8083 23.2491 13.2099L25.7778 14.4734C26.3965 14.7834 27.125 14.3336 27.125 13.6416V2.35923C27.125 1.66676 26.3961 1.21654 25.7769 1.52656L23.2486 2.7896C22.4451 3.191 21.5 2.60669 21.5 1.7085C21.5 1.04106 20.9589 0.5 20.2915 0.5H4.875ZM2.75 6.375C2.75 4.16586 4.54086 2.375 6.75 2.375H15.625C17.8341 2.375 19.625 4.16586 19.625 6.375V9.625C19.625 11.8341 17.8341 13.625 15.625 13.625H6.75C4.54086 13.625 2.75 11.8341 2.75 9.625V6.375ZM22.5365 5.2552C23.7832 4.63186 25.25 5.53841 25.25 6.93225V9.06775C25.25 10.4616 23.7832 11.3681 22.5365 10.7448C21.9013 10.4272 21.5 9.77795 21.5 9.06775V6.93225C21.5 6.22205 21.9013 5.57281 22.5365 5.2552Z"
                                 fill="#0A5E5C" />
-                        </svg>
+                        </svg></a>
                     </div>
                     <div class="llamada-contacto">
-                        <svg id="llamada-contacto" width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <a href="../html/videollamda.html"><svg id="llamada-contacto" width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3.4195 0.54062L4.58517 0.182287C5.67934 -0.15313 6.84609 0.389578 7.31517 1.45L8.24576 3.5625C8.65092 4.48229 8.42667 5.56458 7.68892 6.2375L5.63709 8.11041C5.76276 9.23125 6.15492 10.3344 6.81142 11.4198C7.43519 12.47 8.27179 13.3892 9.27167 14.1229L11.7363 13.3312C12.6712 13.0323 13.6884 13.3771 14.2604 14.1865L15.5962 16.0719C16.2624 17.0135 16.1433 18.3115 15.3167 19.1094L14.4305 19.9646C13.5487 20.8156 12.2888 21.125 11.1242 20.775C8.37359 19.95 5.84509 17.501 3.53759 13.4281C1.22684 9.34895 0.411087 5.88645 1.09142 3.04479C1.37742 1.84895 2.2625 0.895828 3.4195 0.54062Z" fill="#0A5E5C"/>
-                        </svg>
+                        </svg></a>
                             
                     </div>
                 </div>
@@ -237,11 +245,11 @@
             </div>
             <div class="emogi-escribir-enviar">
                 <div class="emogi">
-                    <svg id="emogi" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <a href="../html/mensajes.html"><svg id="emogi" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.4375 9.45834C16.3695 9.45834 17.125 8.75878 17.125 7.89584C17.125 7.03289 16.3695 6.33334 15.4375 6.33334C14.5055 6.33334 13.75 7.03289 13.75 7.89584C13.75 8.75878 14.5055 9.45834 15.4375 9.45834Z" fill="#3F4444"/>
                         <path d="M7.5625 9.45834C8.49448 9.45834 9.25 8.75878 9.25 7.89584C9.25 7.03289 8.49448 6.33334 7.5625 6.33334C6.63052 6.33334 5.875 7.03289 5.875 7.89584C5.875 8.75878 6.63052 9.45834 7.5625 9.45834Z" fill="#3F4444"/>
                         <path d="M11.4887 0.0833321C5.27875 0.0833321 0.25 4.75 0.25 10.5C0.25 16.25 5.27875 20.9167 11.4887 20.9167C17.71 20.9167 22.75 16.25 22.75 10.5C22.75 4.75 17.71 0.0833321 11.4887 0.0833321ZM11.5 18.8333C6.5275 18.8333 2.5 15.1042 2.5 10.5C2.5 5.89583 6.5275 2.16667 11.5 2.16667C16.4725 2.16667 20.5 5.89583 20.5 10.5C20.5 15.1042 16.4725 18.8333 11.5 18.8333ZM11.5 14.6667C9.835 14.6667 8.40625 13.8229 7.61875 12.5833H5.74C6.19201 13.6574 6.9837 14.58 8.01144 15.2305C9.03918 15.881 10.2551 16.229 11.5 16.229C12.7449 16.229 13.9608 15.881 14.9886 15.2305C16.0163 14.58 16.808 13.6574 17.26 12.5833H15.3812C14.605 13.8229 13.165 14.6667 11.5 14.6667Z" fill="#3F4444"/>
-                    </svg>                        
+                    </svg></a>                        
                 </div>
                 <div class="escribir">
                     <input
@@ -266,5 +274,5 @@
     </div>
   </body>
 
-  <script src="../js/main.js"></script>
+  <script src="../js/nav.js"></script>
 </html>
